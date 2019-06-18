@@ -1,5 +1,18 @@
-<p>groups#index</p>
+<div class='container-fulid'>
+<div class='row'>
+<div class='col-md-2'></div>
 
-<% @groups.each do |group| %>
-<%= group.name %>
-<%end%>
+
+<div class='group-page col-md-7 col-md-offset-1'>
+<%= image_tag 'icon.png',class: 'top-icon' %>
+<%= image_tag 'band-top.png',class: 'top-image' %>
+<p class="font-weight-bold"><%= @group.name %></p>
+<p><%= @group.short_prof %></p>
+
+
+</div>
+
+
+<div class='col-md-2'></div>
+</div>
+</div>

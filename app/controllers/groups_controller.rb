@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.all
+    @group = Group.find_by(nickname: params[:id])
   end
 end

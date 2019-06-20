@@ -15,14 +15,27 @@
  */
 @import "bootstrap";
 
+html{
+  font-size: 62.5%;
+}
+
 body{
-  background-color: #EDF2F6;
+  font-size: 1.2rem;
+  background-color: rgb(255, 255, 255);
   text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+a:link,a:visited,a:hover,a:active{
+    /*color:rgb(82, 81, 81);*/
+    text-decoration: none;
 }
 
 .header{
   padding:15px 0px 15px 0px;
-  background-color: rgb(255, 255, 255);
+  background-color: #EDF2F6;
 }
 .header-content{
   margin:0 auto;
@@ -44,29 +57,84 @@ body{
 .group-page{
   margin:0 auto;
   background-color: rgb(255, 255, 255);
-  height:700px;
+  height:100%;
   padding:0px;
   position: relative;
 }
 
 .top-image{
   display: block;
-  height:250px;
+  height:270px;
   width:100%;
-  margin-bottom:75px;
-}
-.top-icon{
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0;
+  margin:0 auto;
+  margin-bottom:30px;
 
+}
+
+.basic-content{
+  padding:10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin:40px 0px 40px 0px;
+}
+.basic-icon{
   height:140px;
   width:140px;
   border-radius: 80px;
   border:3px solid rgb(255, 255, 255);
+  display:inline-block;
+  vertical-align: middle;
+
+}
+.basic-text{
+  padding:5px 5px 5px 5px;
+  background-color: rgb(255, 255, 255);
+  width:50%;
+  display:inline-block;
+  vertical-align: middle;
+  margin-left:25px;
+}
+.basic-text p{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.select{
+  font-size: 5rem;
+  width:20%;
+  margin:20px 10px 15px 10px;
+  color:rgb(216, 216, 216);
+  background-color: rgb(245, 245, 245);
+  padding:20px 20px 20px 20px;
+  border-radius: 20px;
+}
+
+.artworks{
+  margin:0 auto;
+  background-color: rgb(255, 255, 255);
+  height:100%;
+}
+
+.element{
+  background-color:rgb(255, 255, 255);
+  /*
+  padding:5px 5px 5px 5px;
+  border:1px solid #333;
+  box-shadow: 0px 1px 10px 1px rgba(238, 238, 238, 0.4);
+  */
+  /*margin:5px 5px 20px 5px;*/
+  /*width:20%;*/
+  margin:10px 0 10px 0;
+}
+.element-image{
+  /*margin:0px 0px 0px 0px;*/
+  width:100%;
+}
+.element-title{
+  text-align: center;
+  font-weight:bold;
+}
+.element-title span{
+  font-size: 1.3rem;
+  border-bottom:1px solid #333;
 }

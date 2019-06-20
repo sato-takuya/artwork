@@ -1,0 +1,31 @@
+<div class='container-fulid'>
+<div class='row'>
+<%= image_tag 'red.jpg',class: 'top-image' %>
+<div class='col-md-2'></div>
+
+
+<div class='group-page col-md-7 col-md-offset-1'>
+<%#<%= image_tag 'icon.png',class: 'top-icon' %>
+
+<div class='basic-content'>
+
+  <%= image_tag 'icon.png',class: 'basic-icon' %>
+  <div class='basic-text'>
+    <p><%= @group.name %></p>
+    <span><%= @group.short_prof %></span>
+  </div>
+</div>
+
+
+
+<%= link_to '', "/amazarashi",class:"btn far fa-copy select" %><%#current_user.id が入る%>
+<%= link_to '', "/amazarashi/about",class:"btn fas fa-users select" %><%#current_user.id が入る%>
+
+
+
+</div>
+
+
+<div class='col-md-2'></div>
+</div>
+</div>

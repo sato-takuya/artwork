@@ -46,6 +46,7 @@ gem 'public_uid'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'google-analytics-rails'
+gem 'font-awesome-sass'
 
 gem 'active_hash'
 

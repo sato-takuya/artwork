@@ -14,12 +14,20 @@
     <p><%= @group.name %></p>
     <span><%= @group.short_prof %></span>
   </div>
+
+<div class='select-button'>
+<div class='btn-circle-fishy'>
+<%= link_to '', "/amazarashi",class:"far fa-copy select" %><%#current_user.id が入る btn far fa-copy%>
+</div>
+<div class='btn-circle-fishy'>
+<%= link_to '', "/amazarashi/about",class:"fas fa-user-circle select" %><%#current_user.id が入る btn fas fa-users%>
+</div>
+</div>
 </div>
 
 
 
-<%= link_to '', "/amazarashi",class:"btn far fa-copy select" %><%#current_user.id が入る%>
-<%= link_to '', "/amazarashi/about",class:"btn fas fa-users select" %><%#current_user.id が入る%>
+
 
 
 

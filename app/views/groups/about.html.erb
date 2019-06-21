@@ -1,34 +1,32 @@
 <%=render "shared/basic"%>
 
+
 <div class='container-fuild'>
 <div class='row'>
 <div class='col-md-2'></div>
 
 
 
-<div class='artworks col-md-7 col-md-offset-1'>
-
+<div class='members-frame col-md-7 col-md-offset-1'>
+<h2 class='text-left'>Member</h2>
 <br>
-
 <div class='row'>
-
-<% @members.each do |member| %>
-
-<%= link_to "#", class: 'member col-6 col-sm-6 col-md-6 col-lg-3' do %>
-<%= image_tag '',class:'member-image' %>
-
-<span><%= member.member_name %></span><br>
-
-<%end%>
-<%end%>
-
-
-
+  <% @members.each do |member| %>
+    <%= link_to "#", class: 'member col-12  col-sm-6 col-md-6 col-lg-6' do %>
+    <%= image_tag member.member_image,class:'member-image' %>
+    <div class='member-right'>
+    <div class='member-text'>
+    <span><%= member.member_name %></span>
+    <span>(<%= member.part %>)</span>
+    </div>
+    <div class='member-sns'>
+      <%= image_tag 'twitter.png',class:'icon-sns' %>
+      <%= image_tag 'instagram.png',class:'icon-sns' %>
+    </div>
+    </div>
+    <%end%>
+  <%end%>
 </div>
-
-
-
-
 </div>
 
 <div class='col-md-2'></div>

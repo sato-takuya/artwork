@@ -5,7 +5,7 @@ class Group < ActiveHash::Base
   has_many :videos
 
   self.data = [
-    {:id => 1, :name => "amazarashi(バンド名)", :nickname => "amazarashi",:image => "icon.png",:short_prof => "100文字程度の簡単な自己紹介"}
+    {:id => 1, :name => "バンド名", :nickname => "bandexample",:image => "icon.png",:short_prof => "100文字程度の簡単な自己紹介"}
   ]
 
 end

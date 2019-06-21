@@ -72,19 +72,22 @@ a:link,a:visited,a:hover,a:active{
   position: relative;
 }
 
+
+.top-image-box{
+  width:100%;
+  background-color: rgb(226, 226, 226);
+  margin-bottom:70px;
+}
 .top-image{
   display: block;
-  height:270px;
-  width:100%;
+  max-height:260px;
+  width:auto;
   margin:0 auto;
-  margin-bottom:30px;
-
 }
-
 .basic-content{
-  padding:10px 10px 10px 10px;
+  padding:20px 20px 20px 20px;
   background-color: rgb(255, 255, 255);
-  margin:40px 0px 40px 0px;
+  margin:30px 0px 20px 0px;
 }
 .basic-icon{
   height:140px;
@@ -194,6 +197,7 @@ a:link,a:visited,a:hover,a:active{
 .member-right{
   display: inline-block;
   vertical-align: middle;
+  margin:30px 0px;
 }
 .member-text{
   display:block;

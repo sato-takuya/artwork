@@ -127,7 +127,7 @@ a:link,a:visited,a:hover,a:active{
 
 
 
-
+/*
 .tabnav{
     margin: 0;
     padding: 0;
@@ -152,12 +152,37 @@ a:link,a:visited,a:hover,a:active{
 .tabcontent{
     padding: 20px;
 }
+*/
 
 
+.tab li {
+  display: inline-block;
+  margin:0 auto;
+  color: rgb(161, 161, 161);
+  padding: 10px 20px;
+  cursor: pointer;
+  list-style: none;
+  transition: .3s;
+  font-size: 3rem;
+}
+.tab li.active {
+  color: rgb(48, 48, 48);
+  background: rgb(255, 255, 255);
+}
+
+.area ul {
+  display: none;
+}
+.area ul.show {
+  display: block;
+}
+
+.show{
+  padding:0;
+}
 
 
-
-.artworks{
+.artworks,.members-frame{
   margin:0 auto;
   background-color: rgb(255, 255, 255);
   height:100%;
@@ -191,12 +216,6 @@ a:link,a:visited,a:hover,a:active{
   height:60px;
 }
 
-.members-frame{
-  margin:0 auto;
-  background-color: rgb(255, 255, 255);
-  height:100%;
-  padding:0px 50px;
-}
 .member{
   color:#333;
   margin-bottom:30px;

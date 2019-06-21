@@ -1,63 +1,71 @@
 <%=render "shared/basic"%>
 
-<ul class="tabnav">
-    <li><a href="#tab01" class="far fa-copy" ></a></li>
-    <li><a href="#tab02" class="fas fa-user-circle"></a></li>
+
+<ul class="tab clearfix">
+  <li class="active far fa-copy"></li>
+  <li class="fas fa-user-circle"></li>
 </ul>
-<div class="tabcontent">
-    <div id="tab01">
-    <div class='container-fuild'>
-<div class='row'>
-<div class='col-md-2'></div>
+
+<!-- コンテンツ
+ 全体を非表示にし、showクラスが付いたコンテンツのみ表示 -->
+<div class="area">
+<ul class="show">
+  <div class='container-fuild'>
+      <div class='row'>
+      <div class='col-md-2'></div>
+
+    <div class='artworks col-md-7 col-md-offset-1'>
+
+      <h2 class='text-left'>Audio</h2>
+      <br>
+
+      <div class='row'>
+      <% @audios.each do |audio| %>
+      <%= link_to "#", class: 'audio col-6  col-sm-6 col-md-6 col-lg-3' do %>
+      <%= image_tag audio.audio_image,class:'audio-image' %>
+      <div class='audio-title'>
+      <span><%= audio.title %></span><br>
+      <%= audio.group.name %>
+      </div>
+      <%end%>
+      <%end%>
+      </div>
+
+      <h2 class='text-left'>Video</h2>
+      <br>
 
 
+      <div class='row'>
+      <% @videos.each do |video| %>
+      <%= link_to "#", class: 'video col-6  col-sm-6 col-md-6 col-lg-3' do %>
+      <%= image_tag video.video_image,class:'video-image' %>
+      <div class='video-title'>
+      <span><%= video.title %></span><br>
+      <%= video.group.name %>
+      </div>
 
-<div class='artworks col-md-7 col-md-offset-1'>
-
-<h2 class='text-left'>Audio</h2>
-<br>
-<div class='row'>
-<% @audios.each do |audio| %>
-<%= link_to "#", class: 'audio col-6  col-sm-6 col-md-6 col-lg-3' do %>
-<%= image_tag audio.audio_image,class:'audio-image' %>
-<div class='audio-title'>
-<span><%= audio.title %></span><br>
-<%= audio.group.name %>
-</div>
-<%end%>
-<%end%>
-</div>
-
-
-<h2 class='text-left'>Video</h2>
-<br>
-<div class='row'>
-<% @videos.each do |video| %>
-<%= link_to "#", class: 'video col-6  col-sm-6 col-md-6 col-lg-3' do %>
-<%= image_tag video.video_image,class:'video-image' %>
-<div class='video-title'>
-<span><%= video.title %></span><br>
-<%= video.group.name %>
-</div>
-<%end%>
-<%end%>
-</div>
-
-
-</div>
-
-<div class='col-md-2'></div>
-</div>
-</div>
-
-
+      <%end%>
+      <%end%>
 
     </div>
-    <div id="tab02"><br>
-    <div class='container-fuild'>
+    </div>
+
+
+
+
+      <div class='col-md-2'></div>
+    </div>
+  </div>
+</ul>
+
+
+
+
+
+<ul>
+<div class='container-fuild'>
 <div class='row'>
 <div class='col-md-2'></div>
-
 
 
 <div class='members-frame col-md-7 col-md-offset-1'>
@@ -86,7 +94,14 @@
 </div>
 </div>
 
-    </div>
- </div>
+</div>
+</div>
+</ul>
+
+
+
+</div>
+
+
 
 

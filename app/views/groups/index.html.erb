@@ -1,21 +1,12 @@
 <%=render "shared/basic"%>
-<div class='select-button'>
 
-<div class='button-under'>
-<div class='btn-circle-fishy'>
-
-
-<%= link_to '', "/bandexample",class:"far fa-copy select" %><%#current_user.id が入る btn far fa-copy%>
-</div>
-</div>
-
-<div class='btn-circle-fishy'>
-<%= link_to '', "/bandexample/about",class:"fas fa-user-circle select" %><%#current_user.id が入る btn fas fa-users%>
-</div>
-</div>
-
-
-<div class='container-fuild'>
+<ul class="tabnav">
+    <li><a href="#tab01" class="far fa-copy" ></a></li>
+    <li><a href="#tab02" class="fas fa-user-circle"></a></li>
+</ul>
+<div class="tabcontent">
+    <div id="tab01">
+    <div class='container-fuild'>
 <div class='row'>
 <div class='col-md-2'></div>
 
@@ -58,3 +49,44 @@
 <div class='col-md-2'></div>
 </div>
 </div>
+
+
+
+    </div>
+    <div id="tab02"><br>
+    <div class='container-fuild'>
+<div class='row'>
+<div class='col-md-2'></div>
+
+
+
+<div class='members-frame col-md-7 col-md-offset-1'>
+<h2 class='text-left'>Member</h2>
+<br>
+<div class='row'>
+  <% @members.each do |member| %>
+    <%= link_to "#", class: 'member col-12  col-sm-6 col-md-6 col-lg-6' do %>
+    <%= image_tag member.member_image,class:'member-image' %>
+    <div class='member-right'>
+    <div class='member-text'>
+    <span><%= member.member_name %></span>
+    <span>(<%= member.part %>)</span>
+    </div>
+    <div class='member-sns'>
+      <%= image_tag 'twitter.png',class:'icon-sns' %>
+      <%= image_tag 'instagram.png',class:'icon-sns' %>
+    </div>
+    </div>
+    <%end%>
+  <%end%>
+</div>
+</div>
+
+<div class='col-md-2'></div>
+</div>
+</div>
+
+    </div>
+ </div>
+
+

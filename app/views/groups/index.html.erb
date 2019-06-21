@@ -8,34 +8,34 @@
 
 
 <div class='artworks col-md-7 col-md-offset-1'>
-
-<h3 class='text-left'>Audio</h3>
+<h2 class='text-left'>Audio</h2>
 <br>
-
 <div class='row'>
-
-<% @elements.each do |element| %>
-
-<%= link_to "#", class: 'element col-6 col-sm-6 col-md-6 col-lg-3' do %>
-<%= image_tag 'icon.png',class:'element-image' %>
-<div class='element-title'>
-<span><%= element.title %></span><br>
-<%= element.group.name %>
+<% @audios.each do |audio| %>
+<%= link_to "#", class: 'audio col-6  col-sm-6 col-md-6 col-lg-3' do %>
+<%= image_tag audio.audio_image,class:'audio-image' %>
+<div class='audio-title'>
+<span><%= audio.title %></span><br>
+<%= audio.group.name %>
 </div>
 <%end%>
 <%end%>
-
-
-
 </div>
 
 
-
-
-<h3 class='text-left'>Video</h3>
-
-<h3 class='text-left'>CDs</h3>
-
+<h2 class='text-left'>Video</h2>
+<br>
+<div class='row'>
+<% @videos.each do |video| %>
+<%= link_to "#", class: 'video col-6  col-sm-6 col-md-6 col-lg-3' do %>
+<%= image_tag video.video_image,class:'video-image' %>
+<div class='video-title'>
+<span><%= video.title %></span><br>
+<%= video.group.name %>
+</div>
+<%end%>
+<%end%>
+</div>
 
 
 </div>

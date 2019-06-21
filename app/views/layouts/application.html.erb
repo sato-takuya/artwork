@@ -9,15 +9,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
   </head>
 
   <body>
+  <div class="wrapper">
   <header class='header'>
     <%= render "shared/header"%>
   </header>
   <div class='container-fuild'>
     <%= yield %>
+  </div>
+  <footer class='footer'>
+    <%=render "shared/footer"%>
+  </footer>
   </div>
   </body>
 </html>

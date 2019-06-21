@@ -1,3 +1,36 @@
 <%=render "shared/basic"%>
 
-<p>アバウトページ</p>
+<div class='container-fuild'>
+<div class='row'>
+<div class='col-md-2'></div>
+
+
+
+<div class='artworks col-md-7 col-md-offset-1'>
+
+<br>
+
+<div class='row'>
+
+<% @members.each do |member| %>
+
+<%= link_to "#", class: 'member col-6 col-sm-6 col-md-6 col-lg-3' do %>
+<%= image_tag '',class:'member-image' %>
+
+<span><%= member.member_name %></span><br>
+
+<%end%>
+<%end%>
+
+
+
+</div>
+
+
+
+
+</div>
+
+<div class='col-md-2'></div>
+</div>
+</div>

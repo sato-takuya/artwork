@@ -1,77 +1,38 @@
 <div class='container-fuild'>
-<div class='row'>
-<div class='col-md-2'></div>
+  <div class='row'>
+    <div class='col-md-2'></div>
+          <div class='members-frame col-md-7 col-md-offset-1'>
+          <h2 class='text-left'>Member</h2><br>
 
-
-<div class='members-frame col-md-7 col-md-offset-1'>
-
-
-<h2 class='text-left'>Member</h2>
-<br>
-
-<% if false %><!--コメントアウト-->
-<div class='row'>
-    <% @members.each do |member| %>
-          <%= link_to "#", class: 'member col-12  col-sm-6 col-md-6 col-lg-6' do %>
-          <%= image_tag member.member_image,class:'member-image' %>
-
-          <div class='member-right'>
-            <div class='member-text'>
-              <span><%= member.member_name %></span>
-              <span>(<%= member.part %>)</span>
-            </div>
-            <div class='member-sns'>
-              <%= image_tag 'twitter.png',class:'icon-sns' %>
-              <%= image_tag 'instagram.png',class:'icon-sns' %>
-            </div>
+            <div class="row">
+                  <% @members.each do |member| %>
+                      <a class="member col-12 col-md-6 js-modal-open" href="" data-target="<%=member.id%>">
+                        <%= image_tag member.member_image,class:'member-image' %>
+                        <div class='member-right'>
+                        <div class='member-text'>
+                        <span><%= member.member_name %></span>
+                        <span>(<%= member.part %>)</span>
+                        </div>
+                        </div>
+                      </a>
+                            <div id="<%=member.id%>" class="modal js-modal">
+                              <div class="modal__bg js-modal-close"></div>
+                              <div class="modal__content">
+                                <%= image_tag member.member_image,class:'member-show-image' %>
+                                <div class='member-show-right'>
+                                <p><span><%= member.member_name %></span></p>
+                                <p class='member-info'><span><%= member.member_info %></span></p>
+                                      <div class='member-show-sns'>
+                                      <%= image_tag 'twitter.png',class:'icon-sns' %>
+                                      <%= image_tag 'instagram.png',class:'icon-sns' %>
+                                      </div>
+                                <a class="js-modal-close" href="">閉じる</a>
+                              </div>
+                              </div>
+                            </div><!--modal__inner-->
+                  <%end%>
+            </div><!--rowにかかる-->
           </div>
-          <%end%>
-    <%end%>
+    <div class='col-md-2'></div>
+  </div>
 </div>
-<%end%><!--コメントアウト-->
-
-<div class='row'>
-<% @members.each do |member| %>
-<div class="content">
-        <a class="member col-12  col-sm-6 col-md-6 col-lg-6 js-modal-open" href="" data-target="<%=member.id%>">
-        <%= image_tag member.member_image,class:'member-image' %>
-        <div class='member-right'>
-            <div class='member-text'>
-              <span><%= member.member_name %></span>
-              <span>(<%= member.part %>)</span>
-            </div>
-            <div class='member-sns'>
-              <%= image_tag 'twitter.png',class:'icon-sns' %>
-              <%= image_tag 'instagram.png',class:'icon-sns' %>
-            </div>
-          </div>
-        </a>
-    </div>
-    <div id="<%=member.id%>" class="modal js-modal">
-        <div class="modal__bg js-modal-close"></div>
-        <div class="modal__content">
-        <%= image_tag member.member_image,class:'member-show-image' %>
-        <div class='member-show-right'>
-            <p><span><%= member.member_name %></span></p>
-            <p class='member-info'><span><%= member.member_info %></span></p>
-            <div class='member-show-sns'>
-              <%= image_tag 'twitter.png',class:'icon-sns' %>
-              <%= image_tag 'instagram.png',class:'icon-sns' %>
-            </div>
-            <a class="js-modal-close" href="">閉じる</a>
-          </div>
-        </div><!--modal__inner-->
-    </div><!--modal-->
-  <%end%>
-</div>
-
-
-
-
-
-
-</div>
-<div class='col-md-2'></div>
-</div>
-</div>
-

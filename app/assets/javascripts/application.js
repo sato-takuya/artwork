@@ -81,3 +81,18 @@ $(function () {
     return false;
   });
 });
+
+
+$(function () {
+  $('.playBtn').click(function () {
+    if ($('#audio1')[0].paused) {
+      $('#audio1')[0].play();
+      $('.select').removeClass("far fa-play-circle");//playを消す
+      $('.select').addClass("far fa-stop-circle");//stopを加える
+    } else {
+      $('#audio1')[0].pause();
+      $('.select').removeClass("far fa-stop-circle");//stopを消す
+      $('.select').addClass("far fa-play-circle");//playを加える
+    }
+  });
+});

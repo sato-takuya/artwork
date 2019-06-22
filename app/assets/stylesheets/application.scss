@@ -241,6 +241,7 @@ a:link,a:visited,a:hover,a:active{
     top: 50%;
     transform: translate(-50%,-50%);
     width: 80%;
+    position: relative;
 }
 .member-show-image{
   display: inline-block;
@@ -253,6 +254,22 @@ a:link,a:visited,a:hover,a:active{
   font-size: 1rem;
 }
 
+
+.modal__content .far {/*classがfaのアイコンに対して*/
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;/*余計な隙間を除く*/
+  padding:0;/*余計な隙間を除く*/
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 60px;/*サイズ*/
+  }
+
+
+
 .member-show-right{
   display: inline-block;
   vertical-align: middle;
@@ -264,7 +281,8 @@ a:link,a:visited,a:hover,a:active{
 }
 
 .audio-show-image{
-  width:100%;
+  width:50%;
+  height:auto;
 }
 .audio-control{
   display: block;

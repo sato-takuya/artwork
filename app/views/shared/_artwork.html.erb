@@ -19,9 +19,12 @@
     <div class='row'>
     <div id="<%=audio.public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
-    <div class="modal__content col-md-6">
-      <%= image_tag audio.audio_image,class:'audio-show-image' %><br>
-      <%= audio_tag "glowing.mp3",autoplay: false ,controls: true,class:'audio-control' %>
+    <div class="modal__content col-12 col-md-3">
+      <a class="playBtn"><%= image_tag audio.audio_image,class:'audio-show-image' %><i class="select far fa-play-circle" ></i></a>
+
+      <br>
+      <%= audio_tag "glowing.mp3",autoplay: false ,controls: false,class:'audio-control',id:'audio1' %>
+
       <p><span class='audio-show-title'><%= audio.title %></span></p>
       <a class="audio-modal-close" href="">閉じる</a>
     </div>

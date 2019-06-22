@@ -67,3 +67,17 @@ $(function () {
 });
 
 
+$(function () {
+  $('.audio-modal-open').each(function () {
+    $(this).on('click', function () {
+      var target = $(this).data('target');
+      var modal = document.getElementById(target);
+      $(modal).fadeIn();
+      return false;
+    });
+  });
+  $('.audio-modal-close').on('click', function () {
+    $('.audio-modal').fadeOut();
+    return false;
+  });
+});

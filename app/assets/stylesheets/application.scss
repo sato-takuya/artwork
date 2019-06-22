@@ -159,11 +159,13 @@ a:link,a:visited,a:hover,a:active{
 }
 
 .audio,.video{
+  display:inline-block;
   color:rgb(83, 83, 83);
   background-color:rgb(255, 255, 255);
   margin-bottom:20px;
 }
 .audio-image,.video-image{
+
   /*margin:0px 0px 0px 0px;*/
   width:100%;
 }
@@ -195,12 +197,10 @@ a:link,a:visited,a:hover,a:active{
   height:80px;
   width:80px;
   border-radius: 50%;
-  display:inline-block;
+  float: left;
 }
 .member-right{
   display: inline-block;
-  vertical-align: middle;
-  margin:30px 0px;
 }
 .member-text{
   display:block;
@@ -261,4 +261,9 @@ a:link,a:visited,a:hover,a:active{
 }
 .member-show-sns{
   margin-top:20px;
+}
+
+.audio-show-image{
+  height:300px;
+  width:300px;
 }

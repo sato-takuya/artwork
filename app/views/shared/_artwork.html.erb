@@ -1,41 +1,53 @@
 <div class='container-fuild'>
-      <div class='row'>
-      <div class='col-md-2'></div>
+<div class='row'>
+<div class='col-md-2'></div>
 
-    <div class='artworks col-md-7 col-md-offset-1'>
+<div class='artworks col-md-7 col-md-offset-1'>
 
-      <h2 class='text-left'>Audio</h2>
-      <br>
+<h2 class='text-left'>Audio</h2>
+<br>
 
-      <div class='row'>
-      <% @audios.each do |audio| %>
-      <%= link_to "#", class: 'audio col-6  col-sm-6 col-md-6 col-lg-3' do %>
+<div class='row'>
+  <% @audios.each do |audio| %>
+    <a class="audio col-12 col-md-3 js-modal-open" href="" data-target="<%=audio.id%>">
       <%= image_tag audio.audio_image,class:'audio-image' %>
       <div class='audio-title'>
       <span><%= audio.title %></span><br>
       <%= audio.group.name %>
       </div>
-      <%end%>
-      <%end%>
-      </div>
-
-      <h2 class='text-left'>Video</h2>
-      <br>
-      <div class='row'>
-      <% @videos.each do |video| %>
-      <%= link_to "#", class: 'video col-6  col-sm-6 col-md-6 col-lg-3' do %>
-      <%= image_tag video.video_image,class:'video-image' %>
-      <div class='video-title'>
-      <span><%= video.title %></span><br>
-      <%= video.group.name %>
-      </div>
-
-      <%end%>
-      <%end%>
-
+    </a>
+    <div id="<%=audio.id%>" class="modal js-modal">
+    <div class="modal__bg js-modal-close"></div>
+    <div class="modal__content">
+      <%= image_tag audio.audio_image,class:'audio-show-image' %><br>
+      <%= audio_tag "glowing.mp3",autoplay: false ,controls: true,class:'audio-control' %>
+      <p><span><%= audio.title %></span></p>
+      <a class="js-modal-close" href="">閉じる</a>
     </div>
-    </div>
+    </div><!--modal__inner-->
+  <%end%>
+</div>
 
-      <div class='col-md-2'></div>
-    </div>
-  </div>
+
+
+
+
+<h2 class='text-left'>Video</h2>
+<br>
+<div class='row'>
+<% @videos.each do |video| %>
+<%= link_to "#", class: 'video col-6  col-sm-6 col-md-6 col-lg-3' do %>
+<%= image_tag video.video_image,class:'video-image' %>
+<div class='video-title'>
+<span><%= video.title %></span><br>
+<%= video.group.name %>
+</div>
+
+<%end%>
+<%end%>
+
+</div>
+</div>
+<div class='col-md-2'></div>
+</div>
+</div>

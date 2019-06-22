@@ -119,6 +119,7 @@ a:link,a:visited,a:hover,a:active{
 
 
 
+
 .tab li {
   display: inline-block;
   margin:0 auto;
@@ -164,6 +165,14 @@ a:link,a:visited,a:hover,a:active{
   background-color:rgb(255, 255, 255);
   margin-bottom:20px;
 }
+
+.artworks .row{
+  margin:0;
+}
+.members-frame .row{
+  margin:0;
+}
+
 .audio-image,.video-image{
 
   /*margin:0px 0px 0px 0px;*/

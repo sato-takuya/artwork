@@ -15,9 +15,10 @@
                         </div>
                         </div>
                       </a>
+                      <div class='row'>
                             <div id="<%=member.id%>" class="modal js-modal">
                               <div class="modal__bg js-modal-close"></div>
-                              <div class="modal__content">
+                              <div class="modal__content col-md-6">
                                 <%= image_tag member.member_image,class:'member-show-image' %>
                                 <div class='member-show-right'>
                                 <p><span><%= member.member_name %></span></p>
@@ -30,6 +31,7 @@
                               </div>
                               </div>
                             </div><!--modal__inner-->
+                      </div>
                   <%end%>
             </div><!--rowにかかる-->
           </div>

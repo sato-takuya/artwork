@@ -16,15 +16,17 @@
       <%= audio.group.name %>
       </div>
     </a>
+    <div class='row'>
     <div id="<%=audio.public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
-    <div class="modal__content">
+    <div class="modal__content col-md-6">
       <%= image_tag audio.audio_image,class:'audio-show-image' %><br>
       <%= audio_tag "glowing.mp3",autoplay: false ,controls: true,class:'audio-control' %>
-      <p><span><%= audio.title %></span></p>
+      <p><span class='audio-show-title'><%= audio.title %></span></p>
       <a class="audio-modal-close" href="">閉じる</a>
     </div>
     </div><!--modal__inner-->
+    </div>
   <%end%>
 </div>
 

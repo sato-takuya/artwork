@@ -264,6 +264,12 @@ a:link,a:visited,a:hover,a:active{
 }
 
 .audio-show-image{
-  height:300px;
-  width:300px;
+  width:100%;
+}
+.audio-control{
+  display: block;
+  width:100%;
+}
+.audio-show-title{
+  font-size: 1.5rem;
 }

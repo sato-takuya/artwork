@@ -95,24 +95,22 @@ a:link,a:visited,a:hover,a:active{
   margin:30px 0px 20px 0px;
 }
 .basic-icon{
-  height:140px;
-  width:140px;
-  border-radius: 80px;
-  border:3px solid rgb(255, 255, 255);
+  height:80px;
+  width:80px;
+  border-radius: 50%;
   display:inline-block;
   vertical-align: middle;
 }
 .basic-text{
   padding:5px 5px 5px 5px;
   background-color: rgb(255, 255, 255);
-  width:50%;
+  width:40%;
   display:inline-block;
   vertical-align: middle;
-  margin-left:25px;
 }
 .basic-text p{
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .fa,.fs{

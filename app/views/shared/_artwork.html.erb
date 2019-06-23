@@ -9,15 +9,15 @@
 
 <div class='row'>
   <% @audios.each do |audio| %>
-    <a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.public_uid%>">
+    <a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.audio_public_uid%>">
       <%= image_tag audio.audio_image,class:'audio-image' %>
       <div class='audio-title'>
-      <span><%= audio.title %></span><br>
-      <%= audio.group.name %>
+      <span><%= audio.audio_title %></span><br>
+      <%= audio.user.name %>
       </div>
     </a>
     <div class='row'>
-    <div id="<%=audio.public_uid%>" class="modal audio-modal">
+    <div id="<%=audio.audio_public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
     <div class="modal__content col-12 col-md-3">
       <a class="playBtn"><%= image_tag audio.audio_image,class:'audio-show-image' %><i class="select far fa-play-circle" ></i></a>
@@ -25,7 +25,7 @@
       <br>
       <%= audio_tag "glowing.mp3",autoplay: false ,controls: false,class:'audio-control',id:'audio1' %>
 
-      <p><span class='audio-show-title'><%= audio.title %></span></p>
+      <p><span class='audio-show-title'><%= audio.audio_title %></span></p>
       <a class="audio-modal-close" href="">閉じる</a>
     </div>
     </div><!--modal__inner-->
@@ -36,7 +36,7 @@
 
 
 
-
+<% if false %>
 <h2 class='text-left'>Video</h2>
 <br>
 <div class='row'>
@@ -52,6 +52,9 @@
 <%end%>
 
 </div>
+
+<% end %>
+
 </div>
 <div class='col-md-2'></div>
 </div>

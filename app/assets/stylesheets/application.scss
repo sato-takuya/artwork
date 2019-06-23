@@ -90,6 +90,7 @@ a:link,a:visited,a:hover,a:active{
 }
 .basic-content{
   background-color: rgb(255, 255, 255);
+  margin-bottom:30px;
 }
 .basic-icon{
   height:80px;
@@ -101,7 +102,7 @@ a:link,a:visited,a:hover,a:active{
 .basic-text{
   padding:5px 5px 5px 5px;
   background-color: rgb(255, 255, 255);
-  width:40%;
+  width:auto;
   display:inline-block;
   vertical-align: middle;
 }

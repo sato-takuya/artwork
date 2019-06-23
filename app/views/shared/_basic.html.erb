@@ -12,10 +12,10 @@
 <%= image_tag 'band.jpg',class: 'top-image' %>
 </div>
 
-  <%= image_tag 'icon.png',class: 'basic-icon' %>
+  <%= image_tag current_user.image,class: 'basic-icon' %>
   <div class='basic-text'>
     <p><%= @group.name %></p>
-    <span><%= @group.short_prof %></span>
+    <%#<span><%= @group.short_prof %>
   </div>
 
 </div>

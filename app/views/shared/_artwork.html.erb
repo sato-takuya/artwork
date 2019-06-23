@@ -49,8 +49,10 @@
 <div class='row'>
     <div id="<%=video.video_public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
-    <div class="video_modal__content col-12 col-md-4">
-    <%= movie(embed_link("https://www.youtube.com/watch?v=u-Nlxx7xbFs")) %>
+    <div class="video_modal__content col-12 col-md-6">
+    <div class="iframe-content">
+      <%= movie(embed_link("https://www.youtube.com/watch?v=u-Nlxx7xbFs")) %>
+      </div>
     </div>
     </div><!--modal__inner-->
 

@@ -3,6 +3,6 @@ class GroupsController < ApplicationController
     @group = User.find_by(nickname: params[:id])
     @audios = @group.audios
     #@videos = @group.videos
-    #@members = @group.members
+    @members = @group.members
   end
 end

@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:omniauthable
 
   has_many :audios
-  #has_many :members
+  has_many :members
   #has_many :videos
 
   def to_param

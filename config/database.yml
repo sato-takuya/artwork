@@ -24,9 +24,13 @@ test:
 #  <<: *default
 #  database: db/production.sqlite3
 
-production:
+#production:
 #半角スペース２個分の空白を開ける
+#  <<: *default
+#  adapter: postgresql
+#  encoding: unicode
+#  pool: 5
+
+production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: db/production.sqlite3

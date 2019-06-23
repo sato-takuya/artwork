@@ -193,6 +193,7 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
+    ruby-oembed (0.12.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.3)
     sass (3.7.4)
@@ -280,6 +281,7 @@ DEPENDENCIES
   public_uid
   puma (~> 3.11)
   rails (~> 5.2.3)
+  ruby-oembed
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

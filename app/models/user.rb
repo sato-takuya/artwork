@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :audios
   has_many :members
-  #has_many :videos
+  has_many :videos
 
   def to_param
     nickname

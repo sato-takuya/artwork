@@ -33,27 +33,30 @@
   <%end%>
 </div>
 
-
-
-
-<% if false %>
 <h2 class='text-left'>Video</h2>
 <br>
+
 <div class='row'>
 <% @videos.each do |video| %>
-<%= link_to "#", class: 'video col-6  col-sm-6 col-md-6 col-lg-3' do %>
-<%= image_tag video.video_image,class:'video-image' %>
+
+<a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.video_public_uid%>">
+<%= image_tag embed_image('https://www.youtube.com/watch?v=u-Nlxx7xbFs'),class:'video-image' %>
 <div class='video-title'>
-<span><%= video.title %></span><br>
-<%= video.group.name %>
+<%= video.user.name %>
 </div>
+</a>
 
-<%end%>
-<%end%>
+<div class='row'>
+    <div id="<%=video.video_public_uid%>" class="modal audio-modal">
+    <div class="modal__bg audio-modal-close"></div>
+    <div class="video_modal__content col-12 col-md-4">
+    <%= movie(embed_link("https://www.youtube.com/watch?v=u-Nlxx7xbFs")) %>
+    </div>
+    </div><!--modal__inner-->
 
 </div>
-
 <% end %>
+</div>
 
 </div>
 <div class='col-md-2'></div>

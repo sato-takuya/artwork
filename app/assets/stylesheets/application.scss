@@ -250,6 +250,14 @@ a:link,a:visited,a:hover,a:active{
     width: 80%;
     position: relative;
 }
+.video_modal__content{
+    left: 50%;
+    padding: 10px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
 .member-show-image{
   display: inline-block;
   height:60px;
@@ -295,6 +303,7 @@ a:link,a:visited,a:hover,a:active{
   display: block;
   width:100%;
 }
-.audio-show-title{
+.audio-show-title,.video-show-title{
   font-size: 1.5rem;
 }
+

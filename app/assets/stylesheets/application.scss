@@ -42,6 +42,9 @@ a:link,a:visited,a:hover,a:active{
 .container-fulid{
   overflow-x: hidden;
 }
+.main-content{
+  min-height:700px;
+}
 
 
 .header{
@@ -227,6 +230,9 @@ a:link,a:visited,a:hover,a:active{
 
 
 
+
+
+
 .modal{
     display: none;
     height: 100vh;
@@ -241,13 +247,14 @@ a:link,a:visited,a:hover,a:active{
     width: 100%;
 }
 .modal__content{
-    background: #fff;
+    background: rgb(36, 36, 36);
     left: 50%;
-    padding: 10px;
+    padding: 20px 0px;
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 80%;
+    width: 100%;
+    min-height:55%;
     position: relative;
 }
 .video_modal__content{
@@ -269,44 +276,47 @@ a:link,a:visited,a:hover,a:active{
     height: 100%;
 }
 
-.member-show-image{
-  display: inline-block;
-  height:60px;
-  width:60px;
-  border-radius: 50%;
-  vertical-align: middle;
-}
+
 .js-modal-close{
   font-size: 1rem;
 }
 
-.modal__content .far {/*classがfaのアイコンに対して*/
+
+.modal__content .far {
+  /*
   position: absolute;
   top: 40%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  margin:0;/*余計な隙間を除く*/
-  padding:0;/*余計な隙間を除く*/
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 60px;/*サイズ*/
+  margin:0;
+  padding:0;
+  */
+  color: rgb(180, 180, 180);
+  font-size: 45px;
   }
 
 
 
-.member-show-right{
-  display: inline-block;
-  vertical-align: middle;
-  margin:30px 0px;
-  margin-left:40px;
+
+.member-show-image{
+  height:80px;
+  width:80px;
+  border-radius: 50%;
+}
+.member-show-bottom{
+  margin:20px auto;
+  color: rgb(180, 180, 180);
+  width:50%;
 }
 .member-show-sns{
   margin-top:20px;
 }
 
+
 .audio-show-image{
-  width:50%;
+  width:95%;
   height:auto;
 }
 .audio-control{
@@ -314,6 +324,14 @@ a:link,a:visited,a:hover,a:active{
   width:100%;
 }
 .audio-show-title{
-  font-size: 1.5rem;
+  margin-top:10px;
+  display: block;
+  font-size: 1.3rem;
+  color: rgb(180, 180, 180);
 }
-
+.audio-show-name{
+  display: block;
+  font-size: 1.3rem;
+  color: rgb(180, 180, 180);
+  margin-bottom:25px;
+}

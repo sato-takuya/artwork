@@ -4,9 +4,9 @@
 
 <div class='artworks col-md-7 col-md-offset-1'>
 
+
 <h2 class='text-left'>Audio</h2>
 <br>
-
 <div class='row'>
   <% @audios.each do |audio| %>
     <a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.audio_public_uid%>">
@@ -20,18 +20,26 @@
     <div id="<%=audio.audio_public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
     <div class="modal__content col-12 col-md-3">
-      <a class="playBtn"><%= image_tag audio.audio_image,class:'audio-show-image' %><i class="select far fa-play-circle" ></i></a>
+      <%= image_tag audio.audio_image,class:'audio-show-image' %>
+      <span class='audio-show-title'><%= audio.audio_title %></span>
+      <span class='audio-show-name'><%= audio.user.name %></span>
 
-      <br>
+      <a class="playBtn"><i class="select far fa-play-circle" ></i></a>
       <%= audio_tag "glowing.mp3",autoplay: false ,controls: false,class:'audio-control',id:'audio1' %>
 
-      <p><span class='audio-show-title'><%= audio.audio_title %></span></p>
-      <a class="audio-modal-close" href="">閉じる</a>
+
+      <br>
+      <!--
+      <br><a class="audio-modal-close" href="">閉じる</a>
+      -->
     </div>
-    </div><!--modal__inner-->
+    </div>
     </div>
   <%end%>
 </div>
+
+
+
 
 <h2 class='text-left'>Video</h2>
 <br>
@@ -42,6 +50,7 @@
 <a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.video_public_uid%>">
 <%= image_tag embed_image('https://www.youtube.com/watch?v=u-Nlxx7xbFs'),class:'video-image' %>
 <div class='video-title'>
+<span><%= video.video_title %></span><br>
 <%= video.user.name %>
 </div>
 </a>
@@ -49,7 +58,7 @@
 <div class='row'>
     <div id="<%=video.video_public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
-    <div class="video_modal__content col-12 col-md-6">
+    <div class="video_modal__content col-12 col-md-5">
     <div class="iframe-content">
       <%= movie(embed_link("https://www.youtube.com/watch?v=u-Nlxx7xbFs")) %>
       </div>

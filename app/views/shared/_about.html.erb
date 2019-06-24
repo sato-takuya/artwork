@@ -18,7 +18,7 @@
                       <div class='row'>
                             <div id="<%=member.id%>" class="modal js-modal">
                               <div class="modal__bg js-modal-close"></div>
-                              <div class="modal__content col-md-4">
+                              <div class="modal__content col-md-3">
                                 <%= image_tag member.member_image,class:'member-show-image' %>
                                 <div class='member-show-bottom'>
                                 <p><span><%= member.member_name %></span></p>
@@ -27,6 +27,7 @@
                                       <%= image_tag 'twitter.png',class:'icon-sns' %>
                                       <%= image_tag 'instagram.png',class:'icon-sns' %>
                                       </div>
+                                      <br>
                                 <a class="js-modal-close" href="">閉じる</a>
                               </div>
                               </div>

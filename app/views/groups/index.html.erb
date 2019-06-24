@@ -1,5 +1,32 @@
 
-<%=render "shared/basic"%>
+<div class='container-fulid'>
+<div class='row'>
+
+<div class='col-md-2'></div>
+
+
+<div class='group-page col-md-7 col-md-offset-1'>
+<%#<%= image_tag 'icon.png',class: 'top-icon' %>
+
+<div class='basic-content'>
+<div class='top-image-box'>
+<%= image_tag 'band.png',class: 'top-image' %>
+</div>
+
+  <%= image_tag @group.image,class: 'basic-icon' %>
+  <div class='basic-text'>
+    <p><%= @group.name %></p>
+    <%#<span><%= @group.short_prof %>
+  </div>
+
+</div>
+</div>
+<div class='col-md-2'></div>
+</div>
+</div>
+
+
+
 
 <ul class="tab clearfix">
   <li class="active far fa-copy"></li>

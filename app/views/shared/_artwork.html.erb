@@ -48,7 +48,7 @@
 <% @videos.each do |video| %>
 
 <a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.video_public_uid%>">
-<%= image_tag embed_image('https://www.youtube.com/watch?v=u-Nlxx7xbFs'),class:'video-image' %>
+<%= image_tag embed_image('https://www.youtube.com/watch?v=SX_ViT4Ra7k'),class:'video-image' %>
 <div class='video-title'>
 <span><%= video.video_title %></span><br>
 <%= video.user.name %>
@@ -60,7 +60,7 @@
     <div class="modal__bg audio-modal-close"></div>
     <div class="video_modal__content col-12 col-md-5">
     <div class="iframe-content">
-      <%= movie(embed_link("https://www.youtube.com/watch?v=u-Nlxx7xbFs")) %>
+      <%= movie(embed_link("https://www.youtube.com/watch?v=SX_ViT4Ra7k")) %>
       </div>
     </div>
     </div><!--modal__inner-->

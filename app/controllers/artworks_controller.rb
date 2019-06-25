@@ -1,4 +1,4 @@
 class ArtworksController < ApplicationController
-  def show
+  def index
   end
 end

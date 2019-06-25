@@ -9,7 +9,7 @@
 <div class='header-menu'>
 <%  if current_user %>
   <%= link_to(image_tag(current_user.image,class: 'header-icon'), "/#{current_user.nickname}") %>
-  <%= link_to 'アートワークを追加', "/audios/#{current_user.nickname}",class:'btn btn-primary btn-lg' %>
+  <%= link_to 'アートワークを追加', "/artworks",class:'btn btn-primary btn-lg' %>
 <%end%>
 </div>
 

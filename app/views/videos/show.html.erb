@@ -1,0 +1,11 @@
+<p>show(video一覧)</p>
+
+<%= link_to '新規作成', new_video_path %>
+
+<%=@user.name%>
+
+<% @videos.each do |video| %>
+<%= video.video_title %>
+<%= link_to '編集', edit_video_path(video) %>
+<%= link_to '削除', video_path(video),method: :delete,data:{confirm: "削除しますか？"} %>
+<%end%>

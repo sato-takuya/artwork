@@ -5,7 +5,7 @@
 <div class='artworks col-md-7 col-md-offset-1'>
 
 
-<h2 class='text-left'>Audio</h2>
+<h2 class='text-left title'>Audio</h2>
 <br>
 <div class='row'>
   <% @audios.each do |audio| %>
@@ -57,14 +57,14 @@
 
 
 
-<h2 class='text-left'>Video</h2>
+<h2 class='text-left title'>Video</h2>
 <br>
 
 <div class='row'>
 <% @videos.each do |video| %>
 
-<a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.video_public_uid%>">
-<%= image_tag embed_image('https://www.youtube.com/watch?v=SX_ViT4Ra7k'),class:'video-image' %>
+<a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.public_uid%>">
+<%= image_tag embed_image(video.video_url),class:'video-image' %>
 <div class='video-title'>
 <span><%= video.video_title %></span><br>
 <%= video.user.name %>
@@ -72,11 +72,11 @@
 </a>
 
 <div class='row'>
-    <div id="<%=video.video_public_uid%>" class="modal audio-modal">
+    <div id="<%=video.public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
     <div class="video_modal__content col-12 col-md-5">
     <div class="iframe-content">
-      <%= movie(embed_link("https://www.youtube.com/watch?v=SX_ViT4Ra7k")) %>
+      <%= movie(embed_link(video.video_url)) %>
       </div>
     </div>
     </div><!--modal__inner-->

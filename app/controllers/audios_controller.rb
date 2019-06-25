@@ -38,6 +38,9 @@ class AudiosController < ApplicationController
   end
 
   def destroy
+    @audio = Audio.find_by(public_uid: params[:id])
+    @audio.destroy
+    redirect_to "/",notice:"削除しました"
   end
 
   private

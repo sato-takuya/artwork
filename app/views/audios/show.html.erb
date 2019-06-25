@@ -7,5 +7,5 @@
 <% @audios.each do |audio| %>
 <%= audio.audio_title %>
 <%= link_to '編集', edit_audio_path(audio) %>
-<%= link_to '削除', audio_path(audio),methid: :delete,data:{confirm: "削除しますか？"} %>
+<%= link_to '削除', audio_path(audio),method: :delete,data:{confirm: "削除しますか？"} %>
 <%end%>

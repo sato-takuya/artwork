@@ -9,18 +9,34 @@
 <br>
 <div class='row'>
   <% @audios.each do |audio| %>
-    <a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.audio_public_uid%>">
-      <%= image_tag audio.audio_image,class:'audio-image' %>
+    <a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.public_uid%>">
+
+    <%if audio.audio_image.nil? %>
+    <% audio.audio_image="noimage.png" %>
+    <%= image_tag audio.audio_image,class:'audio-show-image' %>
+    <%else%>
+    <%= image_tag audio.audio_image,class:'audio-image' %>
+    <%end%>
+
+
       <div class='audio-title'>
       <span><%= audio.audio_title %></span><br>
       <%= audio.user.name %>
       </div>
     </a>
     <div class='row'>
-    <div id="<%=audio.audio_public_uid%>" class="modal audio-modal">
+    <div id="<%=audio.public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
     <div class="modal__content col-9 col-md-3">
+
+    <%if audio.audio_image.nil? %>
+    <% audio.audio_image="noimage.png" %>
+    <%= image_tag audio.audio_image,class:'audio-show-image' %>
+    <%else%>
       <%= image_tag audio.audio_image,class:'audio-show-image' %>
+    <%end%>
+
+
       <span class='audio-show-title'><%= audio.audio_title %></span>
       <span class='audio-show-name'><%= audio.user.name %></span>
 

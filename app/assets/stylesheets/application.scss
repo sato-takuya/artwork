@@ -257,6 +257,15 @@ a:link,a:visited,a:hover,a:active{
     min-height:55%;
     position: relative;
 }
+.member_modal__content{
+    background: rgb(36, 36, 36);
+    left: 50%;
+    padding: 20px 0px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    min-height:55%;
+}
 .video_modal__content{
   left: 50%;
   top: 50%;

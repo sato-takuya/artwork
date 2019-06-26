@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get '/:id' ,to: 'groups#index', param: :nickname
   resources :audios,:except => :show
   resources :videos,:except => :show
+  resources :members,:except => :show
   get 'audios/:id',to:'audios#show', param: :nickname
   get 'videos/:id',to:'videos#show', param: :nickname
+  get 'members/:id',to:'members#show', param: :nickname
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 end

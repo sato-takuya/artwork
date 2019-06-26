@@ -1,0 +1,8 @@
+<p>member-show</p>
+
+<%= link_to '新規作成', new_member_path %>
+<%@members.each do |member|%>
+<%=member.member_name%>
+<%= link_to '編集', edit_member_path(member) %>
+<%= link_to '削除', member_path(member),method: :delete,data:{confirm: "削除しますか？"} %>
+<%end%>

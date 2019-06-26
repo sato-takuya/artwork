@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_135853) do
+ActiveRecord::Schema.define(version: 2019_06_26_043529) do
 
   create_table "audios", force: :cascade do |t|
     t.string "source"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_06_25_135853) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "public_uid"
   end
 
   create_table "users", force: :cascade do |t|

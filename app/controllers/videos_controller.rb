@@ -34,7 +34,6 @@ class VideosController < ApplicationController
     else
       render "new"
     end
-
   end
 
   def destroy

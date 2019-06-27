@@ -1,1 +1,5 @@
-<p>trends#index</p>
+
+<p>トップページ</p>
+<% @users.each do |user| %>
+<%= link_to image_tag(user.image,class:'member-show-image'), "/#{user.nickname}" %>
+<%end%>

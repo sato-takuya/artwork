@@ -9,7 +9,9 @@
 
 <div class='basic-content'>
 <div class='top-image-box'>
-<%= image_tag 'band.png',class: 'top-image' %>
+<%if current_user.top_image.attached?%>
+  <%= image_tag current_user.top_image,class: 'top-image' %>
+<%end%>
 </div>
 
   <%= image_tag current_user.image,class: 'basic-icon' %>

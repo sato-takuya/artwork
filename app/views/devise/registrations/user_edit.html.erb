@@ -1,0 +1,48 @@
+<%= form_for current_user, url: {action: 'user_update'} do |f| %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <p>名前</p>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <p>URL</p>
+    <span>art-wk.herokuapp</span><%= f.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <p>プロフィール画像</p>
+    <%= f.file_field :new_icon_image %>
+  </div>
+
+  <div class="field">
+    <p>カバー画像</p>
+    <%= f.file_field :new_top_image %>
+  </div>
+
+  <div class="field">
+    <p>公式サイトURL</p>
+    <%= f.text_field :official_url %>
+  </div>
+
+  <div class="field">
+    <p>ツイッターID</p>
+    <%= f.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <p>インスタグラムID</p>
+    <%= f.text_field :instagram_id %>
+  </div>
+
+<%= f.submit "プロフィールを更新",:class=>"btn btn-primary btn-lg my-5" %>
+
+<% end %>
+
+
+

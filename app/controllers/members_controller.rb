@@ -14,7 +14,6 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(members_params)
     @member.user_id = current_user.id
-    @member.member_image = 'icon.png'
     if @member.save
       redirect_to "/",notice: "保存しました"
     else
@@ -30,7 +29,6 @@ class MembersController < ApplicationController
     @member = Member.find_by(public_uid: params[:id])
     @member.assign_attributes(members_params)
     @member.user_id = current_user.id
-    @member.member_image = 'icon.png'
     if @member.save
       redirect_to "/",notice: "保存しました"
     else
@@ -46,6 +44,6 @@ class MembersController < ApplicationController
 
   private
   def members_params
-    params.require(:member).permit(:member_name,:part,:member_info,:member_image)
+    params.require(:member).permit(:member_name,:part,:member_info,:new_member_image)
   end
 end

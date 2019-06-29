@@ -10,10 +10,16 @@
 
 <div class='basic-content'>
 <div class='top-image-box'>
-<%= image_tag 'band.png',class: 'top-image' %>
+<%if current_user.top_image.attached?%>
+  <%= image_tag current_user.top_image,class: 'top-image' %>
+<%end%>
 </div>
 
-  <%= image_tag @group.image,class: 'basic-icon' %>
+<%if current_user.icon_image.attached?%>
+  <%= image_tag @group.icon_image,class: 'basic-icon' %>
+<%else%>
+<%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
+<%end%>
   <div class='basic-text'>
     <p><%= @group.name %></p>
     <%#<span><%= @group.short_prof %>

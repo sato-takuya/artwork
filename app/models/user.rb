@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  include ActiveHash::Associations
+  ###include ActiveHash::Associations
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,6 +8,25 @@ class User < ApplicationRecord
   has_many :audios
   has_many :members
   has_many :videos
+
+  has_one_attached :top_image
+  has_one_attached :icon_image
+  attribute :new_top_image
+  attribute :new_icon_image
+
+  before_save do
+    if new_top_image
+      self.top_image = new_top_image
+    end
+  end
+
+  before_save do
+    if new_icon_image
+      self.icon_image = new_icon_image
+    end
+  end
+
+
 
   def to_param
     nickname

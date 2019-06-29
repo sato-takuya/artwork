@@ -8,6 +8,50 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
+  <div class="field">
+    <p>名前</p>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <p>URL</p>
+    <span>art-wk.herokuapp</span><%= f.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <p>プロフィール画像</p>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <p>カバー画像</p>
+    <%= f.file_field :top_image %>
+  </div>
+
+  <div class="field">
+    <p>公式サイトURL</p>
+    <%= f.text_field :official_url %>
+  </div>
+
+  <div class="field">
+    <p>ツイッターID</p>
+    <%= f.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <p>インスタグラムID</p>
+    <%= f.text_field :instagram_id %>
+  </div>
+
+
+<br>
+
+
+
+
+
+
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
@@ -36,8 +80,7 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
+<h3>Cancel my account(アカウント削除)</h3>
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>

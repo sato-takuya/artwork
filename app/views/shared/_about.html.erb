@@ -7,7 +7,9 @@
             <div class="row">
                   <% @members.each do |member| %>
                       <a class="member col-12 col-md-6 js-modal-open" href="" data-target="<%=member.id%>">
+                      <%if member.member_image.attached?%>
                         <%= image_tag member.member_image,class:'member-image' %>
+                      <%end%>
                         <div class='member-right'>
                         <div class='member-text'>
                         <span><%= member.member_name %></span>
@@ -19,7 +21,9 @@
                             <div id="<%=member.id%>" class="modal js-modal">
                               <div class="modal__bg js-modal-close"></div>
                               <div class="member_modal__content col-9 col-md-3">
-                                <%= image_tag member.member_image,class:'member-show-image' %>
+                                <%if member.member_image.attached?%>
+                                    <%= image_tag member.member_image,class:'member-show-image' %>
+                                <%end%>
                                 <div class='member-show-bottom'>
                                 <p><span><%= member.member_name %></span></p>
                                 <p class='member-info'><span><%= member.member_info %></span></p>
@@ -35,6 +39,7 @@
                       </div>
                   <%end%>
             </div><!--rowにかかる-->
+            <%= link_to 'メンバーを追加・編集', "#",class:"btn btn-lg btn-primary" %>
           </div>
     <div class='col-md-2'></div>
   </div>

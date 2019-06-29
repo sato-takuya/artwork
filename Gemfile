@@ -49,7 +49,7 @@ gem 'google-analytics-rails'
 gem 'font-awesome-sass'
 
 gem 'active_hash'
-
+gem 'mini_magick'
 group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

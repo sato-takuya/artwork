@@ -1,3 +1,4 @@
 <%= link_to '楽曲', "/audios/#{current_user.nickname}",class:"btn btn-lg btn-primary" %>
 <%= link_to '動画', "/videos/#{current_user.nickname}",class:"btn btn-lg btn-primary" %>
 <%= link_to 'メンバーを追加・編集', "/members/#{current_user.nickname}",class:"btn btn-lg btn-primary" %>
+<%= link_to 'プロフィール編集', user_edit_path,class:"btn btn-lg btn-primary" %>

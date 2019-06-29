@@ -16,7 +16,7 @@
 </div>
 
 <%if current_user.icon_image.attached?%>
-  <%= image_tag @group.icon_image,class: 'basic-icon' %>
+  <%= image_tag current_user.icon_image,class: 'basic-icon' %>
 <%else%>
 <%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
 <%end%>

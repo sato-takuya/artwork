@@ -29,6 +29,8 @@ class MembersController < ApplicationController
     @member = Member.find_by(public_uid: params[:id])
     @member.assign_attributes(members_params)
     @member.user_id = current_user.id
+
+
     if @member.save
       redirect_to "/",notice: "保存しました"
     else

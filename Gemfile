@@ -51,6 +51,7 @@ gem 'font-awesome-sass'
 gem 'active_hash'
 gem 'mini_magick'
 gem "aws-sdk-s3", require: false
+gem 'rmagick'
 
 group :development, :test do
   gem 'sqlite3'

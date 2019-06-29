@@ -11,6 +11,15 @@
 
 <br>
 <span>画像</span>
-<%= form.file_field :new_member_image %>
+<%= form.file_field :new_member_image,id:"profile-image" %>
+
+
+<img id="select-image" style="max-width:300px;">
+<input type="hidden" id="upload-image-x" name="ImageX" value="0"/>
+<input type="hidden" id="upload-image-y" name="ImageY" value="0"/>
+<!--
+<input type="hidden" id="upload-image-w" name="profileImageW" value="0"/>
+<input type="hidden" id="upload-image-h" name="profileImageH" value="0"/>
+-->
 
 <%= form.submit %>

@@ -1,9 +1,12 @@
 
 <p>トップページ</p>
-<% @users.each do |user| %>
-<%if user.icon_image.attached?%>
-<%= link_to image_tag(user.icon_image,class:'member-show-image'), "/#{user.nickname}" %>
+<%if @user.nil?%>
 <%else%>
-<%= link_to image_tag("noimage.png",class:'member-show-image'), "/#{user.nickname}" %>
+<% @users.each do |user| %>
+  <%if user.icon_image.attached?%>
+  <%= link_to image_tag(user.icon_image,class:'member-show-image'), "/#{user.nickname}" %>
+  <%else%>
+  <%= link_to image_tag("noimage.png",class:'member-show-image'), "/#{user.nickname}" %>
+  <%end%>
 <%end%>
 <%end%>

@@ -14,6 +14,26 @@ class User < ApplicationRecord
   attribute :new_top_image
   attribute :new_icon_image
 
+  validate if: :new_top_image do
+    if new_top_image.respond_to?(:content_type)
+      unless new_top_image.content_type.in?(ALLOWED_CONTENT_TYPES)
+        errors.add(:new_top_image,"エラー")
+      end
+    else
+      errors.add(:new_top_image,:invalid)
+    end
+  end
+
+  validate if: :new_icon_image do
+    if new_icon_image.respond_to?(:content_type)
+      unless new_icon_image.content_type.in?(ALLOWED_CONTENT_TYPES)
+        errors.add(:new_icon_image,:invalid_image_type)
+      end
+    else
+      errors.add(:new_icon_image,:invalid)
+    end
+  end
+
   before_save do
     if new_top_image
       self.top_image = new_top_image

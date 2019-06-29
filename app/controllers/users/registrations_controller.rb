@@ -25,7 +25,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if current_user.save
 	  redirect_to "/#{current_user.nickname}", notice: 'プロフィールを更新しました'
     else
-      render "profile_edit"
+      #ファイル形式が間違っている場合のバリデーションが効いていないので、一旦ここで完全に処理を止める
     end
     #super
   end

@@ -7,12 +7,13 @@
 
 <%= link_to(image_tag('sound.png',class: 'header-logo'), "/") %>
 <div class='header-menu'>
-<%  if current_user %>
-<%if current_user.icon_image.attached?%>
-  <%= link_to(image_tag(current_user.icon_image,class: 'header-icon'), "/#{current_user.nickname}") %>
-<%else%>
-<%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
-<%end%>
+<% if user_signed_in? %>
+
+  <%if current_user.icon_image.attached?%>
+    <%= link_to(image_tag(current_user.icon_image,class: 'header-icon'), "/#{current_user.nickname}") %>
+  <%else%>
+    <%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
+  <%end%>
   <%= link_to 'アートワークを追加', "/artworks",class:'btn btn-primary btn-lg' %>
 <%end%>
 </div>

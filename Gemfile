@@ -54,6 +54,7 @@ gem "aws-sdk-s3", require: false
 gem 'rmagick'
 gem 'carrierwave'
 gem 'audiojs-rails'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'sqlite3'

@@ -30,7 +30,6 @@ class MembersController < ApplicationController
     @member.assign_attributes(members_params)
     @member.user_id = current_user.id
 
-
     if @member.save
       redirect_to "/",notice: "保存しました"
     else

@@ -97,15 +97,7 @@ $(function () {
   });
 });
 
-
-
-
-
-
-
-
-
-
+/*
 $(function () {
   // 初期設定
   var options =
@@ -114,8 +106,8 @@ $(function () {
     viewMode: 1,
     crop: function (e) {
       cropData = $('#select-image').cropper("getData");
-      $("#upload-image-x").val(Math.floor(cropData.x));
-      $("#upload-image-y").val(Math.floor(cropData.y));
+      $("#upload-image-x").val(Math.floor(cropData.width/2));
+      $("#upload-image-y").val(Math.floor(cropData.height/2));
       $("#upload-image-w").val(Math.floor(cropData.width));
       $("#upload-image-h").val(Math.floor(cropData.height));
     },
@@ -132,3 +124,19 @@ $(function () {
     $('#select-image').cropper('replace', URL.createObjectURL(this.files[0]));
   });
 });
+*/
+
+$(document).ready(function () {
+  var audioSection = $('section#song');
+  $('a.play_song').click(function () {
+
+    var audio = $('<audio>', {
+      controls: 'controls'
+    });
+
+    var url = $(this).attr('href');
+    $('<source>').attr('src', url).appendTo(audio);
+    audioSection.html(audio);
+    return false;
+  });
+}); 

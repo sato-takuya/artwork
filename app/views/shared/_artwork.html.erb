@@ -33,17 +33,16 @@
     <%else%>
     <%= image_tag "noimage.png",class:'audio-show-image' %>
     <%end%>
-
-
       <span class='audio-show-title'><%= audio.audio_title %></span>
       <span class='audio-show-name'><%= audio.user.name %></span>
+
 
       <a class="playBtn"><i class="select far fa-play-circle" ></i></a>
 
       <h2>Listen to Song</h2>
       <section id="song">
       </section>
-      <td><%= link_to "HTML5 Audio", audio.audio_file, :class => "play_song" %></td>
+      <a><%= link_to "", audio.audio_file, :class => "play_song select far fa-play-circle" %></a>
 
       <br>
       <!--

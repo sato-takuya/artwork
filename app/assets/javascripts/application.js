@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require audiojs
 //= require activestorage
 //= require_tree .
 
@@ -83,19 +84,28 @@ $(function () {
 });
 
 
+
 $(function () {
   $('.playBtn').click(function () {
-    if ($('#audio1')[0].paused) {
-      $('#audio1')[0].play();
+    if ($('#audio').paused) {
+      $('#audio')[0].play();
       $('.select').removeClass("far fa-play-circle");//playを消す
       $('.select').addClass("far fa-stop-circle");//stopを加える
     } else {
-      $('#audio1')[0].pause();
+      $('#audio')[0].pause();
       $('.select').removeClass("far fa-stop-circle");//stopを消す
+      $('#audio')[0].currentTime = 0;
       $('.select').addClass("far fa-play-circle");//playを加える
     }
   });
 });
+
+
+audiojs.events.ready(function () {
+  var as = audiojs.createAll();
+});
+
+
 
 /*
 $(function () {
@@ -125,21 +135,3 @@ $(function () {
   });
 });
 */
-
-
-
-$(document).ready(function () {
-
-  var audioSection = $('section#song');
-  $('a.play_song').click(function () {//play_songをクリックしたとき
-    var audio = $('<audio>', {
-      controls: 'controls',
-      controlslist: "nodownload"
-    });
-
-    var url = $(this).attr('href');
-    $('<source>').attr('src', url).appendTo(audio);
-    audioSection.html(audio);
-    return false;
-  });
-});

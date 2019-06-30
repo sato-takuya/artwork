@@ -36,15 +36,17 @@
     <%else%>
     <%= image_tag "noimage.png",class:'audio-show-image' %>
     <%end%>
+    <%= audio_tag  audio.audio_file,autoplay: false ,controls: false,class:'audio-control',preload:"auto" %>
       <span class='audio-show-title'><%= audio.audio_title %></span>
       <span class='audio-show-name'><%= audio.user.name %></span>
-    <section id="song">
-    </section>
-    <a><%= link_to "再生", audio.audio_file, :class => "play_song"%></a>
+
+
 
 <!--
- far fa-play-circle
+    <a class="playBtn"><i class="select far fa-play-circle" ></i></a>
+    <%= audio_tag  audio.audio_file,autoplay: false ,controls: false,class:'audio-control',id:"audio" %>
 -->
+
 
 
     </div>

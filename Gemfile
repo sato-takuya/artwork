@@ -52,6 +52,8 @@ gem 'active_hash'
 gem 'mini_magick'
 gem "aws-sdk-s3", require: false
 gem 'rmagick'
+gem 'carrierwave'
+gem 'audiojs-rails'
 
 group :development, :test do
   gem 'sqlite3'

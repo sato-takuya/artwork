@@ -1,11 +1,10 @@
 class Audio < ApplicationRecord
   belongs_to :user, optional: true
+  mount_uploader :audio_file, AudiofileUploader
   generate_public_uid
 
   has_one_attached :audio_image
-  has_one_attached :audio_file
   attribute :new_audio_image
-  attribute :new_audio_file
 
   validate if: :new_audio_image do
     if new_audio_image.respond_to?(:content_type)
@@ -23,11 +22,6 @@ class Audio < ApplicationRecord
     end
   end
 
-  before_save do
-    if new_audio_file
-      self.audio_file = new_audio_file
-    end
-  end
 
   def to_param
     public_uid

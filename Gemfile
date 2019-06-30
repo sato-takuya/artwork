@@ -55,6 +55,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'audiojs-rails'
 gem 'fog'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'sqlite3'

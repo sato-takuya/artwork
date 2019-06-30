@@ -523,6 +523,7 @@ DEPENDENCIES
   devise-i18n-views
   dotenv-rails
   fog
+  fog-aws
   font-awesome-sass
   google-analytics-rails
   jbuilder (~> 2.5)

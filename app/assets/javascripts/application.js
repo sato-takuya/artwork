@@ -126,15 +126,16 @@ $(function () {
 });
 */
 
+
+
 $(document).ready(function () {
+
   var audioSection = $('section#song');
-  $('a.play_song').click(function () {
-
-
+  $('a.play_song').click(function () {//play_songをクリックしたとき
     var audio = $('<audio>', {
-      controls: 'controls'
+      controls: 'controls',
+      controlslist: "nodownload"
     });
-
 
     var url = $(this).attr('href');
     $('<source>').attr('src', url).appendTo(audio);

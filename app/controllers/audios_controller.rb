@@ -45,6 +45,6 @@ class AudiosController < ApplicationController
 
   private
   def audios_params
-    params.require(:audio).permit(:audio_title,:audio_file,:audio_lyrics,:new_audio_image)
+    params.require(:audio).permit(:audio_title,:file,:audio_lyrics,:new_audio_image)
   end
 end

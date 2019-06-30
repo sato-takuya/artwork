@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_29_091605) do
+ActiveRecord::Schema.define(version: 2019_06_30_130410) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_06_29_091605) do
   end
 
   create_table "audios", force: :cascade do |t|
-    t.string "audio_file"
     t.string "audio_title"
     t.string "audio_image"
     t.text "audio_lyrics"
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_06_29_091605) do
     t.string "public_uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "file"
   end
 
   create_table "groups", force: :cascade do |t|

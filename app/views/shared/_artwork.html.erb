@@ -36,7 +36,7 @@
     <%else%>
     <%= image_tag "noimage.png",class:'audio-show-image' %>
     <%end%>
-    <%= audio_tag  audio.file,autoplay: false ,controls: false,class:'audio-control',preload:"auto" %>
+    <%= audio_tag  audio.audio_file,preload:"auto" %>
       <span class='audio-show-title'><%= audio.audio_title %></span>
       <span class='audio-show-name'><%= audio.user.name %></span>
 

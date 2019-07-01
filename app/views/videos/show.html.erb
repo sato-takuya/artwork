@@ -1,11 +1,35 @@
-<p>show(video一覧)</p>
+<div class='container-fuild'>
+<div class='row'>
+<div class='col-md-3'></div>
 
-<%= link_to '新規作成', new_video_path %>
+<div class='col-md-6'><!--上側の枠-->
+<div class="iframe-content">
+      <%= movie(embed_link(@video.video_url)) %>
+</div>
+<div class="video-show-title">
+<p><%= @video.video_title %></p>
+</div>
+<br>
+<br>
+<div class="video-show-name">
+<p><%= @video.user.name %></p>
+</div>
+<br>
+<br>
+<div class="video-show-lyrics">
+<%= simple_format(@video.video_lyrics) %>
+<p><%=  %></p>
+</div>
 
-<%=@user.name%>
-
-<% @videos.each do |video| %>
-<%= video.video_title %>
-<%= link_to '編集', edit_video_path(video) %>
-<%= link_to '削除', video_path(video),method: :delete,data:{confirm: "削除しますか？"} %>
+<div class='video-show-under'><!--下-->
+<% @video_all.each do |video|%>
+<%= link_to(video_path(video), class: '') do %>
+  <%= image_tag embed_image(video.video_url),class:'relation' %>
 <%end%>
+<%end%>
+</div><!--下側-->
+</div><!--枠END-->
+
+<div class='col-md-2'></div>
+</div>
+</div>

@@ -1,10 +1,15 @@
 class AudiosController < ApplicationController
   def index
+    @user = User.find_by(nickname: params[:id])
+    @audios = @user.audios
   end
 
   def show
-    @user = User.find_by(nickname: params[:id])
-    @audios = @user.audios
+    @audio = Audio.find_by(public_uid: params[:public_uid])
+    #user-nickname
+    user_id = @audio.user.id
+    #nicknameからaudio_all探す
+    @audio_all = Audio.where(user_id: user_id)
   end
 
   def new
@@ -22,11 +27,11 @@ class AudiosController < ApplicationController
   end
 
   def edit
-    @audio = Audio.find_by(public_uid: params[:id])
+    @audio = Audio.find_by(public_uid: params[:public_uid])
   end
 
   def update
-    @audio = Audio.find_by(public_uid: params[:id])
+    @audio = Audio.find_by(public_uid: params[:public_uid])
     @audio.assign_attributes(audios_params)
     @audio.user_id = current_user.id
     if @audio.save
@@ -38,7 +43,7 @@ class AudiosController < ApplicationController
   end
 
   def destroy
-    @audio = Audio.find_by(public_uid: params[:id])
+    @audio = Audio.find_by(public_uid: params[:public_uid])
     @audio.destroy
     redirect_to "/",notice:"削除しました"
   end

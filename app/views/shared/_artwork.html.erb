@@ -9,13 +9,13 @@
 <br>
 <div class='row'>
   <% @audios.each do |audio| %>
-    <a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.public_uid%>">
-
+  <%= link_to(audio_path(audio), class: 'audio col-6 col-md-3') do %>
+    <!--<a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.public_uid%>">-->
 
     <%if audio.audio_image.attached?%>
-    <%= image_tag audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
+    <%= image_tag audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-image' %>
     <%else%>
-    <%= image_tag "noimage.png",class:'audio-show-image' %>
+    <%= image_tag "noimage.png",class:'audio-image' %>
     <%end%>
 
 
@@ -24,32 +24,26 @@
       <%= audio.user.name %>
       </div>
 
-    </a>
-
-    <div class='row'>
-    <div id="<%=audio.public_uid%>" class="modal audio-modal">
-    <div class="modal__bg audio-modal-close"></div>
-    <div class="modal__content col-9 col-md-3">
-
-    <%if audio.audio_image.attached?%>
-    <%= image_tag audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
-    <%else%>
-    <%= image_tag "noimage.png",class:'audio-show-image' %>
+    <!--</a>-->
     <%end%>
-    <%= audio_tag  audio.audio_file,preload:"auto" %>
-      <span class='audio-show-title'><%= audio.audio_title %></span>
-      <span class='audio-show-name'><%= audio.user.name %></span>
 
-
-
-<!--
--->
-
-
-
+    <!--モーダルウィンドウ
+    <div class='row'>
+      <div id="<%=audio.public_uid%>" class="modal audio-modal">
+      <div class="modal__bg audio-modal-close"></div>
+        <div class="modal__content col-9 col-md-3">
+          <%if audio.audio_image.attached?%>
+          <%= image_tag audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
+          <%else%>
+          <%= image_tag "noimage.png",class:'audio-show-image' %>
+          <%end%>
+        <%= audio_tag  audio.audio_file,preload:"auto" %>
+          <span class='audio-show-title'><%= audio.audio_title %></span>
+          <span class='audio-show-name'><%= audio.user.name %></span>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
+    -->
   <%end%>
 </div>
 
@@ -62,14 +56,17 @@
 <div class='row'>
 <% @videos.each do |video| %>
 
-<a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.public_uid%>">
-<%= image_tag embed_image(video.video_url),class:'video-image' %>
+<%= link_to(video_path(video), class: 'video col-6 col-md-3') do %>
+<!--<a class="video col-6 col-md-3 audio-modal-open" href="" data-target="<%=video.public_uid%>">-->
+<%= image_tag embed_image(video.video_url),class:'video-image col-md-12' %>
 <div class='video-title'>
 <span><%= video.video_title %></span><br>
 <%= video.user.name %>
 </div>
-</a>
+<!--</a>-->
+<%end%>
 
+<!--モーダルウィンドウ
 <div class='row'>
     <div id="<%=video.public_uid%>" class="modal audio-modal">
     <div class="modal__bg audio-modal-close"></div>
@@ -78,9 +75,9 @@
       <%= movie(embed_link(video.video_url)) %>
       </div>
     </div>
-    </div><!--modal__inner-->
-
+    </div>
 </div>
+-->
 <% end %>
 </div>
 

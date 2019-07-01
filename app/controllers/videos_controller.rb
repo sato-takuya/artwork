@@ -1,10 +1,15 @@
 class VideosController < ApplicationController
   def index
+    @user = User.find_by(nickname: params[:id])
+    @videos = @user.videos
   end
 
   def show
-    @user = User.find_by(nickname: params[:id])
-    @videos = @user.videos
+    @video = Video.find_by(public_uid: params[:public_uid])
+    #user-nickname
+    user_id = @video.user.id
+    #nicknameからvideo_all探す
+    @video_all = Video.where(user_id: user_id)
   end
 
   def new
@@ -22,11 +27,11 @@ class VideosController < ApplicationController
   end
 
   def edit
-    @video = Video.find_by(public_uid: params[:id])
+    @video = Video.find_by(public_uid: params[:public_uid])
   end
 
   def update
-    @video = Video.find_by(public_uid: params[:id])
+    @video = Video.find_by(public_uid: params[:public_uid])
     @video.assign_attributes(videos_params)
     @video.user_id = current_user.id
     if @video.save
@@ -37,7 +42,7 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @video = Video.find_by(public_uid: params[:id])
+    @video = Video.find_by(public_uid: params[:public_uid])
     @video.destroy
     redirect_to "/",notice:"削除しました"
   end

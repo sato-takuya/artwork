@@ -14,13 +14,14 @@ module ApplicationHelper
 
   def embed_link(link)
     str = link
-    str = str.gsub!("watch?v=","embed/")
+    #str = str.gsub!("watch?v=","embed/")
   end
 
   def embed_image(link)
-    mach = link.match(/\?v=([^&]+)/)
-    mach_s = mach.to_s
-    id = mach_s.delete("?v=")
+    nomal_link = link.gsub!("embed/","watch?v=")#一旦普通のURLに戻す
+    movie_id_v= nomal_link.match(/\?v=([^&]+)/)#普通のURLから動画ID＋v=を探す
+    str = movie_id_v.to_s
+    id = str.delete("?v=")
 
     image_url = "http://img.youtube.com/vi/#{id}/mqdefault.jpg"
   end

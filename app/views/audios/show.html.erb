@@ -4,7 +4,7 @@
 
 <div class='col-md-6'><!--上側の枠-->
 
-    <%= image_tag @audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
+  <%= image_tag @audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
 <%= audio_tag  @audio.audio_file,preload:"auto" %>
 <div class="audio-show-title">
 <p><%= @audio.audio_title %></p>
@@ -12,13 +12,18 @@
 <div class="audio-show-name">
 <p><%= @audio.user.name %></p>
 </div>
-<br>
-<br>
 <div class="audio-show-lyrics">
 <%= simple_format(@audio.audio_lyrics) %>
-<p><%=  %></p>
+
+<%if user_signed_in? && @audio.user_id == current_user.id%>
+
+<%= link_to '編集', edit_audio_path(@audio) %>
+<%= link_to '削除', audio_path(@audio),method: :delete,data:{confirm: "削除しますか？"} %>
+<%end%>
+
 </div>
 
+<h3>関連楽曲</h3>
 <div class='audio-show-under'><!--下-->
 <% @audio_all.each do |audio|%>
 <%= link_to(audio_path(audio), class: '') do %>
@@ -27,6 +32,7 @@
 <%end%>
 </div><!--下側-->
 </div><!--枠END-->
+
 
 <div class='col-md-2'></div>
 </div>

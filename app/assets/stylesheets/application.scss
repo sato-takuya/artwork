@@ -43,7 +43,7 @@ a:link,a:visited,a:hover,a:active{
   overflow-x: hidden;
 }
 .main-content{
-  min-height:700px;
+  min-height:900px;
 }
 
 .title{
@@ -54,7 +54,9 @@ a:link,a:visited,a:hover,a:active{
 .header{
   padding:20px 0px;
   /*background-color: #EDF2F6;*/
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: normal, lighten, soft-light;
+
   /*background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);*/
   width:100%;
   height:80px;
@@ -200,6 +202,9 @@ a:link,a:visited,a:hover,a:active{
   border-top:1px solid rgb(189, 189, 189);
   height:60px;
 }
+.footer a{
+  color:#333;
+}
 
 
 .member{
@@ -284,6 +289,7 @@ a:link,a:visited,a:hover,a:active{
     left: 0;
     width: 100%;
     height: 100%;
+    padding:5px;
 }
 
 
@@ -332,7 +338,7 @@ a:link,a:visited,a:hover,a:active{
 
 
 /*　プレイヤー（再生バー）の高さ、幅、背景色の指定　*/
-.audiojs { height: 22px; background: #242424; width: 50%;margin:5px auto;}
+.audiojs { height: 22px; background: #242424; width: 60%;margin:5px auto;}
 
 /*　再生・停止ボタンの高さ、幅、パディングの指定　*/
 .audiojs .play-pause { width: 25px; height: 20px; padding: 0px 8px 0px 0px; }
@@ -360,16 +366,17 @@ a:link,a:visited,a:hover,a:active{
 
 
 .audio-show-image{
-  width:50%;
+  margin-top:10px;
+  width:60%;
 }
 
 .audio-show-title{
   display:block;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 .audio-show-name{
   display:block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .audio-relation{
   width:20%;
@@ -378,16 +385,23 @@ a:link,a:visited,a:hover,a:active{
 
 .video-show-title{
   display:block;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   border-bottom:1px solid #333;
   float:left;
 }
 .video-show-name{
   display:block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   float:left;
 }
 .relation{
   width:30%;
+}
+
+
+
+#img1{
+  max-width:100px;
+  max-height:100px;
 }
 

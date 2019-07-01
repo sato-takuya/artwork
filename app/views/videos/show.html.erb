@@ -18,9 +18,14 @@
 <br>
 <div class="video-show-lyrics">
 <%= simple_format(@video.video_lyrics) %>
-<p><%=  %></p>
+<%if user_signed_in? && @video.user_id == current_user.id%>
+
+<%= link_to '編集', edit_video_path(@video) %>
+<%= link_to '削除', video_path(@video),method: :delete,data:{confirm: "削除しますか？"} %>
+<%end%>
 </div>
 
+<p>関連動画</p>
 <div class='video-show-under'><!--下-->
 <% @video_all.each do |video|%>
 <%= link_to(video_path(video), class: '') do %>

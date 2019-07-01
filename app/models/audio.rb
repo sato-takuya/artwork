@@ -3,7 +3,6 @@ class Audio < ApplicationRecord
   mount_uploader :audio_file, AudiofileUploader
   generate_public_uid
 
-
   has_one_attached :audio_image
   attribute :new_audio_image
 

@@ -22,6 +22,7 @@ CarrierWave.configure do |config|
       config.fog_directory = 'art-wk'
       config.asset_host = 'https://art-wk.s3-ap-northeast-1.amazonaws.com'
 
+end
 
 # 日本語ファイル名の設定
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/

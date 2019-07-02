@@ -4,7 +4,7 @@
 
 <div class='col-md-6'><!--上側の枠-->
 
-  <%= image_tag @audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
+<%= image_tag @audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
 <%= audio_tag  @audio.audio_file,preload:"auto" %>
 <div class="audio-show-title">
 <p><%= @audio.audio_title %></p>
@@ -12,22 +12,36 @@
 <div class="audio-show-name">
 <p><%= @audio.user.name %></p>
 </div>
-<div class="audio-show-lyrics">
-<%= simple_format(@audio.audio_lyrics) %>
 
-<%if user_signed_in? && @audio.user_id == current_user.id%>
 
-<%= link_to '編集', edit_audio_path(@audio) %>
-<%= link_to '削除', audio_path(@audio),method: :delete,data:{confirm: "削除しますか？"} %>
-<%end%>
-
+<div class="hidden_box">
+    <input type="checkbox" id="label1" />
+    <label for="label1">歌詞を表示</label>
+    <div class="hidden_show">
+      <!--非表示ここから-->
+      <%= simple_format(@audio.audio_lyrics) %>
+      <!--ここまで-->
+    </div>
 </div>
 
+
+
+<div class="edit-delete col-md-6">
+<%if user_signed_in? && @audio.user_id == current_user.id%>
+<div class='fas fa-edit'><%= link_to '編集', edit_audio_path(@audio) %></div>
+<div class='fas fa-trash'><%= link_to '削除', audio_path(@audio),method: :delete,data:{confirm: "削除しますか？"} %></div>
+<%end%>
+</div><br>
+
+<br>
 <h3>関連楽曲</h3>
-<div class='audio-show-under'><!--下-->
-<% @audio_all.each do |audio|%>
-<%= link_to(audio_path(audio), class: '') do %>
-  <%= image_tag audio.audio_image.variant(combine_options:{gravity: :center}).processed,class:'audio-relation' %>
+<div class='audio-show-under row'><!--下-->
+<% @audio_all.each_with_index do |audio,i|%>
+<%= link_to(audio_path(audio), class: 'audio-relation-link-to col-4 col-md-3') do %>
+<%= image_tag audio.audio_image.variant(combine_options:{gravity: :center}).processed,class:'audio-relation' %>
+  <br><span><%= audio.audio_title %></span><br>
+  <%= audio.user.name %>
+  <%break if i == 3%>
 <%end%>
 <%end%>
 </div><!--下側-->

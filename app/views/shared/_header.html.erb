@@ -16,16 +16,14 @@
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
       <div id="nav-content">
-      <li><%= link_to 'マイページ', "/#{current_user.nickname}"%></li>
-      <li><%= link_to '設定', user_edit_path(current_user) %></li>
-      <br>
-      <li><%= link_to '楽曲新規追加', new_audio_path %></li>
-      <li><%= link_to '動画新規追加', new_video_path %></li>
-      <li><%= link_to 'メンバーを追加・編集', "/members/#{current_user.nickname}" %></li>
-      <%if user_signed_in? %>
-      <br>
-      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-      <%end%>
+      <li class="fas fa-sign-in-alt"><%= link_to ' マイページ', "/#{current_user.nickname}"%></li><br><br>
+      <li class="fas fa-cog"><%= link_to ' 設定', user_edit_path(current_user) %></li><br><br>
+      <hr>
+
+      <li><%= link_to '楽曲を追加', new_audio_path %></li><br>
+      <li><%= link_to '動画を追加', new_video_path %></li><br><br>
+      <hr>
+      <li><%= link_to 'メンバーを編集', "/members/#{current_user.nickname}" %></li>
       </div>
 </div>
   <%else%>

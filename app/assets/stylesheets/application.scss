@@ -50,7 +50,7 @@ a:link,a:visited,a:hover,a:active{
   overflow-x: hidden;
 }
 .main-content{
-  min-height:900px;
+  min-height:1000px;
 }
 
 .title{
@@ -59,14 +59,15 @@ a:link,a:visited,a:hover,a:active{
 
 
 .header{
-  padding:20px 20px 0px 20px;
+   padding:5px 0px 0px 0px;
+
   /*background-color: #EDF2F6;*/
   background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
   background-blend-mode: normal, lighten, soft-light;
 
   /*background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);*/
   width:100%;
-  height:80px;
+  height:60px;
 }
 .header-content{
   margin:0 auto;
@@ -208,6 +209,9 @@ a:link,a:visited,a:hover,a:active{
 }
 
 .footer{
+  color:rgb(58, 58, 58);
+  background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: normal, lighten, soft-light;
   border-top:1px solid rgb(189, 189, 189);
   height:auto;
   padding:30px 0px 10px 0px;
@@ -352,7 +356,7 @@ a:link,a:visited,a:hover,a:active{
 .audiojs .play-pause { width: 25px; height: 20px; padding: 0px 8px 0px 0px; }
 
 /*　再生・停止ボタンなどの p 要素　*/
-.audiojs p { width: 25px; height: 20px; margin: -3px 0px 0px -1px; }
+.audiojs p { width: 25px; height: 20px; margin: -3px 0px 0px -1px;}
 
 /*　進行状態・ロードの状態を表示する部分　*/
 .audiojs .scrubber { background: #5a5a5a; width: 150px; height: 10px; margin: 5px; }
@@ -379,17 +383,31 @@ a:link,a:visited,a:hover,a:active{
 }
 
 .audio-show-title{
-  display:block;
-  font-size: 1.7rem;
+  display:inline-block;
+  font-size: 1.8rem;
+  border-bottom:1px solid rgb(192, 192, 192);
 }
 .audio-show-name{
   display:block;
   font-size: 1.3rem;
 }
+
 .audio-relation{
-  width:20%;
+  height:100px;
+}
+.audio-relation-link-to{
+  height:auto;
+  display:inline-block;
+  margin:0 auto;
 }
 
+.audio-show-under{
+  margin-top:10px;
+  padding:10px 0px;
+}
+.edit-delete{
+  float:right;
+}
 
 .video-show-title{
   display:block;
@@ -428,8 +446,6 @@ a:link,a:visited,a:hover,a:active{
 /*アイコンのスペース*/
 #nav-open {
   display: inline-block;
-  width: 30px;
-  height: 22px;
   vertical-align: middle;
 }
 
@@ -451,7 +467,6 @@ a:link,a:visited,a:hover,a:active{
 /*中身*/
 #nav-content {
   padding-top:20px;
-  font-size:1.4rem;
   overflow: auto;
   position: fixed;
   top: 0;
@@ -464,6 +479,10 @@ a:link,a:visited,a:hover,a:active{
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(105%);/*右側OK*/
   transform: translateX(105%);/*右側OK*/
+}
+#nav-content li{
+  font-size:2rem;
+  margin-top:15px;
 }
 
 /*チェックが入ったらもろもろ表示*/
@@ -502,4 +521,62 @@ a:link,a:visited,a:hover,a:active{
 }
 .fa-youtube{
   background-color:rgb(241, 42, 42);
+}
+
+
+
+
+//audioの歌詞部分
+.hidden_box {
+    margin: 2em 0;
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    font-weight: bold;
+    border-radius: 5px;
+    cursor :pointer;
+    transition: .5s;
+}
+
+/*アイコンを表示*/
+.hidden_box label:before {
+    display: inline-block;
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-right: 5px;
+    transition: 0.2s;
+}
+
+
+/*アイコンを切り替え*/
+.hidden_box input:checked ~ label:before {
+     content: '\f00d';
+     font-family: "Font Awesome 5 Free";
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+     color: #668ad8;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
 }

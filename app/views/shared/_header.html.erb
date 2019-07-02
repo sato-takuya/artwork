@@ -21,6 +21,7 @@
       <br>
       <li><%= link_to '楽曲新規追加', new_audio_path %></li>
       <li><%= link_to '動画新規追加', new_video_path %></li>
+      <li><%= link_to 'メンバーを追加・編集', "/members/#{current_user.nickname}" %></li>
       <%if user_signed_in? %>
       <br>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
@@ -31,7 +32,7 @@
     <%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
   <%end%>
   <%else%>
-  <%= link_to "ログイン", new_user_session_path ,class:"btn btn-info btn-lg"%>
+  <%= link_to " Twitterでログイン/登録", user_twitter_omniauth_authorize_path,class: "btn btn-info btn-lg" %>
 <%end%>
 </div>
 </div>
@@ -42,4 +43,6 @@
 </div>
 
 
-<!--<%= link_to 'アートワークを追加', "/artworks",class:'btn btn-info btn-lg' %>-->
+<!--<%= link_to 'アートワークを追加', "/artworks",class:'btn btn-info btn-lg' %>
+<%= link_to "ログイン", new_user_session_path ,class:"btn btn-info btn-lg"%>
+-->

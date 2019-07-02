@@ -3,7 +3,6 @@
     <div class='col-md-2'></div>
           <div class='members-frame col-md-7 col-md-offset-1'>
           <h2 class='text-left title'>Member</h2><br>
-
             <div class="row">
                   <% @members.each do |member| %>
                       <a class="member col-12 col-md-6 js-modal-open" href="" data-target="<%=member.id%>">
@@ -39,8 +38,15 @@
                       </div>
                   <%end%>
             </div><!--rowにかかる-->
-            <%= link_to 'メンバーを追加・編集', "/members/#{current_user.nickname}",class:"btn btn-lg btn-info" %>
-          </div>
+
+            <h2 class='text-left title'>Links</h2><br>
+            <div class="row">
+            <%= link_to ' ツイッター', "https://twitter.com/#{@group.nickname}",target:"_blank",class:'links fab fa-twitter link-icon col-md-3' %>
+            <%= link_to ' インスタグラム', "https://www.instagram.com/#{@group.instagram_id}",target:"_blank",class:'links fab fa-instagram link-icon col-md-3' %>
+            <%= link_to ' 公式サイト', "#{@group.official_url}",target:"_blank",class:'links fas fa-window-maximize link-icon col-md-3' %>
+            <%= link_to ' Youtube', "#",target:"_blank",class:'links fab fa-youtube link-icon col-md-3' %>
+            </div>
+          </div><!--member-frameここまで-->
     <div class='col-md-2'></div>
-  </div>
+  </div><!--大枠のrowにかかる-->
 </div>

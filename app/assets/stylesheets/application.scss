@@ -59,7 +59,7 @@ a:link,a:visited,a:hover,a:active{
 
 
 .header{
-  padding:15px 20px;
+  padding:20px 20px 0px 20px;
   /*background-color: #EDF2F6;*/
   background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
   background-blend-mode: normal, lighten, soft-light;
@@ -209,10 +209,9 @@ a:link,a:visited,a:hover,a:active{
 
 .footer{
   border-top:1px solid rgb(189, 189, 189);
-  height:60px;
-}
-.footer a{
-  color:#333;
+  height:auto;
+  padding:30px 0px 10px 0px;
+
 }
 
 
@@ -276,7 +275,7 @@ a:link,a:visited,a:hover,a:active{
     top: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    min-height:55%;
+
 }
 .video_modal__content{
   left: 50%;
@@ -477,4 +476,30 @@ a:link,a:visited,a:hover,a:active{
   -webkit-transform: translateX(0%);
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.links{
+  color:rgb(255, 255, 255);
+  margin:10px 15px 10px 0px;
+  padding:12px 0px;
+  height:40px;
+  border-radius: 10px;
+}
+.links:hover{
+  color:rgb(255, 255, 255);
+}
+.link-icon{
+  font-size:1.5rem;
+}
+.fa-twitter{
+  background-color:#1DA1F2;
+}
+.fa-instagram{
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.fa-window-maximize{
+  background-color:#565656;
+}
+.fa-youtube{
+  background-color:rgb(241, 42, 42);
 }

@@ -14,17 +14,28 @@
 <div class="video-show-name">
 <p><%= @video.user.name %></p>
 </div>
-<br>
-<br>
-<div class="video-show-lyrics">
-<%= simple_format(@video.video_lyrics) %>
-<%if user_signed_in? && @video.user_id == current_user.id%>
 
-<%= link_to '編集', edit_video_path(@video) %>
-<%= link_to '削除', video_path(@video),method: :delete,data:{confirm: "削除しますか？"} %>
-<%end%>
+<br>
+<div class="hidden_box">
+    <input type="checkbox" id="label1" />
+    <label for="label1"><span>歌詞を表示</span></label>
+    <div class="hidden_show">
+      <!--非表示ここから-->
+      <%= simple_format(@video.video_lyrics) %>
+      <!--ここまで-->
+    </div>
 </div>
 
+
+<div class="edit-delete col-md-6">
+<%if user_signed_in? && @video.user_id == current_user.id%>
+<div class='fas fa-edit'><%= link_to '編集　', edit_video_path(@video) %></div>
+<div class='fas fa-trash'><%= link_to '削除', video_path(@video),method: :delete,data:{confirm: "削除しますか？"} %></div>
+<%end%>
+</div><br>
+
+
+<br>
 <p>関連動画</p>
 <div class='video-show-under'><!--下-->
 <% @video_all.each do |video|%>

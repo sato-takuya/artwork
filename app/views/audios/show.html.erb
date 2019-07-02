@@ -16,7 +16,7 @@
 
 <div class="hidden_box">
     <input type="checkbox" id="label1" />
-    <label for="label1">歌詞を表示</label>
+    <label for="label1"><span>歌詞を表示</span></label>
     <div class="hidden_show">
       <!--非表示ここから-->
       <%= simple_format(@audio.audio_lyrics) %>
@@ -28,7 +28,7 @@
 
 <div class="edit-delete col-md-6">
 <%if user_signed_in? && @audio.user_id == current_user.id%>
-<div class='fas fa-edit'><%= link_to '編集', edit_audio_path(@audio) %></div>
+<div class='fas fa-edit'><%= link_to '編集　', edit_audio_path(@audio) %></div>
 <div class='fas fa-trash'><%= link_to '削除', audio_path(@audio),method: :delete,data:{confirm: "削除しますか？"} %></div>
 <%end%>
 </div><br>

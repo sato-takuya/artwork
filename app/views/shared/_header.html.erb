@@ -17,13 +17,13 @@
       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
       <div id="nav-content">
       <li class="fas fa-sign-in-alt"><%= link_to ' マイページ', "/#{current_user.nickname}"%></li><br><br>
-      <li class="fas fa-cog"><%= link_to ' 設定', user_edit_path(current_user) %></li><br><br>
       <hr>
 
       <li><%= link_to '楽曲を追加', new_audio_path %></li><br>
-      <li><%= link_to '動画を追加', new_video_path %></li><br><br>
+      <li><%= link_to '動画を追加', new_video_path %></li><br>
       <hr>
-      <li><%= link_to 'メンバーを編集', "/members/#{current_user.nickname}" %></li>
+      <li><%= link_to 'メンバーを編集', "/members/#{current_user.nickname}" %></li><br>
+      <li class="fas fa-cog"><%= link_to ' 設定', user_edit_path(current_user) %></li>
       </div>
 </div>
   <%else%>

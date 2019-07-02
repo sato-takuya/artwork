@@ -3,7 +3,13 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
-    "/#{current_user.nickname}"
+    if current_user.icon_image.attached?
+      "/#{current_user.nickname}"
+    else
+      user_edit_path(current_user)
+    end
+
+
    end
 
 

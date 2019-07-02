@@ -6,16 +6,17 @@
 
 <div class="field">
 <%= form.label :audio_file %>
-<%= form.file_field :audio_file,class:"form-control" %>
+<%= form.file_field :audio_file,id:"myfile1",class:"form-control" %>
 
+<img id="img1"/>
 
 <%= form.label :audio_title %>
 <%= form.text_field :audio_title,class:"form-control", placeholder: "曲名" %>
 
 <%= form.label :new_audio_image %>
-<%= form.file_field :new_audio_image ,id:"myfile",class:"form-control" %>
+<%= form.file_field :new_audio_image ,id:"myfile2",class:"form-control" %>
 
-<img id="img1"/>
+<img id="img2"/>
 
 <%= form.label :audio_lyrics %>
 <%= form.text_area :audio_lyrics,cols:30,class: 'form-control', placeholder: "歌詞" %>

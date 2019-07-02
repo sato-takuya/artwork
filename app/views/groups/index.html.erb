@@ -9,7 +9,7 @@
 <div class='basic-content'><!--トップページとアイコン-->
 <div class='top-image-box'>
 <%if @group.top_image.attached?%>
-  <%= image_tag @group.top_image,class: 'top-image' %>
+  <%= image_tag @group.top_image.variant(combine_options:{crop:"1600x400+0+0",gravity: :center}).processed,class: 'top-image' %>
 <%end%>
 </div>
 

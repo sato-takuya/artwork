@@ -1,16 +1,10 @@
-<%if user_signed_in? %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  <%else%>
-  <%= link_to "ログイン", new_user_session_path %>
-<%end%>
-
-<%= link_to 'よくある質問 ', "#" %>|
-<%= link_to '利用規約 ', "#" %>|
-<%= link_to 'プライバシーポリシー ', "#" %>|
-<%= link_to '運営情報 ', "#" %>|
-<%= link_to 'お問い合わせ ', "#" %>|
-<%= link_to '公式Twitter ', "#" %>|
-<%= link_to '© 2019 artwork.domein', "#" %>
+<li><%= link_to 'よくある質問 ', "#" %></li>
+<li><%= link_to '利用規約 ', "#" %></li>
+<li><%= link_to 'プライバシーポリシー ', "#" %></li>
+<li><%= link_to '運営情報 ', "#" %></li>
+<li><%= link_to 'お問い合わせ ', "#" %></li>
+<li><%= link_to '公式Twitter ', "#" %></li>
+<li><%= link_to '© 2019 artwork.domein', "#" %></li>
 
 
 

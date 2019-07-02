@@ -8,19 +8,38 @@
 <%= link_to(image_tag('sound.png',class: 'header-logo'), "/") %>
 <div class='header-menu'>
 <% if user_signed_in? %>
-
   <%if current_user.icon_image.attached?%>
-    <%= link_to(image_tag(current_user.icon_image,class: 'header-icon'), "/#{current_user.nickname}") %>
+
+  <!--ドロワー-->
+    <label id="nav-open" for="nav-input"><a><%=image_tag(current_user.icon_image,class: 'header-icon')%></a></label>
+  <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+      <li><%= link_to 'マイページ', "/#{current_user.nickname}"%></li>
+      <li><%= link_to '設定', user_edit_path(current_user) %></li>
+      <br>
+      <li><%= link_to '楽曲新規追加', new_audio_path %></li>
+      <li><%= link_to '動画新規追加', new_video_path %></li>
+      <%if user_signed_in? %>
+      <br>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <%end%>
+      </div>
+</div>
   <%else%>
     <%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
   <%end%>
-  <%= link_to 'アートワークを追加', "/artworks",class:'btn btn-info btn-lg' %>
+  <%else%>
+  <%= link_to "ログイン", new_user_session_path ,class:"btn btn-info btn-lg"%>
 <%end%>
 </div>
-
 </div>
 
 
 <div class='col-md-2'></div>
 </div>
 </div>
+
+
+<!--<%= link_to 'アートワークを追加', "/artworks",class:'btn btn-info btn-lg' %>-->

@@ -1,48 +1,52 @@
+<div class='container-fuild'>
+<div class='row'>
+<div class='col-md-4'></div>
+
+<div class='col-md-4'>
 <%= form_for current_user, url: {action: 'user_update'} do |f| %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :name %>
+    <%= f.text_field :name,class:"form-control" %>
   </div>
 
   <div class="field">
-    <p>名前</p>
-    <%= f.text_field :name %>
+    <%= f.label :nickname %>
+    <span>art-wk.herokuapp</span><%= f.text_field :nickname,class:"form-control" %>
   </div>
 
   <div class="field">
-    <p>URL</p>
-    <span>art-wk.herokuapp</span><%= f.text_field :nickname %>
+    <%= f.label :new_icon_image %>
+    <%= f.file_field :new_icon_image ,id:"myfile4",class:"form-control"%>
   </div>
 
-  <div class="field">
-    <p>プロフィール画像</p>
-    <%= f.file_field :new_icon_image %>
-  </div>
+  <img id="img4"/>
 
   <div class="field">
-    <p>カバー画像</p>
-    <%= f.file_field :new_top_image %>
+    <%= f.label :new_top_image %>
+    <%= f.file_field :new_top_image,id:"myfile5",class:"form-control" %>
   </div>
 
-  <div class="field">
-    <p>公式サイトURL</p>
-    <%= f.text_field :official_url %>
-  </div>
+  <img id="img5"/>
 
   <div class="field">
-    <p>ツイッターID</p>
-    <%= f.text_field :nickname %>
+    <%= f.label :official_url %>
+    <%= f.text_field :official_url,class:"form-control" %>
   </div>
 
+
+
   <div class="field">
-    <p>インスタグラムID</p>
-    <%= f.text_field :instagram_id %>
+    <%= f.label :instagram_id %>
+    <%= f.text_field :instagram_id,class:"form-control" %>
   </div>
 
 <%= f.submit "プロフィールを更新",:class=>"btn btn-primary btn-lg my-5" %>
 
 <% end %>
+</div>
 
-
-
+</div>
+<div class='col-md-4'></div>
+</div>
+</div>

@@ -16,7 +16,7 @@ module ApplicationHelper
       twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = audio.audio_title
       twitter_card[:title] = "artwork"
-    end
+  end
     twitter_card[:card] = 'summary_large_image'
     twitter_card
   end

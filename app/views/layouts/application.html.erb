@@ -17,8 +17,6 @@
     <meta property="og:title" content=<%=twitter_card[:title]%> />
     <meta property="og:description" content=<%=twitter_card[:description]%> />
     <meta property="og:image" content=<%=twitter_card[:image]%> />
-
-
     <meta name="viewport" content="width=device-width">
   </head>
 
@@ -30,7 +28,7 @@
   <div class='container-fuild main-content'>
     <%= yield %>
   </div>
-  <a href="https://twitter.com/share?url=https://art-wk.com/share&hashtags=artwork" target="_blank" class="btn btn-warning btn-lg btnparmit" data-show-count="false">シェア</a>
+  <a href="https://twitter.com/share?url=https://art-wk.com/&hashtags=artwork" target="_blank" class="btn btn-warning btn-lg btnparmit" data-show-count="false">シェア</a>
   <footer class='footer'>
     <%=render "shared/footer"%>
   </footer>

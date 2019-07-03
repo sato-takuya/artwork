@@ -10,8 +10,6 @@
 <div class='row'>
   <% @audios.each do |audio| %>
   <%= link_to(audio_path(audio), class: 'audio col-6 col-md-3') do %>
-    <!--<a class="audio col-6 col-md-3 audio-modal-open" href="" data-target="<%=audio.public_uid%>">-->
-
     <%if audio.audio_image.attached?%>
     <%= image_tag audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-image' %>
     <%else%>
@@ -24,7 +22,6 @@
       <%= audio.user.name %>
       </div>
 
-    <!--</a>-->
     <%end%>
 
     <!--モーダルウィンドウ

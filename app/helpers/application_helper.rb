@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def get_twitter_card_info(group,audio)
     twitter_card = {}
     if group.nil? && audio.nil?#トップページver
@@ -8,7 +9,8 @@ module ApplicationHelper
       twitter_card[:title] = "artwork"
     elsif group.present? && audio.nil?#グループver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{group.nickname}"
-      twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
+      twitter_card[:image] = url_for(group.icon_image)
+      #"https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = group.name
       twitter_card[:title] = "artwork"
     else#オーディオver

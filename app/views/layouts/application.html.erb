@@ -10,6 +10,14 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
+    <!-- Twitterカード設定 -->
+    <% twitter_card = get_twitter_card_info(@group,@audio) %>
+    <meta name="twitter:card" content=<%=twitter_card[:card]%> />
+    <meta property="og:url" content=<%=twitter_card[:url]%> />
+    <meta property="og:title" content=<%=twitter_card[:title]%> />
+    <meta property="og:description" content=<%=twitter_card[:description]%> />
+    <meta property="og:image" content=<%=twitter_card[:image]%> />
+
 
     <meta name="viewport" content="width=device-width">
   </head>
@@ -22,6 +30,7 @@
   <div class='container-fuild main-content'>
     <%= yield %>
   </div>
+  <a href="https://twitter.com/share?url=https://art-wk.com/share&hashtags=artwork" target="_blank" class="btn btn-warning btn-lg btnparmit" data-show-count="false">シェア</a>
   <footer class='footer'>
     <%=render "shared/footer"%>
   </footer>

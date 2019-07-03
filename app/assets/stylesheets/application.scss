@@ -208,7 +208,6 @@ a:link,a:visited,a:hover,a:active{
 .audio-image{
   width:100%;
   height: 100%;
-  object-fit: cover !important;
 }
 
 .audio-title,.video-title{
@@ -404,7 +403,6 @@ a:link,a:visited,a:hover,a:active{
   margin-top:10px;
   width:70%;
   height:70%;
-  object-fit: cover !important;
 }
 
 .audio-show-title{
@@ -423,8 +421,7 @@ a:link,a:visited,a:hover,a:active{
 
 .audio-relation{
   width:100%;
-  height: 100%;
-  object-fit: cover!important;
+  height:100%;
 }
 
 

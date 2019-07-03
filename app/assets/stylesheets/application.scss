@@ -61,6 +61,10 @@ a:link,a:visited,a:hover,a:active{
   padding:10px 10px;
 }
 
+.show-content{
+  padding:15px;
+}
+
 
 .header{
    padding:5px 0px 0px 0px;
@@ -355,7 +359,7 @@ a:link,a:visited,a:hover,a:active{
 
 
 /*　プレイヤー（再生バー）の高さ、幅、背景色の指定　*/
-.audiojs { height: 22px; background: #242424; width: 50%;margin:5px auto;}
+.audiojs { height: 22px; background: #242424; width: 70%;margin:5px auto;}
 
 /*　再生・停止ボタンの高さ、幅、パディングの指定　*/
 .audiojs .play-pause { width: 25px; height: 20px; padding: 0px 8px 0px 0px; }
@@ -384,7 +388,7 @@ a:link,a:visited,a:hover,a:active{
 
 .audio-show-image{
   margin-top:10px;
-  width:50%;
+  width:70%;
 }
 
 .audio-show-title{

@@ -9,13 +9,13 @@
 <br>
 <p class="text-left">アイコン画像</p>
 <div id="img_field" onClick="$('#file').click()" >
-<% if current_user.icon_image.attached? %>
-  <%= image_tag current_user.icon_image.variant(combine_options:{crop:"1500x1500+0+0",gravity: :center}).processed ,class:"ex_image" %>
+<% if current_user.icon_image.present? %>
+  <%= image_tag current_user.icon_image.to_s,class:"ex_image" %>
 <% else %>
   <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
 <% end %>
 </div>
-<%= f.file_field :new_icon_image,class: "image", style: "display:none;", id: "file" %>
+<%= f.file_field :icon_image,class: "image", style: "display:none;", id: "file" %>
 
 
 

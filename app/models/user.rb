@@ -4,15 +4,16 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable
+         mount_uploader :icon_image, IconimageUploader
 
   has_many :audios
   has_many :members
   has_many :videos
 
   has_one_attached :top_image
-  has_one_attached :icon_image
+
   attribute :new_top_image
-  attribute :new_icon_image
+
 
   validate if: :new_top_image do
     if new_top_image.respond_to?(:content_type)
@@ -24,29 +25,11 @@ class User < ApplicationRecord
     end
   end
 
-  validate if: :new_icon_image do
-    if new_icon_image.respond_to?(:content_type)
-      unless new_icon_image.content_type.in?(ALLOWED_CONTENT_TYPES)
-        errors.add(:new_icon_image,:invalid_image_type)
-      end
-    else
-      errors.add(:new_icon_image,:invalid)
-    end
-  end
-
   before_save do
     if new_top_image
       self.top_image = new_top_image
     end
   end
-
-  before_save do
-    if new_icon_image
-      self.icon_image = new_icon_image
-    end
-  end
-
-
 
   def to_param
     nickname

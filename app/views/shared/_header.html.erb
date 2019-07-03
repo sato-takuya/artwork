@@ -8,10 +8,21 @@
 <%= link_to(image_tag('sound.png',class: 'header-logo'), "/") %>
 <div class='header-menu'>
 <% if user_signed_in? %>
-  <%if current_user.icon_image.attached?%>
+
+
+
 
   <!--ドロワー-->
-    <label id="nav-open" for="nav-input"><a><%=image_tag(current_user.icon_image,class: 'header-icon')%></a></label>
+    <label id="nav-open" for="nav-input"><a>
+
+<%if current_user.icon_image.present?%>
+    <%=image_tag(current_user.icon_image.to_s,class: 'header-icon')%>
+<%else%>
+    <%=image_tag("noimage.png",class: 'header-icon')%>
+  <%end%>
+
+
+    </a></label>
   <div id="nav-drawer">
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
@@ -26,9 +37,12 @@
       <li class="fas fa-cog"><%= link_to ' 設定', user_edit_path(current_user) %></li>
       </div>
 </div>
-  <%else%>
-    <%= link_to(image_tag("noimage.png",class: 'header-icon'), "/#{current_user.nickname}") %>
-  <%end%>
+
+
+
+
+
+
   <%else%>
   <%= link_to " Twitterでログイン/登録", user_twitter_omniauth_authorize_path,class: "btn btn-info btn-lg" %>
 <%end%>

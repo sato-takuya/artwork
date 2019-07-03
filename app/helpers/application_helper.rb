@@ -8,31 +8,18 @@ module ApplicationHelper
       twitter_card[:title] = "artwork"
     elsif group.present? && audio.nil?#グループver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{group.nickname}"
-      twitter_card[:image] = "https://www.art-wk.herokuapp.com#{aws_url(group.icon_image)}"
+      twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = group.name
       twitter_card[:title] = "artwork"
     else#オーディオver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{audio.public_uid}"
-      twitter_card[:image] = "https://www.art-wk.herokuapp.com#{aws_url(audio.audio_image)}"
+      twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = audio.audio_title
       twitter_card[:title] = "artwork"
   end
     twitter_card[:card] = 'summary_large_image'
     twitter_card
   end
-
-  path = nil
-  def aws_url(path)
-    if path.present?
-    else
-    link = url_for(path)
-    str = link.gsub("blobs", "representations")
-    str
-    end
-  end
-
-
-
 
   def movie(youtube_url)
     iframe = content_tag(

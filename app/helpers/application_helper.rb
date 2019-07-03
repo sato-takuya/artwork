@@ -15,7 +15,7 @@ module ApplicationHelper
       twitter_card[:title] = "artwork"
     else#オーディオver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{audio.public_uid}"
-      twitter_card[:image] = audio.audio_image
+      twitter_card[:image] = audio.audio_image.to_s
       twitter_card[:description] = audio.audio_title
       twitter_card[:title] = "artwork"
   end

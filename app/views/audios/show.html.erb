@@ -4,8 +4,8 @@
 
 <div class='col-md-6'><!--上側の枠-->
 
-<%if @audio.audio_image.attached?%>
-<%= image_tag @audio.audio_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'audio-show-image' %>
+<%if @audio.audio_image.present?%>
+<%= image_tag @audio.audio_image.to_s,class:'audio-show-image' %>
 <%else%>
 <%= image_tag "noimage.png",class:'audio-show-image' %>
 <%end%>
@@ -43,8 +43,8 @@
 <% @audio_all.each_with_index do |audio,i|%>
 <%= link_to(audio_path(audio), class: 'audio-relation-link-to col-4 col-md-3') do %>
 
-<%if audio.audio_image.attached?%>
-<%= image_tag audio.audio_image.variant(combine_options:{gravity: :center}).processed,class:'audio-relation' %>
+<%if audio.audio_image.present?%>
+<%= image_tag audio.audio_image.to_s ,class:'audio-relation' %>
 <%end%>
 
   <br><span><%= audio.audio_title %></span><br>

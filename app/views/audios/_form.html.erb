@@ -9,8 +9,8 @@
 <br>
 <p class="text-left">画像</p>
 <div id="img_field" onClick="$('#file').click()" >
-<% if @audio.audio_image.attached? %>
-  <%= image_tag @audio.audio_image  %>
+<% if @audio.audio_image.present? %>
+  <%= image_tag @audio.audio_image.to_s  %>
 <% else %>
   <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
 <% end %>

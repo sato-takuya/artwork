@@ -27,8 +27,8 @@
                                 <p><span><%= member.member_name %></span></p>
                                 <p class='member-info'><span><%= member.member_info %></span></p>
                                       <div class='member-show-sns'>
-                                      <%= image_tag 'twitter.png',class:'icon-sns' %>
-                                      <%= image_tag 'instagram.png',class:'icon-sns' %>
+                                      <%= link_to '',"https://twitter.com/#{member.twitter_id}",target:"_blank",class:'icon-sns fab fa-twitter' %>
+                                      <%= link_to '',"https://www.instagram.com/#{member.instagram_id}",target:"_blank",class:'icon-sns fab fa-instagram' %>
                                       </div>
                                       <br>
                                 <a class="js-modal-close" href="">閉じる</a>

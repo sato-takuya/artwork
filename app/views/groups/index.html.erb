@@ -14,7 +14,7 @@
 </div>
 
 <%if @group.icon_image.attached?%>
-  <%= image_tag @group.icon_image,class: 'basic-icon' %>
+  <%= image_tag @group.icon_image.variant(combine_options:{crop:"1500x1500+0+0",gravity: :center}).processed,class: 'basic-icon' %>
 <%end%>
   <div class='basic-text'>
     <p><%= @group.name %></p>

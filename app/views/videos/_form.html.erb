@@ -1,21 +1,24 @@
-<div class='container-fuild'>
+<div class='container-fuild form'>
 <div class='row'>
 <div class='col-md-4'></div>
 
 <div class='col-md-4'>
 
 <div class="field">
-<%= form.label :video_url %>
-<%= form.text_field :video_url,class:"form-control", placeholder: "Youtubeの埋め込みURL" %>
+<br>
+<p class="text-left">Youtubeの埋め込みURL</p>
+<%= form.text_field :video_url,class:"form-control", placeholder: "<iframe　width= 〜 </iframe>" %>
 
-<%= form.label :video_title %>
-<%= form.text_field :video_title,class:"form-control", placeholder: "曲名" %>
+<br>
+<p class="text-left">動画タイトル</p>
+<%= form.text_field :video_title,class:"form-control", placeholder: "動画タイトル" %>
 
-<%= form.label :video_lyrics %>
+<br>
+<p class="text-left">歌詞</p>
 <%= form.text_area :video_lyrics,col:40,class: 'form-control', placeholder: "歌詞" %>
 
 </div>
-<%= form.submit class:'btn btn-info btn-lg my-5' %>
+<%= form.submit class:'btn btn-info btn-lg my-5',value:"この内容で登録する" %>
 
 
 </div>

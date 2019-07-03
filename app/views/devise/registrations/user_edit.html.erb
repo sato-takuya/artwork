@@ -1,54 +1,78 @@
-<div class='container-fuild'>
+<%= form_for current_user, url: {action: 'user_update'} do |f| %>
+<div class='container-fuild form'>
 <div class='row'>
 <div class='col-md-4'></div>
 
 <div class='col-md-4'>
-<%= form_for current_user, url: {action: 'user_update'} do |f| %>
+<div class="field">
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name,class:"form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :nickname %>
-    <span>art-wk.herokuapp</span><%= f.text_field :nickname,class:"form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :new_icon_image %>
-    <%= f.file_field :new_icon_image ,id:"myfile4",class:"form-control"%>
-  </div>
-
-  <img id="img4"/>
-
-  <div class="field">
-    <%= f.label :new_top_image %>
-    <%= f.file_field :new_top_image,id:"myfile5",class:"form-control" %>
-  </div>
-
-  <img id="img5"/>
-
-  <div class="field">
-    <%= f.label :official_url %>
-    <%= f.text_field :official_url,class:"form-control" %>
-  </div>
-
-
-
-  <div class="field">
-    <%= f.label :instagram_id %>
-    <%= f.text_field :instagram_id,class:"form-control" %>
-  </div>
-
-<%= f.submit "プロフィールを更新",:class=>"btn btn-primary btn-lg my-5" %>
-
+<br>
+<p class="text-left">アイコン画像</p>
+<div id="img_field" onClick="$('#file').click()" >
+<% if current_user.icon_image.attached? %>
+  <%= image_tag current_user.icon_image.variant(combine_options:{crop:"1500x1500+0+0",gravity: :center}).processed ,class:"ex_image" %>
+<% else %>
+  <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
 <% end %>
+</div>
+<%= f.file_field :new_icon_image,class: "image", style: "display:none;", id: "file" %>
 
+
+
+<br>
+<p class="text-left">名前</p>
+<%= f.text_field :name,class:"form-control" %>
+
+
+
+<br>
+<p class="text-left">URL</p>
+<div class="row">
+<span class="col-md-4">art-wk.herokuapp</span><%= f.text_field :nickname,class:"form-control col-md-8" %>
+<span class="col-md-12">ページURLが変わるため、ユーザー名の変更は慎重に行ってください。
+半角英数字とアンダーバー（_）のみを使うことができます。</span>
+</div>
+
+
+
+
+
+
+
+
+    <br>
+<p class="text-left">カバー写真</p>
+    <%= f.file_field :new_top_image,id:"myfile5",class:"form-control" %>
+
+
+
+
+
+    <br>
+<p class="text-left">公式サイトのURL</p>
+    <%= f.text_field :official_url,class:"form-control" %>
+
+
+
+
+
+    <br>
+<p class="text-left">InstagramのID</p>
+    </span><%= f.text_field :instagram_id,class:"form-control" %>
+
+  </div>
+
+<%= f.submit "この内容で登録する",:class=>"btn btn-info btn-lg my-5" %>
+
+<br><br><br>
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
 </div>
 
-</div>
+
+
+
+</div><!--中央　終わり-->
 <div class='col-md-4'></div>
 </div>
 </div>
+<% end %>

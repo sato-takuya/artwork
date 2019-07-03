@@ -1,28 +1,48 @@
-<div class='container-fuild'>
+<div class='container-fuild form'>
 <div class='row'>
 <div class='col-md-4'></div>
 
 <div class='col-md-4'>
 
 <div class="field">
-<%= form.label :audio_file %>
-<%= form.file_field :audio_file,id:"myfile1",class:"form-control" %>
 
-<img id="img1"/>
-
-<%= form.label :audio_title %>
-<%= form.text_field :audio_title,class:"form-control", placeholder: "曲名" %>
-
-<%= form.label :new_audio_image %>
-<%= form.file_field :new_audio_image ,id:"myfile2",class:"form-control" %>
-
-<img id="img2"/>
-
-<%= form.label :audio_lyrics %>
-<%= form.text_area :audio_lyrics,cols:30,class: 'form-control', placeholder: "歌詞" %>
+<br>
+<p class="text-left">画像</p>
+<div id="img_field" onClick="$('#file').click()" >
+<% if @audio.audio_image.attached? %>
+  <%= image_tag @audio.audio_image  %>
+<% else %>
+  <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+<% end %>
 </div>
 
-<%= form.submit class:'btn btn-info btn-lg my-5' %>
+<%= form.file_field :new_audio_image, class: "image", style: "display:none;", id: "file"%>
+
+
+
+<br>
+<p class="text-left">音声ファイル(.mp3/.wav)</p>
+<div class="input-group">
+<label class="input-group-btn">
+<span class="btn btn-info">
+音声ファイルを選択
+<%= form.file_field :audio_file,style:"display:none" %>
+</span>
+</label>
+    <input type="text" class="form-control" readonly="">
+</div>
+
+
+<br>
+<p class="text-left">曲名</p>
+<%= form.text_field :audio_title,class:"form-control", placeholder: "曲名を入力してください" %>
+
+<br>
+<p class="text-left">歌詞</p>
+<%= form.text_area :audio_lyrics,cols:30,class: 'form-control', placeholder: "歌詞を入力してください" %>
+</div>
+
+<%= form.submit class:'btn btn-info btn-lg my-5',value:"この内容で登録する" %>
 
 
 </div>

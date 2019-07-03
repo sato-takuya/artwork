@@ -5,25 +5,43 @@
 <div class='col-md-4'>
 <div class="field">
 
+<br>
+<p class="text-left">画像</p>
+<div id="img_field" onClick="$('#file').click()" >
+<% if @member.member_image.attached? %>
+  <%= image_tag @member.member_image,class:"ex_image"  %>
+<% else %>
+  <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+<% end %>
+</div>
+<%= form.file_field :new_member_image, style: "display:none;", id: "file" %>
 
 
-<%= form.label :member_name %>
+
+
+<br>
+<p class="text-left">名前</p>
 <%= form.text_field :member_name,class:"form-control", placeholder: "名前" %>
 
-<%= form.label :part %>
-<%= form.text_field :part,class:"form-control", placeholder: "楽器" %>
+<br>
+<p class="text-left">楽器パート</p>
+<%= form.text_field :part,class:"form-control", placeholder: "楽器パート" %>
 
-<%= form.label :member_info %>
+<br>
+<p class="text-left">自己紹介</p>
 <%= form.text_area :member_info,class:"form-control", placeholder: "自己紹介" %>
 
 
-<%= form.label :new_member_image %>
-<%= form.file_field :new_member_image,id:"myfile3" %>
+<br>
+<p class="text-left">TwitterID</p>
+<%= form.text_field :twitter_id,class:"form-control", placeholder: "" %>
 
-<img id="img3"/>
+<br>
+<p class="text-left">InstagramID</p>
+<%= form.text_field :instagram_id,class:"form-control", placeholder: "" %>
 
 </div>
-<%= form.submit class:'btn btn-info btn-lg my-5' %>
+<%= form.submit class:'btn btn-info btn-lg my-5',value:"この内容で登録する" %>
 
 
 </div>

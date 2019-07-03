@@ -75,101 +75,37 @@ audiojs.events.ready(function () {
 
 
 
-
 $(function () {
-  $('#myfile2').change(function (e) {
-    //ファイルオブジェクトを取得する
-    var file = e.target.files[0];
-    var reader = new FileReader();
+  $fileField = $('#file')
 
-    //画像でない場合は処理終了
-    if (file.type.indexOf("image") < 0) {
-      alert("画像ファイルを指定してください。");
-      return false;
-    }
+  // 選択された画像を取得し表示
+  $($fileField).on('change', $fileField, function (e) {
+    file = e.target.files[0]
+    reader = new FileReader(),
+      $preview = $("#img_field");
 
-    //アップロードした画像を設定する
     reader.onload = (function (file) {
       return function (e) {
-        $("#img2").attr("src", e.target.result);
-        $("#img2").attr("title", file.name);
+        $preview.empty();
+        $preview.append($('<img>').attr({
+          src: e.target.result,
+          width: "100%",
+          class: "preview",
+          title: file.name
+        }));
       };
     })(file);
     reader.readAsDataURL(file);
   });
 });
-$(function () {
-  $('#myfile3').change(function (e) {
-    //ファイルオブジェクトを取得する
-    var file = e.target.files[0];
-    var reader = new FileReader();
 
-    //画像でない場合は処理終了
-    if (file.type.indexOf("image") < 0) {
-      alert("画像ファイルを指定してください。");
-      return false;
-    }
 
-    //アップロードした画像を設定する
-    reader.onload = (function (file) {
-      return function (e) {
-        $("#img3").attr("src", e.target.result);
-        $("#img3").attr("title", file.name);
-      };
-    })(file);
-    reader.readAsDataURL(file);
 
-  });
+
+//音声ファイルフォームデザイン
+$(document).on('change', ':file', function () {
+  var input = $(this),
+    numFiles = input.get(0).files ? input.get(0).files.length : 1,
+    label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+  input.parent().parent().next(':text').val(label);
 });
-$(function () {
-  $('#myfile4').change(function (e) {
-    //ファイルオブジェクトを取得する
-    var file = e.target.files[0];
-    var reader = new FileReader();
-
-    //画像でない場合は処理終了
-    if (file.type.indexOf("image") < 0) {
-      alert("画像ファイルを指定してください。");
-      return false;
-    }
-
-    //アップロードした画像を設定する
-    reader.onload = (function (file) {
-      return function (e) {
-        $("#img4").attr("src", e.target.result);
-        $("#img4").attr("title", file.name);
-      };
-    })(file);
-    reader.readAsDataURL(file);
-
-  });
-});
-$(function () {
-  $('#myfile5').change(function (e) {
-    //ファイルオブジェクトを取得する
-    var file = e.target.files[0];
-    var reader = new FileReader();
-
-    //画像でない場合は処理終了
-    if (file.type.indexOf("image") < 0) {
-      alert("画像ファイルを指定してください。");
-      return false;
-    }
-
-    //アップロードした画像を設定する
-    reader.onload = (function (file) {
-      return function (e) {
-        $("#img5").attr("src", e.target.result);
-        $("#img5").attr("title", file.name);
-      };
-    })(file);
-    reader.readAsDataURL(file);
-
-  });
-});
-
-
-
-
-
-//ドロワーメニュー

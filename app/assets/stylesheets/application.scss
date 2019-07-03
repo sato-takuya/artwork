@@ -57,6 +57,10 @@ a:link,a:visited,a:hover,a:active{
   font-weight: bold;
 }
 
+.form{
+  padding:10px 10px;
+}
+
 
 .header{
    padding:5px 0px 0px 0px;
@@ -193,6 +197,7 @@ a:link,a:visited,a:hover,a:active{
 
 .audio-image{
   width:100%;
+  margin:0 auto;
 }
 
 .audio-title,.video-title{
@@ -245,7 +250,17 @@ a:link,a:visited,a:hover,a:active{
 }
 .icon-sns{
   display: inline-block;
-  height:35px;
+  height:40px;
+  width:70px;
+  color:white;
+  font-size:2rem;
+  padding:10px 5px 0px 5px;
+  border-radius: 5px;
+  margin-right:10px;
+  margin-bottom:20px;
+}
+.icon-sns:hover{
+  color:rgb(224, 224, 224);
 }
 
 .modal{
@@ -416,9 +431,9 @@ a:link,a:visited,a:hover,a:active{
 
 
 
-#img1,#img2,#img3,#img4,#img5{
-  max-width:100px;
-  max-height:100px;
+#img2,#img3,#img4,#img5{
+  width:100px;
+  height:100px;
 }
 
 
@@ -573,4 +588,60 @@ a:link,a:visited,a:hover,a:active{
     padding: 10px 0;
     height: auto;
     opacity: 1;
+}
+
+
+
+
+//画像ファイル選択デザイン
+#img_field {
+  font-size: 15px;
+  margin: 10px auto;
+  padding: 5px 8px;
+  border: solid 1px rgb(175, 175, 175);
+  color: #666;
+  position: relative;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
+
+#img_field i {
+  font-size: 100px;
+  color: #aaa;
+  line-height: 250px;
+  transition: 0.3s ease-out;
+}
+
+#img_field i.add {
+  display: none;
+  font-size: 50px;
+  position: absolute;
+  top: -90px;
+  right: 15px;
+}
+
+#img_field:hover {
+  background-color: rgb(61, 61, 61);
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
+
+#img_field:hover i {
+  transition: 0.3s ease-out;
+  display: block;
+  color: #fff;
+}
+
+.ex_image{
+  height:300px;
 }

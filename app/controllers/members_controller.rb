@@ -45,6 +45,6 @@ class MembersController < ApplicationController
 
   private
   def members_params
-    params.require(:member).permit(:member_name,:part,:member_info,:new_member_image)
+    params.require(:member).permit(:member_name,:part,:member_info,:new_member_image,:twitter_id,:instagram_id)
   end
 end

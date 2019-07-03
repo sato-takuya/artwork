@@ -186,10 +186,16 @@ a:link,a:visited,a:hover,a:active{
   padding:0 30px;
 }
 
-.audio,.video{
+.audio{
+  color:rgb(83, 83, 83);
+  background-color:rgb(255, 255, 255);
+  margin-bottom:60px;
+}
+.video{
   color:rgb(83, 83, 83);
   background-color:rgb(255, 255, 255);
   margin-bottom:20px;
+  padding:0;
 }
 
 .artworks .row{
@@ -201,7 +207,8 @@ a:link,a:visited,a:hover,a:active{
 
 .audio-image{
   width:100%;
-  margin:0 auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .audio-title,.video-title{
@@ -209,11 +216,16 @@ a:link,a:visited,a:hover,a:active{
   font-weight:bold;
 }
 .audio-title span{
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   border-bottom:1px solid #333;
 }
+
+.video-image{
+  padding:10px;
+}
+
 .video-title span{
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   border-bottom:1px solid #333;
 }
 
@@ -385,10 +397,14 @@ a:link,a:visited,a:hover,a:active{
 .track-details:before { content: '♬  Now Playing: '; }
 
 
-
+.audio-show-image-box{
+  margin-bottom:300px;
+}
 .audio-show-image{
   margin-top:10px;
   width:70%;
+  height:70%;
+  object-fit: cover;
 }
 
 .audio-show-title{
@@ -401,19 +417,17 @@ a:link,a:visited,a:hover,a:active{
   font-size: 1.3rem;
 }
 
-.audio-relation{
-  height:100px;
-}
-.audio-relation-link-to{
-  height:auto;
-  display:inline-block;
-  margin:0 auto;
+.audio-relation-link{
+  margin-bottom:50px;
 }
 
-.audio-show-under{
-  margin-top:10px;
-  padding:10px 0px;
+.audio-relation{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+
 .edit-delete{
   float:right;
 }

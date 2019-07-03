@@ -1,8 +1,11 @@
 <div class='container-fuild show-content'>
 <div class='row'>
-<div class='col-md-3'></div>
+<div class='col-md-4'></div>
+<div class='col-md-4'><!--全体の枠-->
 
-<div class='col-md-6'><!--上側の枠-->
+<div class='row'><!--上-->
+
+<div class="col-md-12">
 
 <%if @audio.audio_image.present?%>
 <%= image_tag @audio.audio_image.to_s,class:'audio-show-image' %>
@@ -17,7 +20,6 @@
 <p><%= @audio.user.name %></p>
 </div>
 
-
 <div class="hidden_box">
     <input type="checkbox" id="label1" />
     <label for="label1"><span>歌詞を表示</span></label>
@@ -28,7 +30,6 @@
     </div>
 </div>
 
-
 <br><br><br><br>
 <div class="edit-delete col-md-6">
 <%if user_signed_in? && @audio.user_id == current_user.id%>
@@ -37,15 +38,24 @@
 <%end%>
 </div><br>
 
+
+</div>
+
+</div><!--上-->
+
+
+
+<br><br><br><br>
+<br><br><br><br>
 <br><br><br><br>
 <h3>関連楽曲</h3>
-<div class='audio-show-under row'><!--下-->
-<% @audio_all.each_with_index do |audio,i|%>
-<%= link_to(audio_path(audio), class: 'audio-relation-link-to col-4 col-md-3') do %>
+<div class='row'><!--下-->
 
-<%if audio.audio_image.present?%>
-<%= image_tag audio.audio_image.to_s ,class:'audio-relation' %>
-<%end%>
+<% @audio_all.each_with_index do |audio,i|%>
+<%= link_to(audio_path(audio), class: 'col-6 col-md-4 audio-relation-link') do %>
+  <%if audio.audio_image.present?%>
+  <%= image_tag audio.audio_image.to_s ,class:'audio-relation' %>
+  <%end%>
 
   <br><span><%= audio.audio_title %></span><br>
   <%= audio.user.name %>
@@ -53,9 +63,11 @@
 <%end%>
 <%end%>
 </div><!--下側-->
-</div><!--枠END-->
 
 
-<div class='col-md-2'></div>
+
+
+</div><!--全体の枠-->
+<div class='col-md-4'></div>
 </div>
 </div>

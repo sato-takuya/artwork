@@ -21,11 +21,16 @@ module ApplicationHelper
     twitter_card
   end
 
+  path = nil
   def aws_url(path)
+    if path.present?
+    else
     link = url_for(path)
     str = link.gsub("blobs", "representations")
     str
+    end
   end
+
 
 
 

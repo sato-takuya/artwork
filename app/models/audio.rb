@@ -1,7 +1,10 @@
 class Audio < ApplicationRecord
   belongs_to :user, optional: true
   mount_uploader :audio_file, AudiofileUploader
+  mount_uploader :audio_image, AudioimageUploader
   generate_public_uid
+
+
 
   has_one_attached :audio_image
   attribute :new_audio_image
@@ -21,6 +24,8 @@ class Audio < ApplicationRecord
       self.audio_image = new_audio_image
     end
   end
+
+
 
 
   def to_param

@@ -205,6 +205,11 @@ a:link,a:visited,a:hover,a:active{
   margin:0;
 }
 
+.audio-image{
+  width:100%;
+  height: 100%;
+  object-fit: cover !important;
+}
 
 .audio-title,.video-title{
   text-align: center;
@@ -395,7 +400,12 @@ a:link,a:visited,a:hover,a:active{
 .audio-show-image-box{
   margin-bottom:300px;
 }
-
+.audio-show-image{
+  margin-top:10px;
+  width:70%;
+  height:70%;
+  object-fit: cover !important;
+}
 
 .audio-show-title{
   display:inline-block;
@@ -411,6 +421,11 @@ a:link,a:visited,a:hover,a:active{
   margin-bottom:50px;
 }
 
+.audio-relation{
+  width:100%;
+  height: 100%;
+  object-fit: cover!important;
+}
 
 
 .edit-delete{

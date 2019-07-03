@@ -8,12 +8,12 @@ module ApplicationHelper
       twitter_card[:title] = "artwork"
     elsif group.present? && audio.nil?#グループver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{group.nickname}"
-      twitter_card[:image] = "https://www.art-wk.herokuapp.com" + url_for(group.icon_image)
+      twitter_card[:image] = url_for(group.icon_image)
       twitter_card[:description] = group.name
       twitter_card[:title] = "artwork"
     else#オーディオver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{audio.public_uid}"
-      twitter_card[:image] = "https://www.art-wk.herokuapp.com" + url_for(audio.audio_image)
+      twitter_card[:image] = url_for(audio.audio_image)
       twitter_card[:description] = audio.audio_title
       twitter_card[:title] = "artwork"
   end

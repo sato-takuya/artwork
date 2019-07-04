@@ -306,6 +306,19 @@ a:link,a:visited,a:hover,a:active{
   color:rgb(224, 224, 224);
 }
 
+.member-edit{
+  margin-bottom:20px;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  height:60px;
+  line-height:60px
+}
+.member-edit span{
+  font-weight:bold;
+  font-size:1.2rem;
+  margin-right:40px;
+}
+
 .modal{
     display: none;
     height: 100vh;

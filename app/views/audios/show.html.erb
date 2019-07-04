@@ -10,7 +10,7 @@
 <%if @audio.audio_image.present?%>
 <%= image_tag @audio.audio_image.to_s,class:'ex audio-show-image' %>
 <%else%>
-<%= image_tag "noimage.png",class:'audio-show-image' %>
+<%= image_tag "noimage-audio.png",class:'audio-show-image' %>
 <%end%>
 <%= audio_tag  @audio.audio_file,preload:"auto" %>
 <div class="audio-show-title">
@@ -55,6 +55,8 @@
 <%= link_to(audio_path(audio), class: 'col-6 col-md-4 audio-relation-link') do %>
   <%if audio.audio_image.present?%>
   <%= image_tag audio.audio_image.to_s ,class:'ex audio-relation' %>
+  <%else%>
+  <%= image_tag "noimage-audio.png",class:'ex audio-relation' %>
   <%end%>
 
   <br><span><%= audio.audio_title %></span><br>

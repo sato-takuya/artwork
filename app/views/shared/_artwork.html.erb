@@ -4,28 +4,7 @@
 
 <div class='artworks col-md-7 col-md-offset-1'>
 
-
-<h2 class='text-left title'>Audio</h2>
-<br>
-<div class='row'>
-  <% @audios.each do |audio| %>
-  <%= link_to(audio_path(audio), class: 'audio ex col-6 col-md-3') do %>
-  <%= image_tag audio.audio_image.to_s,class:'audio-image' %>
-
-  <div class='audio-title'>
-      <span><%= audio.audio_title %></span><br>
-      <%= audio.user.name %>
-  </div>
-  <%end%>
-
-  <%end%>
-</div>
-
-
-<br>
-<br>
-<br>
-<h2 class='text-left title'>Video</h2>
+<h2 class='text-left title'>Youtube</h2>
 <br>
 <div class='row'>
 <% @videos.each do |video| %>
@@ -39,6 +18,28 @@
 
 <%end%>
 <% end %>
+</div>
+<br>
+<br>
+
+<h2 class='text-left title'>Audio</h2>
+<br>
+<div class='row'>
+  <% @audios.each do |audio| %>
+  <%= link_to(audio_path(audio), class: 'audio ex col-6 col-md-3') do %>
+  <%if audio.audio_image.present?%>
+  <%= image_tag audio.audio_image.to_s,class:'audio-image' %>
+  <%else%>
+  <%= image_tag "noimage-audio.png",class:'audio-image' %>
+  <%end%>
+
+  <div class='audio-title'>
+      <span><%= audio.audio_title %></span><br>
+      <%= audio.user.name %>
+  </div>
+  <%end%>
+
+  <%end%>
 </div>
 
 </div>

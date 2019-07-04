@@ -4,6 +4,8 @@ class Member < ApplicationRecord
   has_one_attached :member_image
   attribute :new_member_image
 
+  validates :member_name,presence: true
+
   validate if: :new_member_image do
     if new_member_image.respond_to?(:content_type)
       unless new_member_image.content_type.in?(ALLOWED_CONTENT_TYPES)

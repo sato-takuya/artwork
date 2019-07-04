@@ -9,7 +9,7 @@
 <br>
 <div class='row'>
   <% @audios.each do |audio| %>
-  <%= link_to(audio_path(audio), class: 'audio col-6 col-md-3') do %>
+  <%= link_to(audio_path(audio), class: 'audio ex col-6 col-md-3') do %>
   <%= image_tag audio.audio_image.to_s,class:'audio-image' %>
 
   <div class='audio-title'>

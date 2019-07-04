@@ -24,6 +24,8 @@
                               <div class="member_modal__content col-9 col-md-3">
                                 <%if member.member_image.attached?%>
                                     <%= image_tag member.member_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'member-show-image' %>
+                                    <%else%>
+                                    <%= image_tag "noimage.png",class:'member-show-image' %>
                                 <%end%>
                                 <div class='member-show-bottom'>
                                 <p><span><%= member.member_name %></span></p>

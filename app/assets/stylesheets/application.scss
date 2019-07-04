@@ -252,6 +252,7 @@ a:link,a:visited,a:hover,a:active{
   width:80px;
   border-radius: 50%;
   float: left;
+  object-fit: cover!important;
 }
 .member-right{
   display: inline-block;
@@ -355,6 +356,7 @@ a:link,a:visited,a:hover,a:active{
   height:80px;
   width:80px;
   border-radius: 50%;
+  object-fit: cover!important;
 }
 .member-show-bottom{
   margin:20px auto;

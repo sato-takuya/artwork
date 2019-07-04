@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      audio:
+      member:
+      video:
+    attributes:
+      audio:
+        audio_title: 曲名
+        audio_file: 音声ファイル
+        created_at: 登録日時
+        updated_at: 更新日時
+      member:
+        member_name: 名前
+      video:
+        video_url: Youtubeの埋め込みURL

@@ -1,0 +1,31 @@
+<div class="share-space">
+<div class="row">
+<div class="col-md-4"></div>
+<div class=" col-md-4">
+
+<%if @group.nil? && @audio.nil? %>
+<h4 class="share-ex">このサイトをシェア</h4>
+<a href="https://twitter.com/share?url=https://art-wk.com&hashtags=ハッシュタグ" target="_blank" class="share-button" data-show-count="false"><p>Twitter</p></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://art-wk.com" target="_blank" class="share-button" data-show-count="false"><p>Facebook</p></a>
+<a href="http://line.me/R/msg/text/?http://art-wk.com" target="_blank" class="share-button" data-show-count="false"><p>LINE</p></a>
+
+
+
+<%elsif @group.present? && @audio.nil? %>
+<h4 class="share-ex">このバンドをシェア</h4>
+<a href="https://twitter.com/share?url=https://art-wk.com/<%=@group.nickname%>&hashtags=ハッシュタグ" target="_blank" class="share-button" data-show-count="false"><p>Twitter</p></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://art-wk.com/<%=@group.nickname%>" target="_blank" class="share-button" data-show-count="false"><p>Facebook</p></a>
+<a href="http://line.me/R/msg/text/?http://art-wk.com/<%=@group.nickname%>" target="_blank" class="share-button" data-show-count="false"><p>LINE</p></a>
+<%else%>
+
+<h4 class="share-ex">この楽曲をシェア</h4>
+<a href="https://twitter.com/share?url=https://art-wk.com/audios/<%=@audio.public_uid%>&hashtags=ハッシュタグ" target="_blank" class="share-button" data-show-count="false"><p>Twitter</p></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://art-wk.com/audios/<%=@audio.public_uid%>" target="_blank" class="share-button" data-show-count="false"><p>Facebook</p></a>
+<a href="http://line.me/R/msg/text/?http://art-wk.com/audios/<%=@audio.public_uid%>" target="_blank" class="share-button" data-show-count="false"><p>LINE</p></a>
+
+<%end%>
+
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>

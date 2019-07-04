@@ -730,3 +730,28 @@ a:link,a:visited,a:hover,a:active{
 		height: 5em;
 	}
 }
+
+
+//シェアスペース
+.share-space{
+  height:150px;
+  background-color: #313944;
+  padding:20px 0px;
+}
+.share-button{
+  display:inline-block;
+  margin:10px 5px;
+  height:80px;
+  width:80px;
+  border-radius: 50%;
+  background-color:#242C33;
+  padding:0 5px;
+}
+.share-ex{
+  color:rgb(255, 255, 255);
+}
+.share-button p{
+  line-height:80px;
+  color:rgb(255, 255, 255);
+  font-size: 1.4rem;
+}

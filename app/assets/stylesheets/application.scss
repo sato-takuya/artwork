@@ -31,7 +31,7 @@ a{
 
 body{
   font-size: 1.2rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(247, 247, 247);
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -50,6 +50,7 @@ a:link,a:visited,a:hover,a:active{
   overflow-x: hidden;
 }
 .main-content{
+  padding:0 5px;
   min-height:1000px;
 }
 
@@ -95,27 +96,29 @@ a:link,a:visited,a:hover,a:active{
 
 .group-page{
   margin:0 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(247, 247, 247);
   height:100%;
   padding:0px;
 }
 
-
-.top-image-box{
-  width:100%;
-  background-color: rgb(226, 226, 226);
-  margin-bottom:30px;
-}
 .top-image{
-  padding:0;
   display: block;
   max-height:260px;
   width:100%;
   margin:0 auto;
+  margin:10px 0px 0px 0px;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
 .basic-content{
-  background-color: rgb(255, 255, 255);
   margin-bottom:30px;
+}
+.basic-content-under{
+  margin-top:10px;
+  border-radius: 3px;
+  padding:10px 0px 0px 0px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  background-color: rgb(255, 255, 255);
 }
 .basic-icon{
   height:90px;
@@ -159,6 +162,7 @@ a:link,a:visited,a:hover,a:active{
   color: rgb(43, 43, 43);
   background: rgb(255, 255, 255);
   border-bottom:2.5px solid #5BBEE4;
+  background-color: rgb(247, 247, 247);
 }
 .tab li:hover{
   color: rgb(43, 43, 43);
@@ -178,22 +182,23 @@ a:link,a:visited,a:hover,a:active{
 
 
 .artworks,.members-frame{
-  margin:0 auto;
-  background-color: rgb(255, 255, 255);
+  margin:10px auto;
+  background-color: rgb(247, 247, 247);
   height:100%;
   padding:0 30px;
+  border-radius: 3px;
 }
 
 .audio{
   color:rgb(83, 83, 83);
-  background-color:rgb(255, 255, 255);
-  margin-bottom:60px;
+  background-color: rgb(247, 247, 247);
+  margin:0px 0px 60px 0px;
 }
 .video{
   color:rgb(83, 83, 83);
-  background-color:rgb(255, 255, 255);
-  margin-bottom:20px;
-  padding:0;
+  background-color: rgb(247, 247, 247);
+  margin:10px 14px;
+  padding:10px 0px;
 }
 
 .artworks .row{
@@ -203,13 +208,27 @@ a:link,a:visited,a:hover,a:active{
   margin:0;
 }
 
+.audio-frame{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 75% 0 0;
+  margin:0 auto;
+
+}
 .audio-image{
-  width:150px;
-  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
   object-fit: cover!important;
 }
 
 .audio-title,.video-title{
+  margin-top:10px;
   text-align: center;
   font-weight:bold;
 }
@@ -219,7 +238,10 @@ a:link,a:visited,a:hover,a:active{
 }
 
 .video-image{
-  padding:10px;
+  width:100%;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  background-color: rgb(247, 247, 247);
 }
 
 .video-title span{
@@ -239,9 +261,11 @@ a:link,a:visited,a:hover,a:active{
 
 
 .member{
-  display:inline-block;
+  margin:10px auto;
+  padding:20px;
   color:rgb(83, 83, 83);
-  margin-bottom:30px;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
 .member-image{
   height:80px;
@@ -371,7 +395,7 @@ a:link,a:visited,a:hover,a:active{
 
 
 /*　プレイヤー（再生バー）の高さ、幅、背景色の指定　*/
-.audiojs { height: 22px; background: #242424; width: 300px;margin:5px auto;}
+.audiojs { height: 22px; background: #242424; width: 75%;margin:5px auto;}
 
 /*　再生・停止ボタンの高さ、幅、パディングの指定　*/
 .audiojs .play-pause { width: 25px; height: 20px; padding: 0px 8px 0px 0px; }
@@ -402,15 +426,18 @@ a:link,a:visited,a:hover,a:active{
 }
 .audio-show-image{
   margin-top:10px;
-  width:300px;
-  height:300px;
+  width:75%;
+  height:50%;
   object-fit: cover!important;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
 
 .audio-show-title{
   display:inline-block;
   font-size: 1.8rem;
   border-bottom:1px solid rgb(192, 192, 192);
+  margin-top:20px;
 }
 .audio-show-name{
   display:block;
@@ -491,7 +518,7 @@ a:link,a:visited,a:hover,a:active{
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 190px;/*最大幅（調整してください）*/
   height: 100%;
-  background: #fff;/*背景色*/
+  background: rgb(255, 255, 255);/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(105%);/*右側OK*/
   transform: translateX(105%);/*右側OK*/
@@ -518,11 +545,14 @@ a:link,a:visited,a:hover,a:active{
   margin:10px 15px 10px 0px;
   padding:12px 0px;
   height:40px;
-  border-radius: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
 .links:hover{
   color:rgb(255, 255, 255);
 }
+
+
 .link-icon{
   font-size:1.5rem;
 }

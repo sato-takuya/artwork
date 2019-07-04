@@ -9,7 +9,7 @@
 <div class='row'>
 <% @videos.each do |video| %>
 
-<%= link_to(video_path(video), class: 'video col-6 col-md-3') do %>
+<%= link_to(video_path(video), class: 'video col-5 col-offset-1 col-md-3') do %>
 <%= image_tag embed_image(video.video_url),class:'video-image col-md-12' %>
 <div class='video-title'>
 <span><%= video.video_title %></span><br>
@@ -26,12 +26,14 @@
 <br>
 <div class='row'>
   <% @audios.each do |audio| %>
-  <%= link_to(audio_path(audio), class: 'audio ex col-6 col-md-3') do %>
+  <%= link_to(audio_path(audio), class: 'audio col-6 col-md-3') do %>
+  <div class="audio-frame">
   <%if audio.audio_image.present?%>
   <%= image_tag audio.audio_image.to_s,class:'audio-image' %>
   <%else%>
   <%= image_tag "noimage-audio.png",class:'audio-image' %>
   <%end%>
+  </div>
 
   <div class='audio-title'>
       <span><%= audio.audio_title %></span><br>

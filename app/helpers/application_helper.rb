@@ -50,6 +50,6 @@ module ApplicationHelper
     str = movie_id_v.to_s
     id = str.delete("?v=")
 
-    image_url = "http://img.youtube.com/vi/#{id}/mqdefault.jpg"
+    image_url = "http://img.youtube.com/vi/#{id}/sddefault.jpg"
   end
 end

@@ -1,0 +1,13 @@
+<%= link_to ' Twitter', "https://twitter.com/#{@group.nickname}",target:"_blank",class:'links fab fa-twitter link-icon col-md-3' %>
+
+<%if @group.instagram_id.present?%>
+<%= link_to ' Instagram', "https://www.instagram.com/#{@group.instagram_id}",target:"_blank",class:'links fab fa-instagram link-icon col-md-3' %>
+<%end%>
+
+<%if @group.official_url.present?%>
+<%= link_to ' 公式サイト', "#{@group.official_url}",target:"_blank",class:'links fas fa-window-maximize link-icon col-md-3' %>
+<%end%>
+
+<%if @group.youtube_channel.present?%>
+<%= link_to ' Youtube', "https://www.youtube.com/channel/#{@group.youtube_channel}",target:"_blank",class:'links fab fa-youtube link-icon col-md-3' %>
+<%end%>

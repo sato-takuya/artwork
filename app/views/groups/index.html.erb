@@ -17,6 +17,8 @@
 
 <%if @group.icon_image.present?%>
   <%= image_tag @group.icon_image.to_s,class: 'basic-icon' %>
+  <%else%>
+    <%=image_tag "noimage.png",class: 'basic-icon' %>
 <%end%>
   <div class='basic-text'>
     <p><%= @group.name %></p>

@@ -6,9 +6,7 @@ class AudiosController < ApplicationController
 
   def show
     @audio = Audio.find_by(public_uid: params[:public_uid])
-    #user-nickname
     user_id = @audio.user.id
-    #nicknameからaudio_all探す
     @audio_all = Audio.where(user_id: user_id)
   end
 

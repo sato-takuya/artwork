@@ -6,8 +6,6 @@ class Audio < ApplicationRecord
 
 
 
-
-
   def to_param
     public_uid
   end

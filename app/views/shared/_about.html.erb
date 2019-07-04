@@ -8,6 +8,8 @@
                       <a class="member col-12 col-md-6 js-modal-open" href="" data-target="<%=member.id%>">
                       <%if member.member_image.attached?%>
                         <%= image_tag member.member_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'member-image' %>
+                        <%else%>
+                        <%= image_tag "noimage.png",class:'member-image' %>
                       <%end%>
                         <div class='member-right'>
                         <div class='member-text'>
@@ -44,7 +46,7 @@
             <%= link_to ' Twitter', "https://twitter.com/#{@group.nickname}",target:"_blank",class:'links fab fa-twitter link-icon col-md-3' %>
             <%= link_to ' Instagram', "https://www.instagram.com/#{@group.instagram_id}",target:"_blank",class:'links fab fa-instagram link-icon col-md-3' %>
             <%= link_to ' 公式サイト', "#{@group.official_url}",target:"_blank",class:'links fas fa-window-maximize link-icon col-md-3' %>
-            <%= link_to ' Youtube', "#",target:"_blank",class:'links fab fa-youtube link-icon col-md-3' %>
+            <%= link_to ' Youtube', "https://www.youtube.com/channel/#{@group.youtube_channel}",target:"_blank",class:'links fab fa-youtube link-icon col-md-3' %>
             </div>
           </div><!--member-frameここまで-->
     <div class='col-md-2'></div>

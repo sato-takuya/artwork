@@ -88,6 +88,7 @@ a:link,a:visited,a:hover,a:active{
   height:50px;
   width:50px;
   border-radius: 50%;
+  object-fit: cover!important;
 }
 .header-icon:hover{
   cursor: pointer;
@@ -124,6 +125,7 @@ a:link,a:visited,a:hover,a:active{
   height:90px;
   width:90px;
   border-radius: 50%;
+  object-fit: cover!important;
 }
 .basic-text{
   padding:5px 5px 5px 5px;

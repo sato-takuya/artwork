@@ -33,8 +33,8 @@
 <br><br><br><br>
 <div class="edit-delete col-md-6">
 <%if user_signed_in? && @audio.user_id == current_user.id%>
-<div class='fas fa-edit'><%= link_to '編集　', edit_audio_path(@audio) %></div>
-<div class='fas fa-trash'><%= link_to '削除', audio_path(@audio),method: :delete,data:{confirm: "削除しますか？"} %></div>
+<span><div class='fas fa-edit'><%= link_to '編集　', edit_audio_path(@audio) %></div></span>
+<span><div class='fas fa-trash'><%= link_to '削除', audio_path(@audio),method: :delete,data:{confirm: "削除しますか？"} %></div></span>
 <%end%>
 </div><br>
 
@@ -45,18 +45,23 @@
 
 
 
-<br><br><br><br>
-<br><br><br><br>
+
+
 <br><br><br><br>
 <h3>関連楽曲</h3>
 <div class='row'><!--下-->
 
 <% @audio_all.each_with_index do |audio,i|%>
+<%if @audio == audio %>
+<%next%>
+<%end%>
+
 <%= link_to(audio_path(audio), class: 'col-6 col-md-4 audio-relation-link') do %>
   <%if audio.audio_image.present?%>
   <%= image_tag audio.audio_image.to_s ,class:'ex audio-relation' %>
+
   <%else%>
-  <%= image_tag "noimage-audio.png",class:'ex audio-relation' %>
+  <%= image_tag "noimage-audio.png",class:'audio-image' %>
   <%end%>
 
   <br><span><%= audio.audio_title %></span><br>

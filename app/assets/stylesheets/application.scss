@@ -50,7 +50,6 @@ a:link,a:visited,a:hover,a:active{
   overflow-x: hidden;
 }
 .main-content{
-  padding:0 5px;
   min-height:1000px;
 }
 
@@ -68,11 +67,11 @@ a:link,a:visited,a:hover,a:active{
 
 
 .header{
-   padding:5px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
   background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
   background-blend-mode: normal, lighten, soft-light;
   width:100%;
-  height:60px;
+  height:80px;
 }
 .header-content{
   margin:0 auto;
@@ -80,12 +79,14 @@ a:link,a:visited,a:hover,a:active{
 .header-logo{
   height:40px;
   float: left;
+  margin-top:20px;
 }
 .header-icon{
-  height:50px;
-  width:50px;
+  height:60px;
+  width:60px;
   border-radius: 50%;
   object-fit: cover!important;
+  margin-top:10px;
 }
 .header-icon:hover{
   cursor: pointer;
@@ -192,7 +193,7 @@ a:link,a:visited,a:hover,a:active{
 .audio{
   color:rgb(83, 83, 83);
   background-color: rgb(247, 247, 247);
-  margin:0px 0px 60px 0px;
+  margin:0px 0px 90px 0px;
 }
 .video{
   color:rgb(83, 83, 83);
@@ -223,7 +224,7 @@ a:link,a:visited,a:hover,a:active{
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0px 10px rgb(131, 131, 131);
   object-fit: cover!important;
 }
 
@@ -240,7 +241,7 @@ a:link,a:visited,a:hover,a:active{
 .video-image{
   width:100%;
   border-radius: 3px;
-  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0px 10px rgb(90, 90, 90);
   padding:0px;
 }
 
@@ -457,6 +458,9 @@ a:link,a:visited,a:hover,a:active{
 
 .edit-delete{
   float:right;
+}
+.edit-delete span{
+  font-size:1.4rem;
 }
 
 .video-show-title{
@@ -762,9 +766,10 @@ a:link,a:visited,a:hover,a:active{
 
 //シェアスペース
 .share-space{
-  height:150px;
+  height:170px;
   background-color: #313944;
   padding:20px 0px;
+  margin-top:50px;
 }
 .share-button{
   display:inline-block;
@@ -777,6 +782,7 @@ a:link,a:visited,a:hover,a:active{
 }
 .share-ex{
   color:rgb(255, 255, 255);
+  margin-bottom:10px;
 }
 .share-button p{
   line-height:80px;

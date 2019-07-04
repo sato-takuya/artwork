@@ -39,6 +39,9 @@
 <p>関連動画</p>
 <div class='video-show-under'><!--下-->
 <% @video_all.each do |video|%>
+<%if @video == video %>
+<%next%>
+<%end%>
 <%= link_to(video_path(video), class: '') do %>
   <%= image_tag embed_image(video.video_url),class:'relation' %>
 <%end%>

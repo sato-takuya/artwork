@@ -51,7 +51,7 @@ a:link,a:visited,a:hover,a:active{
   overflow-x: hidden;
 }
 .main-content{
-  min-height:1000px;
+  min-height:650px;
 }
 
 .title{
@@ -169,7 +169,7 @@ a:link,a:visited,a:hover,a:active{
   cursor: pointer;
   list-style: none;
   transition: .3s;
-  font-size: 4.2rem;
+  font-size: 4.5rem;
 }
 .tab li.active {
   color: #454552;
@@ -223,7 +223,7 @@ a:link,a:visited,a:hover,a:active{
 .audio-frame{
   position: relative;
   width: 100%;
-  height: 90%;
+  height: 80%;
   padding: 75% 0 0;
   margin:0 auto;
 }
@@ -274,7 +274,7 @@ a:link,a:visited,a:hover,a:active{
   margin:10px auto;
   padding:20px;
   color:#454552;
-  background-color: rgb(243, 247, 250);
+  background-color: rgb(255, 255, 255);
   border-radius: 3px;
   box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
@@ -468,8 +468,21 @@ a:link,a:visited,a:hover,a:active{
   font-size: 1.3rem;
 }
 
+.audio-relation-link{
+  position: relative;
+  width: 100%;
+  height: 120px;
+  padding: 75% 0 0;
+  margin:20px auto;
+}
 
 .audio-relation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  box-shadow: 0 0px 10px rgb(131, 131, 131);
+  object-fit: cover!important;
   width:150px;
   height:150px;
   object-fit: cover!important;

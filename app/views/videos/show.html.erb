@@ -40,13 +40,19 @@
 <br>
 <p>関連動画</p>
 <div class='video-show-under'><!--下-->
-<% @video_all.each do |video|%>
+<% @video_all.each_with_index do |video,i|%>
+
 <%if @video == video %>
 <%next%>
 <%end%>
+<%break if i == 4%>
+
 <%= link_to(video_path(video), class: '') do %>
   <%= image_tag embed_image(video.video_url),class:'relation' %>
 <%end%>
+
+
+
 <%end%>
 </div><!--下側-->
 </div><!--枠END-->

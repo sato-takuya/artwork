@@ -8,7 +8,7 @@
 <div class="field">
 
 <br>
-<p class="text-left">画像</p>
+<p class="text-left label">画像</p>
 <div id="img_field" onClick="$('#file').click()" >
 <% if @audio.audio_image.present? %>
   <%= image_tag @audio.audio_image.to_s  %>
@@ -22,7 +22,7 @@
 
 
 <br>
-<p class="text-left">音声ファイル(.mp3/.wav)</p>
+<p class="text-left label">音声ファイル(.mp3/.wav)</p>
 <div class="input-group">
 <label class="input-group-btn">
 <span class="btn btn-info">
@@ -35,11 +35,11 @@
 
 
 <br>
-<p class="text-left">曲名</p>
+<p class="text-left label">曲名</p>
 <%= form.text_field :audio_title,class:"form-control", placeholder: "曲名を入力してください" %>
 
 <br>
-<p class="text-left">歌詞</p>
+<p class="text-left label">歌詞</p>
 <%= form.text_area :audio_lyrics,cols:30,class: 'form-control', placeholder: "歌詞を入力してください" %>
 </div>
 

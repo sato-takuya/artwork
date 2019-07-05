@@ -1,0 +1,14 @@
+<div class='container-fuild'>
+  <div class='row'>
+    <div class='col-md-3'></div>
+    <div class='docs col-md-6'>
+<h1>退会する</h1>
+
+<p>退会した場合すべてのデータが削除され、復活することはできません。ご了承の上退会をお願いします。</p>
+
+<%= link_to "アカウント削除","/users/#{current_user}", method: :delete, data: { confirm: '本当にアカウントを削除しますか？' },class:"btn btn-danger btn-lg my-4" %>
+</div>
+
+<div class='col-md-3'></div>
+</div>
+</div>

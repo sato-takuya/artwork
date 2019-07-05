@@ -7,7 +7,7 @@
 <div class="field">
 
 <br>
-<p class="text-left">アイコン画像</p>
+<p class="text-left label">アイコン画像</p>
 <div id="img_field" onClick="$('#file').click()" >
 <% if current_user.icon_image.present? %>
   <%= image_tag current_user.icon_image.to_s,class:"ex_image" %>
@@ -20,13 +20,13 @@
 
 
 <br>
-<p class="text-left">名前</p>
+<p class="text-left label">名前</p>
 <%= f.text_field :name,class:"form-control" %>
 
 
 
 <br>
-<p class="text-left">URL</p>
+<p class="text-left label">URL</p>
 <div class="row">
 <span class="col-5 col-md-4">art-wk.herokuapp/</span><%= f.text_field :nickname,class:"form-control col-7 col-md-8" %>
 <br>
@@ -38,7 +38,7 @@
 
 
     <br>
-<p class="text-left">カバー写真</p>
+<p class="text-left label">カバー写真</p>
     <%= f.file_field :new_top_image,id:"myfile5",class:"form-control" %>
 
 
@@ -46,22 +46,21 @@
 
 
     <br>
-<p class="text-left">公式サイトのURL</p>
+<p class="text-left label">公式サイトのURL</p>
     <%= f.text_field :official_url,class:"form-control" %>
-
-
-
-
-
     <br>
-<p class="text-left">InstagramのID</p>
+<p class="text-left label">InstagramのID</p>
     </span><%= f.text_field :instagram_id,class:"form-control" %>
 
 <br>
-<p class="text-left">YoutubeChannelのID</p>
+<p class="text-left label">YoutubeChannelのID</p>
 </span><%= f.text_field :youtube_channel,class:"form-control" %>
 
-  </div>
+<br>
+<p class="text-left label">紹介</p>
+</span><%= f.text_area :info,class:"form-control" , :size => "20x10"%>
+<p>あなたについて、より詳しく教えてください。</p>
+</div>
 
 <%= f.submit "この内容で登録する",:class=>"btn btn-info btn-lg my-5" %>
 

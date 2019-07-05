@@ -6,15 +6,21 @@
 <%=render "shared/errors",obj: @video%>
 <div class="field">
 <br>
-<p class="text-left">Youtubeの埋め込みURL</p>
+<p class="text-left label">Youtubeの埋め込みURL</p>
 <%= form.text_field :video_url,class:"form-control", placeholder: "<iframe　width= 〜 </iframe>" %>
+<br>
+<p class="text-left">※Youtubeの埋め込みURLの取得方法</p>
+<div class="text-left">①Youtube動画の再生画面(Web版)の「共有」をクリック</div>
+<div class="text-left">②「埋め込む」をクリック</div>
+<div class="text-left">③表示されるURLの「iflame」から「/iframe」まで全てコピー</div>
+
 
 <br>
-<p class="text-left">動画タイトル</p>
+<p class="text-left label">動画タイトル</p>
 <%= form.text_field :video_title,class:"form-control", placeholder: "動画タイトル" %>
 
 <br>
-<p class="text-left">歌詞</p>
+<p class="text-left label">歌詞</p>
 <%= form.text_area :video_lyrics,col:40,class: 'form-control', placeholder: "歌詞" %>
 
 </div>

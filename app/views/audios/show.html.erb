@@ -44,9 +44,6 @@
 </div><!--上-->
 
 
-
-
-
 <br><br>
 <br><br><br><br>
 <h3>関連楽曲</h3>
@@ -58,12 +55,13 @@
 <%end%>
 
 <%= link_to(audio_path(audio), class: 'col-6 col-md-4 audio-relation-link') do %>
+<div class="audio-frame">
   <%if audio.audio_image.present?%>
   <%= image_tag audio.audio_image.to_s ,class:'ex audio-relation' %>
-
   <%else%>
   <%= image_tag "noimage-audio.png",class:'audio-image' %>
   <%end%>
+</div>
 
   <br><span><%= audio.audio_title %></span><br>
   <%= audio.user.name %>

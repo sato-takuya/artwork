@@ -23,5 +23,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:official_url])
     devise_parameter_sanitizer.permit(:account_update, keys: [:instagram_id])
     devise_parameter_sanitizer.permit(:account_update, keys: [:youtube_channel])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:info])
   end
 end

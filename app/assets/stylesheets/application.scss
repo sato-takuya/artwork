@@ -31,7 +31,7 @@ a{
 
 body{
   font-size: 1.2rem;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -103,7 +103,6 @@ a:link,a:visited,a:hover,a:active{
 
 .group-page{
   margin:0 auto;
-  background-color: rgb(247, 247, 247);
   height:100%;
   padding:0px;
 }
@@ -121,11 +120,11 @@ a:link,a:visited,a:hover,a:active{
   margin-bottom:30px;
 }
 .basic-content-under{
+  background-color: rgb(255, 255, 255);
   margin-top:10px;
   border-radius: 3px;
   padding:20px 0px 0px 0px;
   box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-  background-color: rgb(255, 255, 255);
 }
 .basic-icon{
   height:90px;
@@ -169,7 +168,7 @@ a:link,a:visited,a:hover,a:active{
   color: rgb(43, 43, 43);
   background: rgb(255, 255, 255);
   border-bottom:2.5px solid #5BBEE4;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
 }
 .tab li:hover{
   color: rgb(43, 43, 43);
@@ -190,7 +189,7 @@ a:link,a:visited,a:hover,a:active{
 
 .artworks,.members-frame{
   margin:10px auto;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
   height:100%;
   padding:0 30px;
   border-radius: 3px;
@@ -198,12 +197,12 @@ a:link,a:visited,a:hover,a:active{
 
 .audio{
   color:rgb(83, 83, 83);
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
   margin:0px 0px 90px 0px;
 }
 .video{
   color:rgb(83, 83, 83);
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
   margin:10px 14px;
   padding:10px 0px;
 }
@@ -464,18 +463,10 @@ a:link,a:visited,a:hover,a:active{
   font-size: 1.3rem;
 }
 
-.audio-relation-link{
-  margin-bottom:50px;
-}
 
 .audio-relation{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  box-shadow: 0 0px 10px rgb(131, 131, 131);
+  width:150px;
+  height:150px;
   object-fit: cover!important;
 }
 

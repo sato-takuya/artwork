@@ -6,13 +6,13 @@
 <div class='row'><!--上-->
 
 <div class="col-md-12">
-
 <%if @audio.audio_image.present?%>
 <%= image_tag @audio.audio_image.to_s,class:'ex audio-show-image' %>
 <%else%>
 <%= image_tag "noimage-audio.png",class:'audio-show-image' %>
 <%end%>
 <%= audio_tag  @audio.audio_file,preload:"auto" %>
+
 <div class="audio-show-title">
 <p><%= @audio.audio_title %></p>
 </div>
@@ -59,7 +59,7 @@
   <%if audio.audio_image.present?%>
   <%= image_tag audio.audio_image.to_s ,class:'ex audio-relation' %>
   <%else%>
-  <%= image_tag "noimage-audio.png",class:'audio-image' %>
+  <%= image_tag "noimage-audio.png",class:'audio-relation' %>
   <%end%>
 </div>
 

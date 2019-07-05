@@ -47,6 +47,7 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'google-analytics-rails'
 gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 
 gem 'active_hash'
 gem 'mini_magick'

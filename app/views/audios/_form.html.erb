@@ -10,11 +10,16 @@
 <br>
 <p class="text-left label">画像</p>
 <div id="img_field" onClick="$('#file').click()" >
+
+<div class="audio-image-form">
 <% if @audio.audio_image.present? %>
-  <%= image_tag @audio.audio_image.to_s  %>
+  <%= image_tag @audio.audio_image.to_s,class:"audio-image-form-content"  %>
 <% else %>
   <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
 <% end %>
+</div>
+
+
 </div>
 
 <%= form.file_field :audio_image, class: "image", style: "display:none;", id: "file"%>

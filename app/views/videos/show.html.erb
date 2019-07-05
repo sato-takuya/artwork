@@ -21,7 +21,9 @@
     <label for="label1"><span>歌詞を表示</span></label>
     <div class="hidden_show">
       <!--非表示ここから-->
-      <%= simple_format @video.video_lyrics , class:"lyrics" %>
+      <div class="lyrics">
+      <%= simple_format @video.video_lyrics %>
+      </div>
       <!--ここまで-->
     </div>
 </div>

@@ -28,7 +28,7 @@
                                     <%= image_tag "noimage.png",class:'member-show-image' %>
                                 <%end%>
                                 <div class='member-show-bottom'>
-                                <p><span><%= member.member_name %></span></p>
+                                <p><span><%= member.member_name %></span><span>(<%= member.part %>)</span></p>
                                 <p class='member-info'><span><%= member.member_info %></span></p>
                                       <div class='member-show-sns'>
                                       <%= link_to '',"https://twitter.com/#{member.twitter_id}",target:"_blank",class:'icon-sns fab fa-twitter' %>

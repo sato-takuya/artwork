@@ -1,268 +1,498 @@
+
 <!DOCTYPE html>
-<!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
-<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
-<!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html class="noIE" lang="en-US">
-<!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<title>Nevada Plus</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ranger &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
 
-		<!-- meta -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+  <!--
+	//////////////////////////////////////////////////////
 
-		<!-- google fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet' type='text/css'>
-		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FREEHTML5.CO
 
-		<!-- css -->
-		<link rel="stylesheet" href="assets/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/style.css" media="screen"/>
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
 
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.js"></script>
-		<![endif]-->
+	//////////////////////////////////////////////////////
+	 -->
 
-		<!--[if IE 8]>
-	    	<script src="assets/js/selectivizr.js"></script>
-	    <![endif]-->
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="assets/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="assets/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="assets/simple-line-icons.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/owl.theme.default.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="assets/bootstrap.css">
+
+
+	<link rel="stylesheet" href="assets/style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="assets/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
 	</head>
-
 	<body>
-		<div id="wrapper">
-    <header class='header'>
-    <%=render "shared/header"%>
-    </header>
-			<!-- About us -->
-	        <div id="about" class="about-us">
-	            <div class="container about-sec">
-	                <header class="block-heading cleafix">
-							<div class="title-page">
-								<p class="main-header">About us</p>
-							    <p class="sub-header">Make sure you know about us</p>
-							</div>
-						</header>
-	                <div class="divide50"></div>
-	                <div class="row">
-	                    <div class="col-md-4 text-center">
-	                        <div class="aboutus-item">
-	                            <i class="aboutus-icon fa fa-plane"></i>
-	                            <h4 class="aboutus-title">Great Transport</h4>
-	                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-4 text-center">
-	                        <div class="aboutus-item">
-	                            <i class="aboutus-icon fa fa-usd"></i>
-	                            <h4 class="aboutus-title">Not Expensive</h4>
-	                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-4 text-center">
-	                        <div class="aboutus-item">
-	                            <i class="aboutus-icon fa fa-cutlery"></i>
-	                            <h4 class="aboutus-title">Delicious Food</h4>
-	                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	        <!-- /About us -->
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="/assets/js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		          	<a class="navbar-brand" href="index.html">Ranger<span>.</span></a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+		            <li><a href="#" data-nav-section="screenshots"><span>Screenshots</span></a></li>
+		            <li><a href="#" data-nav-section="tour"><span>Tour</span></a></li>
+		            <li><a href="#" data-nav-section="features"><span>Features</span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
+		            <li><a href="#" data-nav-section="pricing"><span>Pricing</span></a></li>
+
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<div id="slider" data-section="home">
+		<div class="owl-carousel owl-carousel-main owl-carousel-fullwidth">
+			<!-- You may change the background color here. -->
+		    <div class="item" style="background: #ba78ff;">
+		    	<div class="container" style="position: relative;">
+		    		<div class="row animate-box" data-animate-effect="fadeIn">
+					    <div class="col-md-7 col-sm-7">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead ">App for iOs</h1>
+									<h2 class="fh5co-sub-lead ">100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a></h3>
+									<p class=""><a href="#" class="btn btn-primary btn-lg">View Case Study</a></p>
+						    	</div>
+						    </div>
+					    </div>
+					    <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 mobile-image">
+					    	<div class="mobile"><img src="/images/ios.png" alt="Free HTML5 Template by FREEHTML5.co"></div>
+					    </div>
+
+		    		</div>
+		    	</div>
+		    </div>
+			<!-- You may change the background color here.  -->
+		    <div class="item" style="background: #ba78ff;">
+		    	<div class="container" style="position: relative;">
+		    		<div class="row animate-box" data-animate-effect="fadeIn">
+		    			<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead ">App for Andriod</h1>
+									<h2 class="fh5co-sub-lead ">100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a></h3>
+									<p class=""><a href="#" class="btn btn-primary btn-lg">View Case Study</a></p>
+						    	</div>
+						    </div>
+					    </div>
+					    <div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 mobile-image">
+					    	<div class="mobile"><img src="/images/andriod.png" alt="Free HTML5 Template by FREEHTML5.co"></div>
+					    </div>
+
+		    		</div>
+		    	</div>
+		    </div>
 
 
-			<div class="content-block parallax" id="services">
-				<div class="container services-sec">
-					<div class="title-page">
-						<p class="main-header">Our Services </p>
-					    <p class="sub-header">A little about what we do</p>
+		</div>
+	</div>
+
+	<div id="fh5co-our-services" data-section="services">
+		<div class="container">
+			<div class="row row-bottom-padded-sm animate-box">
+				<div class="col-md-12 section-heading text-center">
+					<h2>Our Services</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+						</div>
 					</div>
-					<section class="block-body">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="service">
-									<div class="bar">
-										<i class="fa fa-send-o"></i>
-									</div>
-									<h2 class="service-head">Illustration</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<div class="bar">
-										<i class="fa fa-heart-o"></i>
-									</div>
-									<h2 class="service-head">3D Modeling</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<div class="bar">
-										<i class="fa fa-camera-retro"></i>
-									</div>
-									<h2 class="service-head">Photography</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-						</div>
-					</section>
 				</div>
-			</div><!-- #services -->
+			</div>
+			<div class="row">
 
-
-			<div class="content-block" id="blog">
-				<div class="container blog-sec">
-					<header class="block-heading cleafix">
-						<a href="#" class="btn btn-o btn-lg pull-right">View All</a>
-						<div class="title-page">
-							<p class="main-header">From the Blog</p>
-						    <p class="sub-header">Keep up with the latest happenings.</p>
-						</div>
-					</header>
-					<section class="block-body">
-						<div class="row">
-							<div class="col-sm-4 blog-post">
-								<img src="/images/bike_water1-1000x600.jpg">
-								<a href="#"><h2>Design Your Mind</h2></a>
-								<div class="date">3 Nov, 2014</div>
-								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								<a href="">Read More</a>
-							</div>
-							<div class="col-sm-4 blog-post">
-								<img src="/images/mac_glasses1-1000x600.jpg">
-								<a href="#"><h2>Winter Is Comming</h2></a>
-								<div class="date">3 Nov, 2014</div>
-								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								<a href="">Read More</a>
-							</div>
-							<div class="col-sm-4 blog-post">
-								<img src="/images/road-1000x600.jpg">
-								<a href="#"><h2>The Illustration</h2></a>
-								<div class="date">3 Nov, 2014</div>
-								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								<a href="">Read More</a>
-							</div>
-						</div>
-					</section>
+				<div class="col-md-4">
+					<div class="box animate-box">
+						<div class="icon colored-1"><span><i class="icon-mustache"></i></span></div>
+						<h3>100% free</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					</div>
 				</div>
-			</div><!-- #blog -->
-
-
-			<div class="content-block parallax" id="parallax">
-				<div class="container">
-					<h3 class="call-action pull-left">In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis.</h3>
-					<a href="#" class="pull-right btn btn-o-white btn-lg">Get a free quote</a>
+				<div class="col-md-4">
+					<div class="box animate-box">
+						<div class="icon colored-4"><span><i class="icon-heart"></i></span></div>
+						<h3>Made with love</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					</div>
 				</div>
-			</div><!-- #parallax -->
-
-			<div class="content-block" id="testimonials">
-				<div class="container testimonial-sec">
-
-					<header class="block-heading cleafix">
-						<div class="title-page  pull-left">
-							<p class="main-header">Testimonial</p>
-						    <p class="sub-header">What our client says</p>
-						</div>
-					</header>
-
-					<section class="block-body">
-						<div class="row">
-							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-							  	<!-- Indicators -->
-							  	<ol class="carousel-indicators">
-								    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-								    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-								    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							  	</ol><!-- /.carousel-indicators -->
-
-
-							  	<!-- Wrapper for slides -->
-							  	<div class="carousel-inner" role="listbox">
-								    <div class="item active">
-								      	<div class="img-center">
-								      		<img class="img-circle circular-img" src="/images/01_200x200.png">
-								      	</div>
-								      	<h3>
-								      		Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce & much more.
-								      	</h3>
-
-								    </div><!-- /.item -->
-								    <div class="item">
-								    	<div class="img-center">
-								      		<img class="img-circle circular-img" src="/images/02_200x200.png">
-								      	</div>
-								       	<h3>
-								       		Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce & much more.
-								       	</h3>
-
-								    </div><!-- /.item -->
-								    <div class="item">
-								    	<div class="img-center">
-								      		<img class="img-circle circular-img" src="/images/03_200x200.png">
-								        </div>
-								       	<h3>
-								       		Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce & much more.
-								       	</h3>
-								    </div><!-- /.item -->
-							  	</div><!-- /.carousel-inner -->
-							</div><!-- /.carousel slide -->
-						</div>
-					</section><!-- /.block-body -->
+				<div class="col-md-4">
+					<div class="box animate-box">
+						<div class="icon colored-2"><span><i class="icon-screen-desktop"></i></span></div>
+						<h3>Fully responsive</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					</div>
 				</div>
-			</div><!-- /#testimonials -->
 
-		</div><!--/#wrapper-->
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-product-screenshots" data-section="screenshots">
+
+		<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeIn">
+				<div class="col-md-12 section-heading text-center">
+					<h2>App Screenshots</h2>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="owl-carousel-center">
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-1-1-login.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-1-8-list.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-2-1-login.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-2-6-overview.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-3-7-groups.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-4-7-groups.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+			<div class="animate-box" data-animate-effect="fadeIn"><img src="/images/screen-5-6-overview.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></div>
+		</div>
+	</div>
+
+	<div id="fh5co-tour" data-section="tour">
+		<div class="container">
+			<div class="row row-bottom-padded-lg">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<img src="/images/screen-1-1-login.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive img-feature-1">
+					</div>
+					<div class="col-md-7 col-md-push-1">
+						<h2>We create beautiful web and mobile apps.</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+						<p><a href="#" class="btn btn-primary">Learn more</a></p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row row-bottom-padded-lg">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-4 col-md-push-8 animate-box" data-animate-effect="fadeInRight">
+						<img src="/images/screen-1-8-list.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive img-feature-1">
+					</div>
+					<div class="col-md-7 col-md-pull-4">
+						<h2>We create beautiful web and mobile apps.</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+						<p><a href="#" class="btn btn-primary">Learn more</a></p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<img src="/images/screen-3-7-groups.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive img-feature-1">
+					</div>
+					<div class="col-md-7 col-md-push-1">
+						<h2>We create beautiful web and mobile apps.</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+						<p><a href="#" class="btn btn-primary">Learn more</a></p>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 
 
 
-		<script src="assets/js/jquery-2.1.3.min.js"></script>
-		<script src="assets/js/bootstrap.js"></script>
-		<script src="assets/js/jquery.actual.min.js"></script>
-		<script src="assets/js/jquery.scrollTo.min.js"></script>
-		<script src="assets/js/contact.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/smoothscroll.js"></script>
-		<script type="text/javascript">
-		jQuery(document).ready(function($){
 
-		  	$(window).scroll(function() {
+	<div id="fh5co-features" data-section="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="animate-box" data-animate-effect="fadeIn">Features</h2>
+					<div class="row animate-box" data-animate-effect="fadeIn">
+						<div class="col-md-8 col-md-offset-2">
+							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-icon"><i class="icon-present"></i></div>
+					<div class="fh5co-desc">
+						<h3>100% Free</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-icon"><i class="icon-eye"></i></div>
+					<div class="fh5co-desc">
+						<h3>Retina Ready</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-icon"><i class="icon-crop"></i></div>
+					<div class="fh5co-desc">
+						<h3>Fully Responsive</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-icon"><i class="icon-speedometer"></i></div>
+					<div class="fh5co-desc">
+						<h3>Lightweight</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-icon"><i class="icon-heart"></i></div>
+					<div class="fh5co-desc">
+						<h3>Made with Love</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-icon"><i class="icon-umbrella"></i></div>
+					<div class="fh5co-desc">
+						<h3>Eco Friendly</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+			</div>
+		</div>
+	</div>
 
-		  		console.log("asdf");
+	<div id="fh5co-testimonials" data-section="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="animate-box" data-animate-effect="fadeIn">Happy Clients Says...</h2>
+					<div class="row animate-box" data-animate-effect="fadeIn">
+						<div class="col-md-8 col-md-offset-2 subtext">
+							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony animate-box" data-animate-effect="fadeIn">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+						</blockquote>
+						<p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+					</div>
 
-				if ($(window).scrollTop() > 100 ){
-
-		 		$('.top-header').addClass('shows');
-
-		  		} else {
-
-		   	 	$('.top-header').removeClass('shows');
-
-		 		};
-			});
-
-		  });
-
-		jQuery('.scroll').on('click', function(e){
-				e.preventDefault()
-
-		  jQuery('html, body').animate({
-		      scrollTop : jQuery(this.hash).offset().top
-		    }, 1500);
-		});
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony animate-box" data-animate-effect="fadeIn">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
+						</blockquote>
+						<p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+					</div>
 
 
-		</script>
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony animate-box" data-animate-effect="fadeIn">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+						</blockquote>
+						<p class="author">John Doe, Founder <a href="#">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-pricing" data-section="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="animate-box" data-animate-effect="fadeIn">Pricing</h2>
+					<div class="row animate-box" data-animate-effect="fadeIn">
+						<div class="col-md-8 col-md-offset-2 subtext">
+							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="price-box animate-box" data-animate-effect="fadeIn">
+						<h2 class="pricing-plan">Starter</h2>
+						<div class="price"><sup class="currency">$</sup>7<small>/mo</small></div>
+						<p>Basic customer support for small business</p>
+						<hr>
+						<ul class="pricing-info">
+							<li>10 projects</li>
+							<li>20 Pages</li>
+							<li>20 Emails</li>
+							<li>100 Images</li>
+						</ul>
+						<a href="#" class="btn btn-default btn-sm">Get started</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="price-box animate-box" data-animate-effect="fadeIn">
+						<h2 class="pricing-plan">Regular</h2>
+						<div class="price"><sup class="currency">$</sup>19<small>/mo</small></div>
+						<p>Basic customer support for small business</p>
+						<hr>
+						<ul class="pricing-info">
+							<li>15 projects</li>
+							<li>40 Pages</li>
+							<li>40 Emails</li>
+							<li>200 Images</li>
+						</ul>
+						<a href="#" class="btn btn-default btn-sm">Get started</a>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block"></div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeIn">
+					<div class="price-box popular">
+						<div class="popular-text">Best value</div>
+						<h2 class="pricing-plan">Plus</h2>
+						<div class="price"><sup class="currency">$</sup>79<small>/mo</small></div>
+						<p>Basic customer support for small business</p>
+						<hr>
+						<ul class="pricing-info">
+							<li>Unlimitted projects</li>
+							<li>100 Pages</li>
+							<li>100 Emails</li>
+							<li>700 Images</li>
+						</ul>
+						<a href="#" class="btn btn-primary btn-sm">Get started</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="price-box animate-box" data-animate-effect="fadeIn">
+						<h2 class="pricing-plan">Enterprise</h2>
+						<div class="price"><sup class="currency">$</sup>125<small>/mo</small></div>
+						<p>Basic customer support for small business</p>
+						<hr>
+						<ul class="pricing-info">
+							<li>Unlimitted projects</li>
+							<li>Unlimitted Pages</li>
+							<li>Unlimitted Emails</li>
+							<li>Unlimitted Images</li>
+						</ul>
+						<a href="#" class="btn btn-default btn-sm">Get started</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="fh5co-cta" style="background-image:url(images/hero.jpg)">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<h3>We love to talk about your business. Lorem ipsum dolor sit amet consectetur adipisicing. </h3>
+				<p><a href="#" class="btn btn-primary btn-outline btn-lg">Get started</a></p>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12">
+					<p class="copyright text-center">&copy; 2015 Free Website Template<a href="index.html">Ranger</a>. All Rights Reserved. <br> Free HTML5 Template by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> | Images by <a href="http://pexels.com/" target="_blank">Pexels</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-youtube"></i></a></li>
+						<li><a href="#"><i class="icon-pinterest"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-instagram"></i></a></li>
+						<li><a href="#"><i class="icon-dribbble"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- jQuery -->
+	<script src="assets/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="assets/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="assets/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="assets/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="assets/owl.carousel.min.js"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="assets/main.js"></script>
 
 	</body>
 </html>

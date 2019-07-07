@@ -157,6 +157,7 @@ h2.section-title,
 
 .title-content p {
 	margin-top: 34px;
+	font-size:2rem;
 }
 
 h3, .h3 {
@@ -186,7 +187,7 @@ section {
 	margin:20px 0px;
 	height:650px;
 	border-radius: 3px;
-	box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 
 }
 .li-image-b{
@@ -204,13 +205,14 @@ SERVICES SECTION
 
 #services{
 	padding: 40px 0 0;
+	background-color:#EAEAEA;
 }
 .service{
 	margin:0 auto;
 }
 
 .services-container {
-	background-color:rgb(255, 255, 255);
+	background-color:#EAEAEA;
 	position: relative;
 	margin:0 auto;
 }
@@ -235,14 +237,14 @@ SERVICES SECTION
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
-	background-color:#EAEAEA;
+	background-color:rgb(255, 255, 255);
 
 }
 .we-make-section2 {
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
-	background-color:rgb(255, 255, 255);
+	background-color:#EAEAEA;
 }
 
 .img-container {

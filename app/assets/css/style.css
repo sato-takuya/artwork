@@ -151,6 +151,7 @@ h2.section-title,
 }
 
 .title-content {
+	margin:0 auto;
 	text-align: center;
 }
 
@@ -181,8 +182,18 @@ section {
 	max-height:450px;
 	height:100%;
 }
-.lp-top-image{
-	width:100%;
+.li-image-a{
+	margin:20px 0px;
+	height:650px;
+	border-radius: 3px;
+	box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+
+}
+.li-image-b{
+	margin:20px 0px;
+	height:650px;
+	border-radius: 3px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
 /**********************
 SERVICES SECTION
@@ -221,13 +232,14 @@ SERVICES SECTION
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
-	background-color:rgb(255, 255, 255);
+	background-color:#EAEAEA;
+
 }
 .we-make-section2 {
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
-	background-color:#EAEAEA;
+	background-color:rgb(255, 255, 255);
 }
 
 .img-container {

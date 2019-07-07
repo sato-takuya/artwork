@@ -9,10 +9,16 @@
 <head>
     <title>fogsound(フォグサウンド)</title>
     <meta charset="utf-8">
+		<!-- Twitterカード設定 -->
+    <% twitter_card = get_twitter_card_info(@group,@audio) %>
+    <meta name="twitter:card" content=<%=twitter_card[:card]%> />
+    <meta property="og:url" content=<%=twitter_card[:url]%> />
+    <meta property="og:title" content=<%=twitter_card[:title]%> />
+    <meta property="og:description" content=<%=twitter_card[:description]%> />
+    <meta property="og:image" content=<%=twitter_card[:image]%> />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
-    <meta name="description" content="Free singlepage web template created by GraphBerry">
-    <meta name="keywords" content="HTML5, Bootstrap 3, CSS3, javascript, PHP, Responsive, Mobile">
     <meta name="author" content="GraphBerry.com"/>
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

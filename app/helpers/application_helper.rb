@@ -6,18 +6,17 @@ module ApplicationHelper
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/"
       twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = "バンド・ミュージシャンのためのポートフォリオサイト"
-      twitter_card[:title] = "artwork"
+      twitter_card[:title] = "fogsound"
     elsif group.present? && audio.nil?#グループver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{group.nickname}"
       twitter_card[:image] = group.icon_image.to_s
-      #"https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = group.name
-      twitter_card[:title] = "artwork"
+      twitter_card[:title] = "fogsound"
     else#オーディオver
       twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{audio.public_uid}"
       twitter_card[:image] = audio.audio_image.to_s
       twitter_card[:description] = audio.audio_title
-      twitter_card[:title] = "artwork"
+      twitter_card[:title] = "fogsound"
   end
     twitter_card[:card] = 'summary_large_image'
     twitter_card

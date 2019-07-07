@@ -15,7 +15,7 @@ class MembersController < ApplicationController
     @member = Member.new(members_params)
     @member.user_id = current_user.id
     if @member.save
-      redirect_to "/",notice: "保存しました"
+      redirect_to "/#{current_user.nickname}",notice: "保存しました"
     else
       render "new"
     end
@@ -31,7 +31,7 @@ class MembersController < ApplicationController
     @member.user_id = current_user.id
 
     if @member.save
-      redirect_to "/",notice: "保存しました"
+      redirect_to "/#{current_user.nickname}",notice: "保存しました"
     else
       render "new"
     end
@@ -40,7 +40,7 @@ class MembersController < ApplicationController
   def destroy
     @member = Member.find_by(public_uid: params[:id])
     @member.destroy
-    redirect_to "/",notice:"削除しました"
+    redirect_to "/#{current_user.nickname}",notice:"削除しました"
   end
 
   private

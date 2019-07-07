@@ -8,7 +8,7 @@ html{
 
 body {
 	font-size: 1.2rem;
-  background-color: rgb(243, 247, 250);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif;
   color:#454552;
@@ -137,8 +137,6 @@ a:link,a:visited,a:hover,a:active{
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
-
-
 ul, ol {
 	list-style-type: none;
 	padding: 0;
@@ -175,18 +173,11 @@ section {
 	background-color: #ffffff;
 }
 
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(50, 70, 81, 0.9);
-}
+
+
 
 
 #home {
-	background-color:#333;
 	max-height:450px;
 	height:100%;
 }
@@ -200,11 +191,14 @@ SERVICES SECTION
 #services{
 	padding: 40px 0 0;
 }
+.service{
+	margin:0 auto;
+}
 
 .services-container {
+	background-color:rgb(255, 255, 255);
 	position: relative;
-	margin-top: 89px;
-	padding: 0 0 56px;
+	margin:0 auto;
 }
 
 
@@ -224,15 +218,26 @@ SERVICES SECTION
 }
 
 .we-make-section {
-	background: url(../img/services_background.png) center center no-repeat;
 	background-size: cover;
 	position: relative;
-	padding: 78px 0 0;
+	padding: 30px 0;
+	background-color:rgb(255, 255, 255);
+}
+.we-make-section2 {
+	background-size: cover;
+	position: relative;
+	padding: 30px 0;
+	background-color:#EAEAEA;
 }
 
-.we-make-section .img-container {
-	margin-bottom: -48px;
+.img-container {
+	padding:10px 0px;
+	background-color:#EAEAEA;
 }
+.gray{
+	background-color:#EAEAEA;
+}
+
 
 .we-make-section h3 {
 	color: #4EA1D5;
@@ -241,7 +246,16 @@ SERVICES SECTION
 
 .we-make-section p {
 	margin-top: 37px;
-	color: #ffffff;
+	color:#454552
+}
+.we-make-section2 h3 {
+	color: #4EA1D5;
+	margin-top: 15px;
+}
+
+.we-make-section2 p {
+	margin-top: 37px;
+	color:#454552
 }
 
 .features-list {
@@ -268,141 +282,7 @@ SERVICES SECTION
 
 
 
-/**********************
-PORTFOLIO SECTION
-***********************/
 
-#portfolio {
-	padding: 92px 0 0;
-}
-
-#portfolio-navigation {
-	margin-top: 91px;
-	text-align: center;
-	margin-bottom: 0;
-}
-
-#portfolio-navigation .navbar-nav {
-	display: inline-block;
-	float: none;
-}
-
-#portfolio-navigation .navbar-nav>li>.filter {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
-	padding: 10px 20px;
-	margin: 0 5px;
-	color: #637988;
-	background: transparent;
-	border: 1px solid transparent;
-	border-radius: 20px;
-	box-sizing: border-box;
-	transition: all 0.3s;
-	outline: none;
-	box-shadow: none;
-}
-
-#portfolio-navigation .navbar-nav>li>.filter:hover,
-#portfolio-navigation .navbar-nav>li>.filter:focus {
-	color: #ffe600;
-}
-
-#portfolio-navigation .navbar-nav>li>.filter.mixitup-control-active,
-#portfolio-navigation .navbar-nav>li>.filter.mixitup-control-active:hover,
-#portfolio-navigation .navbar-nav>li>.filter.mixitup-control-active:focus {
-	color: #ffffff;
-	background: #ffe600;
-	border: 1px solid #ffe600;
-	box-shadow: none;
-}
-
-.portfolio-grid {
-	margin-top: 25px;
-	font-size: 0.1px;
-	text-align: justify;
-}
-
-.portfolio-grid:after {
-	content: '';
-	display: inline-block;
-	width: 100%;
-}
-
-.portfolio-grid .grid-item, .portfolio-grid .gap {
-	position: relative;
-	display: inline-block;
-	margin-top: 29px;
-	width: calc(100%/3 - (((3 - 1) * 29px) / 3));
-}
-
-.portfolio-grid .grid-item img {
-	width: 100%;
-}
-
-#portfolio .btn {
-	display: block;
-	margin: 52px auto 0;
-}
-
-.video-section {
-	margin-top: 94px;
-	padding: 94px 0;
-	background: #ffe500;
-	color: #ffffff;
-}
-
-.video-section h4 {
-	font-weight: 600;
-	color: #334752;
-}
-
-.video-section p {
-	margin-top: 21px;
-}
-
-.video-section i {
-	font-weight: 300;
-	color: #334752;
-}
-
-.video-section .video-description {
-	margin-top: 31px;
-}
-
-.video-section .video-description p:not(:first-of-type) {
-	margin-top: 10px;
-}
-
-#portfolio .video-section .btn {
-	display: inline-block;
-	margin: 22px 0 0;
-}
-
-.business-section {
-	padding: 96px 0 0;
-	background: #324651;
-	color: #ffffff;
-	text-align: center;
-	overflow: hidden;
-}
-
-.business-section p {
-	margin-top: 17px;
-}
-
-.business-section i {
-	font-weight: 300;
-}
-
-#portfolio .business-section .btn {
-	display: inline-block;
-	margin: 36px 0 0;
-}
-
-.business-section .img-container {
-	margin-top: 51px;
-	margin-bottom: -47px;
-}
 
 /**********************
 ABOUT US SECTION
@@ -464,18 +344,7 @@ SLIDER OPTIONS
 	transition: opacity 1s ease-out;
 }
 
-/**********************
-SKILLS & COMPANY SUBSECTION
-***********************/
 
-
-/**********************
-BLOG SECTION
-***********************/
-
-/**********************
-CONTACT US SECTION
-***********************/
 
 #contact {
 	padding: 50px 0 50px;
@@ -725,19 +594,6 @@ RESPONSIVE
 		font-size: 55px;
 	}
 
-	/**********************
-	PORTFOLIO SECTION
-	***********************/
-
-	.portfolio-grid .grid-item, .portfolio-grid .gap {
-		width: calc(100% - (30px * 2));
-		margin-left: 30px;
-		margin-right: 30px;
-	}
-
-	.business-section .img-container {
-		margin: 50px 0 30px;
-	}
 
 	/**********************
 	ABOUT US SECTION
@@ -762,4 +618,38 @@ RESPONSIVE
 		max-width: 170px;
 		margin: 30px auto 0;
 	}
+}
+
+.start-content{
+	height:250px;
+}
+
+#services-container{
+	margin:0 atuo;
+}
+
+
+.share-space{
+  height:170px;
+  background-color: #454552;
+  padding:20px 0px;
+  margin-top:50px;
+}
+.share-button{
+  display:inline-block;
+  margin:10px 5px;
+  height:80px;
+  width:80px;
+  border-radius: 25%;
+  background-color:#EAEAEA;
+  padding:0 px;
+}
+.share-ex{
+  color:#EAEAEA;
+  margin-bottom:10px;
+}
+.share-button p{
+  line-height:80px;
+  color:#454552;
+  font-size: 1.4rem;
 }

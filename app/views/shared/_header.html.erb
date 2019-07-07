@@ -33,7 +33,7 @@
       </div>
 </div>
   <%else%>
-  <%= link_to " Twitterでログイン/登録", user_twitter_omniauth_authorize_path,class: "btn btn-info login-button" %>
+  <%= link_to 'はじめる', "/users/sign_up",class: "btn btn-info btn-lg login-button" %>
 <%end%>
 </div>
 </div>
@@ -42,8 +42,3 @@
 <div class='col-md-2'></div>
 </div>
 </div>
-
-
-<!--<%= link_to 'アートワークを追加', "/artworks",class:'btn btn-info btn-lg' %>
-<%= link_to "ログイン", new_user_session_path ,class:"btn btn-info btn-lg"%>
--->

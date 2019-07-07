@@ -20,7 +20,7 @@ class VideosController < ApplicationController
     @video = Video.new(videos_params)
     @video.user_id = current_user.id
     if @video.save
-      redirect_to "/",notice: "保存しました"
+      redirect_to "/#{current_user.nickname}",notice: "保存しました"
     else
       render "new"
     end
@@ -35,7 +35,7 @@ class VideosController < ApplicationController
     @video.assign_attributes(videos_params)
     @video.user_id = current_user.id
     if @video.save
-      redirect_to "/",notice: "保存しました"
+      redirect_to "/#{current_user.nickname}",notice: "保存しました"
     else
       render "new"
     end
@@ -44,7 +44,7 @@ class VideosController < ApplicationController
   def destroy
     @video = Video.find_by(public_uid: params[:public_uid])
     @video.destroy
-    redirect_to "/",notice:"削除しました"
+    redirect_to "/#{current_user.nickname}",notice:"削除しました"
   end
 
   private

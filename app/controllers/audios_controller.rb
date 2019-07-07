@@ -18,7 +18,7 @@ class AudiosController < ApplicationController
     @audio = Audio.new(audios_params)
     @audio.user_id = current_user.id
     if @audio.save
-      redirect_to "/",notice: "保存しました"
+      redirect_to "/#{current_user.nickname}",notice: "保存しました"
     else
       render "new"
     end
@@ -33,7 +33,7 @@ class AudiosController < ApplicationController
     @audio.assign_attributes(audios_params)
     @audio.user_id = current_user.id
     if @audio.save
-      redirect_to "/",notice: "保存しました"
+      redirect_to "/#{current_user.nickname}",notice: "保存しました"
     else
       render "new"
     end
@@ -43,7 +43,7 @@ class AudiosController < ApplicationController
   def destroy
     @audio = Audio.find_by(public_uid: params[:public_uid])
     @audio.destroy
-    redirect_to "/",notice:"削除しました"
+    redirect_to "/#{current_user.nickname}",notice:"削除しました"
   end
 
   private

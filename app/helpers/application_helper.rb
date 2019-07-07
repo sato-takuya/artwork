@@ -3,17 +3,17 @@ module ApplicationHelper
   def get_twitter_card_info(group,audio)
     twitter_card = {}
     if group.nil? && audio.nil?#トップページver
-      twitter_card[:url] = "https://www.art-wk.herokuapp.com/"
+      twitter_card[:url] = "https://www.fogsound.net"
       twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
       twitter_card[:description] = "バンド・ミュージシャンのためのポートフォリオサイト"
       twitter_card[:title] = "fogsound"
     elsif group.present? && audio.nil?#グループver
-      twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{group.nickname}"
+      twitter_card[:url] = "https://www.fogsound.net/#{group.nickname}"
       twitter_card[:image] = group.icon_image.to_s
       twitter_card[:description] = group.name
       twitter_card[:title] = "fogsound"
     else#オーディオver
-      twitter_card[:url] = "https://www.art-wk.herokuapp.com/#{audio.public_uid}"
+      twitter_card[:url] = "https://www.fogsound.net/#{audio.public_uid}"
       twitter_card[:image] = audio.audio_image.to_s
       twitter_card[:description] = audio.audio_title
       twitter_card[:title] = "fogsound"

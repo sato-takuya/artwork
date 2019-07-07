@@ -3,8 +3,8 @@ module ApplicationHelper
   def get_twitter_card_info(group,audio)
     twitter_card = {}
     if group.nil? && audio.nil?#トップページver
-      twitter_card[:url] = "https://www.fogsound.net"
-      twitter_card[:image] = "https://s3-ap-northeast-1.amazonaws.com/art-wk/images/logo.png"
+      twitter_card[:url] = "https://www.fogsound.net/"
+      twitter_card[:image] = "https://art-wk.s3-ap-northeast-1.amazonaws.com/images/logo.png"
       twitter_card[:description] = "バンド・ミュージシャンのためのポートフォリオサイト"
       twitter_card[:title] = "fogsound"
     elsif group.present? && audio.nil?#グループver

@@ -4,7 +4,7 @@ module ApplicationHelper
     twitter_card = {}
     if group.nil? && audio.nil?#トップページver
       twitter_card[:url] = "https://www.fogsound.net/"
-      twitter_card[:image] = "https://art-wk.s3-ap-northeast-1.amazonaws.com/images/logo.png"
+      twitter_card[:image] = "https://art-wk.s3-ap-northeast-1.amazonaws.com/images/twitter-logo.png"
       twitter_card[:description] = "バンド・ミュージシャンのためのポートフォリオサイト"
       twitter_card[:title] = "fogsound"
     elsif group.present? && audio.nil?#グループver

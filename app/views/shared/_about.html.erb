@@ -1,9 +1,12 @@
 <div class='container-fuild'>
+
   <div class='row'>
     <div class='col-md-2'></div>
           <div class='members-frame col-md-7 col-md-offset-1'>
-          <h2 class='text-left title'>Member</h2><br>
+
             <div class="row">
+    <%if @member.present?%>
+    <h2 class='text-left title'>Member</h2><br>
                   <% @members.each do |member| %>
                       <a class="member col-11 col-md-5 js-modal-open" href="" data-target="<%=member.id%>">
                       <%if member.member_image.attached?%>
@@ -41,7 +44,9 @@
                             </div><!--modal__inner-->
                       </div>
                   <%end%>
+          <%end%>
             </div><!--rowにかかる-->
+
 
 <br><br>
             <h2 class='text-left title'>Links</h2><br>

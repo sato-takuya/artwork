@@ -1,4 +1,6 @@
 class AudiosController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+
   def index
     @user = User.find_by(nickname: params[:id])
     @audios = @user.audios
@@ -26,10 +28,14 @@ class AudiosController < ApplicationController
 
   def edit
     @audio = Audio.find_by(public_uid: params[:public_uid])
+    if @audio.id != current_user.id
+      redirect_to "/"
+    end
   end
 
   def update
     @audio = Audio.find_by(public_uid: params[:public_uid])
+
     @audio.assign_attributes(audios_params)
     @audio.user_id = current_user.id
     if @audio.save
@@ -37,7 +43,6 @@ class AudiosController < ApplicationController
     else
       render "new"
     end
-
   end
 
   def destroy

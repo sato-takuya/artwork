@@ -1,14 +1,21 @@
 class MembersController < ApplicationController
+  before_action :authenticate_user!
   def index
   end
 
   def show
     @user = User.find_by(nickname: params[:id])
     @members = @user.members
+    if @user.id != current_user.id
+      redirect_to "/"
+    end
   end
 
   def new
     @member = Member.new()
+    if @member.user.id != current_user.id
+      redirect_to "/"
+    end
   end
 
   def create
@@ -23,6 +30,9 @@ class MembersController < ApplicationController
 
   def edit
     @member = Member.find_by(public_uid: params[:id])
+    if @member.user.id != current_user.id
+      redirect_to "/"
+    end
   end
 
   def update

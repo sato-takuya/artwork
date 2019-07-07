@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/unsubscribe',to: 'docs#unsubscribe'
   get '/terms',to: 'docs#terms'
   get '/privacy_policy',to: 'docs#privacy_policy'
+  get '/contact',to: 'docs#contact'
 
   resources :audios,:except => :index,param: :public_uid
   resources :videos,:except => :index,param: :public_uid

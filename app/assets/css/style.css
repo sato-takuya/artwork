@@ -217,7 +217,7 @@ SERVICES SECTION
 .services-container {
 	background-color:rgb(217, 238, 250);
 	position: relative;
-	margin:0 auto;
+	margin:10px auto;
 }
 
 
@@ -645,7 +645,7 @@ RESPONSIVE
 }
 
 #services-container{
-	margin:0 atuo;
+	margin:10px auto;
 }
 
 

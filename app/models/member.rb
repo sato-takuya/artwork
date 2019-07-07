@@ -1,6 +1,6 @@
 class Member < ApplicationRecord
   belongs_to :user, optional: true
-  generate_public_uid
+  generate_public_uid generator: PublicUid::Generators::HexStringSecureRandom.new(16)
   has_one_attached :member_image
   attribute :new_member_image
 

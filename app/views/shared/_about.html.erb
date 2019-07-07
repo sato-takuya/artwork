@@ -24,7 +24,7 @@
                       <div class='row'>
                             <div id="<%=member.id%>" class="modal js-modal">
                               <div class="modal__bg js-modal-close"></div>
-                              <div class="member_modal__content col-9 col-md-3">
+                              <div class="member_modal__content col-10 col-md-3">
                                 <%if member.member_image.attached?%>
                                     <%= image_tag member.member_image.variant(combine_options:{crop:"1000x1000+0+0",gravity: :center}).processed,class:'member-show-image' %>
                                     <%else%>
@@ -32,7 +32,7 @@
                                 <%end%>
                                 <div class='member-show-bottom'>
                                 <p><span><%= member.member_name %></span><span>(<%= member.part %>)</span></p>
-                                <p class='member-info'><span><%= member.member_info %></span></p>
+                                <div class='member-info'><span><%= member.member_info %></span></div>
                                       <div class='member-show-sns'>
                                       <%= link_to '',"https://twitter.com/#{member.twitter_id}",target:"_blank",class:'icon-sns fab fa-twitter' %>
                                       <%= link_to '',"https://www.instagram.com/#{member.instagram_id}",target:"_blank",class:'icon-sns fab fa-instagram' %>

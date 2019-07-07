@@ -176,9 +176,6 @@ section {
 }
 
 
-
-
-
 #home {
 	max-height:450px;
 	height:100%;
@@ -199,20 +196,26 @@ section {
 .lp-ex{
 	width:100%;
 }
+
+
+
+
+
+
 /**********************
 SERVICES SECTION
 ***********************/
 
 #services{
 	padding: 40px 0 0;
-	background-color:#EAEAEA;
+	background-color:rgb(217, 238, 250);
 }
 .service{
 	margin:0 auto;
 }
 
 .services-container {
-	background-color:#EAEAEA;
+	background-color:rgb(217, 238, 250);
 	position: relative;
 	margin:0 auto;
 }
@@ -244,7 +247,7 @@ SERVICES SECTION
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
-	background-color:#EAEAEA;
+	background-color:rgb(217, 238, 250);
 }
 
 .img-container {
@@ -669,4 +672,9 @@ RESPONSIVE
   line-height:80px;
   color:#454552;
   font-size: 1.4rem;
+}
+
+.question{
+	margin:0 auto;
+	background-color:rgb(241, 241, 241);
 }

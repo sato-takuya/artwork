@@ -303,8 +303,7 @@ a:link,a:visited,a:hover,a:active{
   font-size:2rem;
   padding:10px 5px 0px 5px;
   border-radius: 5px;
-  margin-right:10px;
-  margin-bottom:20px;
+  margin:10px 10px;
 }
 .icon-sns:hover{
   color:rgb(224, 224, 224);
@@ -402,11 +401,10 @@ a:link,a:visited,a:hover,a:active{
 .member-show-bottom{
   margin:20px auto;
   color: #454552;
-  width:50%;
+  width:70%;
 }
 
 .member-info{
-  padding:5px 5px 5px 5px;
   min-height:70px;
 }
 
@@ -498,11 +496,13 @@ a:link,a:visited,a:hover,a:active{
   font-size: 1.7rem;
   border-bottom:1px solid #333;
   float:left;
+  margin-left:10px;
 }
 .video-show-name{
   display:block;
   font-size: 1.3rem;
   float:left;
+  margin-left:10px;
 }
 .relation{
   width:30%;

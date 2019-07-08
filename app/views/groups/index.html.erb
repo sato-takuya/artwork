@@ -9,7 +9,7 @@
 <div class='basic-content'><!--トップページとアイコン-->
 
 <%if @group.top_image.attached?%>
-  <%= image_tag @group.top_image.variant(combine_options:{crop:"1600x525+0+0",gravity: :center}).processed,class: 'top-image' %>
+  <%= image_tag @group.top_image.variant(combine_options:{crop:"1500x400+0+0",gravity: :center}).processed,class: 'top-image' %>
   <%else%>
   <%= image_tag "top-image.png",class:'top-image' %>
 <%end%>

@@ -3,19 +3,20 @@
 <div class='col-md-2'></div>
 
 <div class='artworks col-md-7 col-md-offset-1'>
-<%if @video.nil? && @audio.nil?%>
+<%if @videos.nil? && @audios.nil?%>
+
 <%= image_tag 'no-content-2',class:'no-content' %>
 <p class="no-content-p">No Content Yet</p>
 
-<%if user_signed_in? && @group.id = current_user.id %>
-<%= link_to '動画を追加', new_video_path,class:"btn btn-info btn-lg" %>
-<%= link_to '楽曲を追加', new_audio_path,class:"btn btn-info btn-lg" %>
-<%end%>
+  <%if user_signed_in? && @group.id = current_user.id %>
+  <%= link_to '動画を追加', new_video_path,class:"btn btn-info btn-lg" %>
+  <%= link_to '楽曲を追加', new_audio_path,class:"btn btn-info btn-lg" %>
+  <%end%>
 
 <%end%>
 
 
-<%if @video.nil?%>
+<%if @videos.nil?%>
 <%else%>
 <h2 class='text-left title'>Youtube</h2>
 <br>
@@ -37,7 +38,7 @@
 <br>
 
 
-<%if @audio.nil?%>
+<%if @audios.nil?%>
 <%else%>
 <h2 class='text-left title'>Audio</h2>
 <br>

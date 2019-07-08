@@ -42,7 +42,7 @@ class VideosController < ApplicationController
 
   def edit
     @video = Video.find_by(public_uid: params[:public_uid])
-    if @video.id != current_user.id
+    if @video.user_id != current_user.id
       redirect_to "/"
     end
   end

@@ -28,7 +28,7 @@ class AudiosController < ApplicationController
 
   def edit
     @audio = Audio.find_by(public_uid: params[:public_uid])
-    if @audio.id != current_user.id
+    if @audio.user_id != current_user.id
       redirect_to "/"
     end
   end

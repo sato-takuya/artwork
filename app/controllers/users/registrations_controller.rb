@@ -23,7 +23,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def user_update
     current_user.assign_attributes(account_update_params)
     if current_user.save
-	  redirect_to "/#{current_user.nickname}", notice: 'プロフィールを更新しました'
     else
       #ファイル形式が間違っている場合のバリデーションが効いていないので、一旦ここで完全に処理を止める
     end

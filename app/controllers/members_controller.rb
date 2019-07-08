@@ -13,9 +13,6 @@ class MembersController < ApplicationController
 
   def new
     @member = Member.new()
-    if @member.user_id != current_user.id
-      redirect_to "/"
-    end
   end
 
   def create

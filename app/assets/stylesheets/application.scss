@@ -809,7 +809,7 @@ a:link,a:visited,a:hover,a:active{
   width:80px;
   border-radius: 25%;
   background-color:#EAEAEA;
-  padding:0 px;
+  padding:0px;
 }
 .share-ex{
   color:#EAEAEA;
@@ -851,4 +851,13 @@ a:link,a:visited,a:hover,a:active{
   margin:0 auto;
   box-shadow: 0 0px 10px rgba(0,0,0,0.2);
   text-align: left;
+}
+
+.no-content{
+  height:200px;
+}
+.no-content-p{
+  font-weight:bold;
+  color:#454552;
+  font-size:1.5rem;
 }

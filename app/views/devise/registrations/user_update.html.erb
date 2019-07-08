@@ -2,15 +2,16 @@
 
 <br>
 <h3>■こちらもあわせて設定してみましょう</h3>
+<p>あとから設定することもできます(アイコンをタップしてメニューを開く)</p>
 <br>
 
-<li><%= link_to '　動画を追加', new_video_path,class:"btn btn-warning btn-lg far fa-file-audio" %></li><br>
+<li><%= link_to '　動画を追加', new_video_path,class:"btn btn-info btn-lg far fa-file-audio" %></li><br>
 <li><%= link_to '　楽曲を追加', new_audio_path,class:"btn btn-info btn-lg far fa-file-audio" %></li><br>
 
 
 <h3>■メンバーを追加・編集する方はこちら</h3>
 <br>
-<li><%= link_to '　メンバーを編集', "/members/#{current_user.nickname}",class:"btn btn-primary btn-lg" %></li><br>
+<li><%= link_to 'メンバーを編集', "/members/#{current_user.nickname}",class:"btn btn-primary btn-lg" %></li><br>
 
 <br>
 <li class="fas fa-sign-in-alt"><%= link_to ' マイページを確認する', "/#{current_user.nickname}"%></li><br><br>

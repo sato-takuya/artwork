@@ -5,18 +5,18 @@ module ApplicationHelper
     if group.nil? && audio.nil?#トップページver
       twitter_card[:url] = "https://www.fogsound.net/"
       twitter_card[:image] = "https://art-wk.s3-ap-northeast-1.amazonaws.com/images/twitter-logo.png"
-      twitter_card[:description] = "ミュージシャン・バンドのためのポートフォリオサイト"
-      twitter_card[:title] = "fogsound"
+      twitter_card[:description] = "ミュージシャン・バンドのための作品集サイト"
+      twitter_card[:title] = "fogsound|ミュージシャン・バンドのための作品集サイト"
     elsif group.present? && audio.nil?#グループver
       twitter_card[:url] = "https://www.fogsound.net/#{group.nickname}"
       twitter_card[:image] = group.icon_image.to_s
       twitter_card[:description] = group.name
-      twitter_card[:title] = "fogsound"
+      twitter_card[:title] = "fogsound|ミュージシャン・バンドのための作品集サイト"
     else#オーディオver
       twitter_card[:url] = "https://www.fogsound.net/#{audio.public_uid}"
       twitter_card[:image] = audio.audio_image.to_s
       twitter_card[:description] = audio.audio_title
-      twitter_card[:title] = "fogsound"
+      twitter_card[:title] = "fogsound|ミュージシャン・バンドのための作品集サイト"
   end
     twitter_card[:card] = 'summary_large_image'
     twitter_card

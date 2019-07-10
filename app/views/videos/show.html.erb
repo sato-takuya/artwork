@@ -36,9 +36,12 @@
 <%end%>
 </div><br>
 
-
-<br>
-<p>関連動画</p>
+<br><br>
+<i class="fas fa-map-marker-alt"></i><%= link_to " #{@video.user.name}のページはこちら", "/#{@video.user.nickname}" %>
+<br><br>
+<%if @video_all.count > 1%>
+<h3>関連動画</h3>
+<%end%>
 <div class='video-show-under'><!--下-->
 <% @video_all.each_with_index do |video,i|%>
 

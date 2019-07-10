@@ -45,8 +45,13 @@
 
 </div><!--上-->
 
+<br><br>
+<i class="fas fa-map-marker-alt"></i><%= link_to " #{@audio.user.name}のページはこちら", "/#{@audio.user.nickname}" %>
+<br><br>
 
+<%if @audio_all.count > 1%>
 <h3>関連楽曲</h3>
+<%end%>
 <div class='row'><!--下-->
 <% @audio_all.each_with_index do |audio,i|%>
 

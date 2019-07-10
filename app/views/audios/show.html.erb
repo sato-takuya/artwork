@@ -47,6 +47,8 @@
 
 
 <br><br><br><br>
+<%= link_to "#{current_user.name}のページへ", "/#{current_user.nickname}" %>
+<br><br><br>
 <h3>関連楽曲</h3>
 <div class='row'><!--下-->
 <% @audio_all.each_with_index do |audio,i|%>

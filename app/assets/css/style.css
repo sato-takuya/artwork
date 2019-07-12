@@ -662,7 +662,7 @@ RESPONSIVE
   width:80px;
   border-radius: 25%;
   background-color:#EAEAEA;
-  padding:0 px;
+  padding:0px;
 }
 .share-ex{
   color:#EAEAEA;
@@ -677,4 +677,7 @@ RESPONSIVE
 .question{
 	margin:0 auto;
 	background-color:rgb(241, 241, 241);
+}
+.lp-image{
+	width:10%;
 }

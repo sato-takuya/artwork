@@ -685,9 +685,9 @@ RESPONSIVE
 
 
 .list-content{
-	width:300px;
+	width:315px;
 	display:block;
-	margin:20px 0px;
+	margin:20px auto;
 	float:left;
 }
 

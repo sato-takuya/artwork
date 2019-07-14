@@ -264,11 +264,8 @@
 					<br>
 					<h4>Q：載せる音源は何でもいいの？</h4>
 					<p>A：正式な楽曲はもちろん、「デモ音源」「弾き語りしてみた音源」など何でもOKです。</p>
-
-					<br>
-					<h4>Q：公式サイトとどう違うの？</h4>
-					<p>A：fogsoundでは、今後トップページにおすすめを表示させるなどの機能を実装予定です。<br>そのため公式サイトのような独立したものではなく、トップページからの流入により、新たなファンを獲得したりできるようになります。</p>
 					<br><br>
+
 					</div>
 					<div class="col-md-4 col-sm-6"></div>
 					</div>
@@ -277,6 +274,45 @@
 				</div> <!-- /.services-container -->
 
 			</section> <!-- /.container -->
+
+
+<section class="user-intro">
+<h2>New Artist！</h2><br><br>
+
+<div class="container">
+<div class="row">
+<div class="col-md-2"></div>
+<div class="user-intro-box col-md-8">
+
+<% @users.each do |user|%>
+
+
+<div class="list-content">
+<%= link_to "/#{user.nickname}" do %>
+					<%if user.icon_image.present?%>
+					<%= image_tag user.icon_image.to_s,class:'user-intro-icon' %>
+					<%else%>
+					<%= image_tag "noimage.png",class:'user-intro-icon' %>
+					<%end%>
+					<p class="user-intro-name"><%= user.name%></p>
+<%end%>
+</div>
+
+
+
+
+<%end%>
+
+
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+</section>
+
+
+
+
 
 
 

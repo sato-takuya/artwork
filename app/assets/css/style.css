@@ -681,3 +681,21 @@ RESPONSIVE
 .lp-image{
 	width:10%;
 }
+
+
+
+.list-content{
+	width:300px;
+	display:block;
+	margin:10px 0px;
+	float:left;
+}
+
+.user-intro-icon{
+	width:150px;
+	height:150px;
+	object-fit: cover!important;
+}
+.user-intro-name{
+	font-size: 1.5rem;
+}

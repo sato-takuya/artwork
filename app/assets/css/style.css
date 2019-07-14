@@ -682,20 +682,21 @@ RESPONSIVE
 	width:10%;
 }
 
-
-
-.list-content{
-	width:315px;
-	display:block;
-	margin:20px auto;
-	float:left;
+.user-intro-box{
 }
 
+.user-intro-content{
+	display:inline-block;
+	width:120px;
+}
+
+
+
 .user-intro-icon{
-	width:150px;
-	height:150px;
+	width:100px;
+	height:100px;
 	object-fit: cover!important;
 }
 .user-intro-name{
-	font-size: 1.5rem;
+	font-size: 0.8rem;
 }
